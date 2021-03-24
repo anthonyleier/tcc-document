@@ -1,0 +1,76 @@
+\chapter{Fundamentação Teórica}
+\label{chap:fund}
+
+Neste capítulo serão apresentados os principais tópicos relacionados ao <Assunto Estudado>, seu conceito e seus impactos na sociedade, bem como as motivações para suas publicações e formas de identificá-las. Além disso, serão abordadas técnicas que permitem <Descrever as técnicas utilizadas>, que serão aplicados para <Tema Proposto>. 
+
+\section{Conceito 1}
+\label{sec:conceito1}
+
+Abaixo é apresentada uma figura com o logotipo do Instituto Federal de Santa Catarina. Para inserir uma figura usando o LaTeX, utilizamos a diretiva \emph{figure}. Normalmente referenciamos a figura a partir do seu label, conforme segue. A Figura \ref{fig:exemplo1} mostra o exemplo de uso de imagenos no \LaTeX.
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Exemplo de uso de imagens no \LaTeX.}
+    \includegraphics[width=0.40\textwidth]{img/ifsc.png}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:exemplo1}
+ \end{figure}
+ 
+ Observe todos os detalhes utilizados. A diretiva \emph{centering} é utilizada para deixar a imagem centralizada. A diretiva \emph{caption} é utilizada para adicionar a legenda na parte superior da imagem. A diretiva \emph{includegraphics} serve para adicionar a imagem propriamente dita, estando neste caso, localizada dentro da pasta \emph{img}. Na mesma diretiva, é possível notar o código \texttt{width=0.40}, que significa que a imagem vai utilizar 40\% da largura do texto. Por fim, a diretiva \emph{legend} é utilizada para indicar a fonte da imagem, e a diretiva \emph{label} para criar uma referência.
+
+\section{Conceito 2}
+\label{sec:conceito2}
+
+\section{Conceito 3}
+\label{sec:conceito3}
+
+\chapter{Estado da Arte da Área Pesquisada}
+\label{chap:mapeamento}
+
+O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para resolver o <Problema Proposto>. Esta revisão resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para <Soluções acerca do problema> de maneira que possam ser aplicados neste projeto de forma satisfatória.
+
+\section{Mapeamento Sistemático da Literatura}
+
+\subsection{Critérios de Inclusão}
+
+\subsection{Critérios de Exclusão}
+
+\section{Análise dos trabalhos selecionados}
+
+\chapter{Procedimentos Metodológicos}
+\label{chap:metodologia}
+
+\section{Recursos}
+
+\chapter{Cronograma}
+\label{chap:cronograma}
+
+A Tabela \ref{tbl:cronograma} apresenta o cronograma de atividades propostas para o desenvolvimento deste projeto de trabalho de conclusão de curso, de forma a viabilizar <Falar sobre o que se pretende atingir com o projeto>.
+
+\begin{table}[!htb]
+\centering
+\caption{Cronograma das atividades previstas.}
+\label{tbl:cronograma}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Etapa}}       & \multicolumn{10}{c|}{\textbf{Meses}}                                                                                                                        \\ \hline
+                                           & Fev & Mar & Abr & Mai & Jun & Ago & Set & Out & Nov & Dez \\ \hline
+Fundamentação Teórica                      & X            & X            &              &              &              &                &                   &               &              &              \\ \hline
+\makecell[l]{Mapeamento Sistemático \\ da Literatura}       &              &              & X            & X            &              &                &                   &               &              &              \\ \hline
+\makecell[l]{Escrita do Projeto de TCC \\ e Defesa}         &              &              & X            & X            & X            &                &                   &               &              &              \\ \hline
+\makecell[l]{Atividade a ser desenvolvida 1}              &              &              &              &              &              & X              &                   &               &              &              \\ \hline
+\makecell[l]{Atividade a ser desenvolvida 2}             &              &              &              &              &              &                & X                 &               &              &              \\ \hline
+\makecell[l]{Atividade a ser desenvolvida 3} &              &              &              &              &              &                & X                 & X             &              &              \\ \hline
+\makecell[l]{Verificação de Aceitação dos \\ Resultados}    &              &              &              &              &              &                &                   & X             &              &              \\ \hline
+\makecell[l]{Comparação dos Resultados \\ com a Literatura} &              &              &              &              &              &                &                   & X             & X            &              \\ \hline
+Exposição dos Resultados                   &              &              &              &              &              &                &                   &               & X            &              \\ \hline
+Escrita do TCC                             &              &              &              &              &              &                &                   &               & X            & X            \\ \hline
+Defesa do TCC                              &              &              &              &              &              &                &                   &               &              & X            \\ \hline
+\end{tabular}
+\vspace{6pt}
+\legend{Fonte: Elaborada pelo autor.}
+\end{table}
+
+As atividades propostas neste cronograma podem sofrer leves alterações no decorrer do seu desenvolvimento de acordo com a necessidade.
+
+A forma mais fácil de criar tabelas é através de ferramentas gráficas. Geralmente utiliza-se o site \url{https://www.tablesgenerator.com/} para realizar tal atividade, exportando o código LaTeX e colando na parte do texto que ela deve aparecer~\cite{tablegenerator2021}.
