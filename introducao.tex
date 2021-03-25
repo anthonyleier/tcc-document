@@ -1,47 +1,68 @@
 \chapter{Introdução}
 \label{chap:introducao}
 
-Neste capítulo serão introduzidos todos os assuntos abordados por este documento. Pretende-se apresentar a motivação, os objetivos e a organização do texto. A codificação de todos os arquivos do \abnTeX\ é \texttt{UTF8}. É necessário que você utilize a mesma codificação nos documentos que escrever, inclusive nos arquivos de base bibliográficas |.bib|.
+A saúde humana sempre foi uma área pilar de toda a sociedade e hoje em dia ela se tornou ainda mais vital para sustentar as demais. Com os problemas e situações advindos da pandemia, devemos pensar em formas de automatizar e auxiliar os profissionais de saúde para que consigam focar em problemas mais graves e urgentes. Com o avanço da tecnologia e dos meios de comunicação, a automação vem se fazendo presente na vida de todos e cada vez mais se torna indispensável nas mais diversas áreas. Para a área da saúde, devemos pensar em formas de além de automatizar, também facilitar processos cotidianos para assim garantir um foco maior nos problemas mais críticos.
 
-Inicia com uma contextualização, onde se explica como chegou ao problema de pesquisa, e cita-se algumas ideias de trabalhos relacionados. Também se deve apresentar brevemente a situação atual da área 
-relacionada ao problema que se deseja resolver, conceituar o problema em questão e comentar sobre as técnicas que serão utilizadas para resolver o problema. Tudo isso em no máximo 1 página (3 ou 4 parágrafos).
+A demanda por exames laboratoriais vem crescendo, e conforme isso acontece, se necessita cada vez mais de profissionais da saúde especializados em atender, analisar e produzir laudos desses exames. Porém nem sempre existe uma equipe suficiente formada para isso, e então acontece sobrecarregamentos de funções para dar conta dessa demanda.
+
+Esse trabalho tem como principal objetivo, buscar formas de facilitar e atender a produção de laudos de exames laboratoriais, com um foco em exames de sangue e na produção de hemogramas. De forma, que os profissionais da saúde possam utilizar uma ferramenta para auxiliar nesse procedimento. Hoje em dia, os hemogramas são feitos por máquinas especializadas nessa tarefa e portanto demandam um alto custo financeiro e de manutenção para isso. Esse processo poderia ser facilitado com o uso de algoritmos de deep learning para a automatização como forma alternativa ao maquinário especializado.
+
+Algoritmos de deep learning têm sido empregados nas mais diversas áreas, como na medicina, na indústria de alimentos, no mercado financeiro, na educação, no comercio eletrônico, nos jogos virtuais.
+
+Podemos encontrar muitos trabalhos utilizando técnicas de deep learning com o objetivo de auxiliar profissionais da saúde em tomadas de decisão.
+
+% Inicia com uma contextualização, onde se explica como chegou ao problema de pesquisa, e cita-se algumas ideias de trabalhos relacionados. Também se deve apresentar brevemente a situação atual da área relacionada ao problema que se deseja resolver, conceituar o problema em questão e comentar sobre as técnicas que serão utilizadas para resolver o problema. Tudo isso em no máximo 1 página (3 ou 4 parágrafos).
 
 \section{Problema de Pesquisa}
 \label{sec:problema}
 
-Trata-se de uma pergunta, cuja resposta é o seu TCC. Com por exemplo, no TCC do Júlio: “Com base nas técnicas e algoritmos de Machine Learning mais frequentes na Literatura, como ofertar um protótipo com 
-um modelo computacional para predição de evasão escolar a nível de estudante para os cursos de graduação do Instituto Federal de Santa Catarina - Câmpus Caçador?”. Podemos perceber que nosso trabalho é necessariamente uma resposta a uma pergunta. O ideal é que tenha caráter prático, visando a solução de determinado problema.
+Pensando nas formas e utilizações dos algoritmos de Deep Learning, utilizados nas mais diversas áreas, como podes utilizar um modelo computacional para a interpretação de imagens de sangue a fim de auxiliar profissionais da saúde na sua tomada de decisão e na elaboração de laudos científicos?
+
+% Trata-se de uma pergunta, cuja resposta é o seu TCC. Com por exemplo, no TCC do Júlio: “Com base nas técnicas e algoritmos de Machine Learning mais frequentes na Literatura, como ofertar um protótipo com 
+% um modelo computacional para predição de evasão escolar a nível de estudante para os cursos de graduação do Instituto Federal de Santa Catarina - Câmpus Caçador?”. Podemos perceber que nosso trabalho é necessariamente uma resposta a uma pergunta. O ideal é que tenha caráter prático, visando a solução de determinado problema.
 
 \section{Hipótese de Pesquisa}
 \label{sec:hipotese}
+A hipótese para a solução do problema apresentado é que podemos utilizar modelos treinado para a interpretação de imagens de sangue com grandes capacidades de prover informações uteis na tomada de decisão dos profissionais da saúde.
 
-A hipótese de pesquisa é uma pressuposição sobre o esperado. A observação de uma situação pelo pesquisador, com uma comparação de estudo, dedução lógica da teoria, cultura na qual a problemática é observada, analogias entre duas ou mais variáveis. Normalmente é escrita como uma afirmação associada ao problema de pesquisa. É o que se deseja produzir ao final do TCC.
+% A hipótese de pesquisa é uma pressuposição sobre o esperado. A observação de uma situação pelo pesquisador, com uma comparação de estudo, dedução lógica da teoria, cultura na qual a problemática é observada, analogias entre duas ou mais variáveis. Normalmente é escrita como uma afirmação associada ao problema de pesquisa. É o que se deseja produzir ao final do TCC.
 
 \section{Objetivos}
 \label{sec:objetivos}
 
 \subsection{Objetivo Geral}
-Converta o seu problema de pesquisa em uma frase afirmativa que inicie com verbo no infinitivo.
+Como objetivo geral deste trabalho, se deve buscar formas de treinamento de um modelo para interpretação de imagens voltado a prover informações úteis na tomada de decisão dos profissionais da saúde.
+
+% Converta o seu problema de pesquisa em uma frase afirmativa que inicie com verbo no infinitivo.
 
 \subsection{Objetivos Específicos}
-Desmembramento do objetivo geral em alguns objetivos específicos, que ao serem atingidos levarão necessariamente ao alcance do objetivo geral.
+\begin{itemize}
+   \item Realizar mapeamento sistemático sobre o tema, a fim de identificar as técnicas/algoritmos de
+Deep Learning mais frequentes e recentes para auxiliar os profissionais.
+   \item Buscar dados de imagens em bases de dados disponíveis e para esse fim.
+   \item Realizar o pré-processamento dos dados a fim de padronizar e preparar todo o conjunto para o treinamento do modelo.
+   \item Desenvolver e treinar modelos computacionais de Deep Learning a fim de encontrar informações suficientes para a análise do sangue.
+   \item Desenvolver um protótipo a partir do modelo pronto e treinado.
+\end{itemize}
 
-Evitar: verbos de caráter muito subjetivo (estudar, 
-conhecer...); preferir (identificar, descrever, propor...)
+% Desmembramento do objetivo geral em alguns objetivos específicos, que ao serem atingidos levarão necessariamente ao alcance do objetivo geral.
+
+% Evitar: verbos de caráter muito subjetivo (estudar, 
+% conhecer...); preferir (identificar, descrever, propor...)
 
 \section{Justificativa}
 \label{sec:justificativa}
+Este estudo busca demonstrar uma forma alternativa de análise de sangue, como o uso de deep learning está cada vez mais sendo usado nas mais diversas áreas. A motivação para este trabalho partiu de pesquisas semelhantes em várias instituições no Brasil e no mundo. A metodologia abordada nesta pesquisa é a de KDD. Todo o resultado obtido neste trabalho pode servir de base para novos projetos que surgirem a respeito deste tema, podendo ser reaproveitado o dataset, ou o pré-processamento, os atributos escolhidos. Além disso, os resultados podem ser utilizados em comparações em testes de novos algoritmos.
 
-Defender a necessidade do estudo, quanto a sua importância, originalidade, oportunidade e viabilidade. Sendo a importância: contribuição do seu estudo na sociedade e na área acadêmica. É importante para 
-quem? Por quê?. A Originalidade: ideia minimamente original. A Oportunidade: período adequado, compatível com as necessidades atuais de conhecimentos e a Viabilidade: existência de recursos necessários para 
-realizar os estudos (tempo, livros, artigos, materiais...)
+% Defender a necessidade do estudo, quanto a sua importância, originalidade, oportunidade e viabilidade. Sendo a importância: contribuição do seu estudo na sociedade e na área acadêmica. É importante para 
+% quem? Por quê?. A Originalidade: ideia minimamente original. A Oportunidade: período adequado, compatível com as necessidades atuais de conhecimentos e a Viabilidade: existência de recursos necessários para 
+% realizar os estudos (tempo, livros, artigos, materiais...)
 
 \section{Organização do texto}
 \label{sec:organizacao}
 
-O restante deste texto está organizado da seguinte forma: No \autoref{chap:fund} são apresentados os principais conceitos relacionados a <assunto estudado>, bem como as técnicas <X, Y e Z> estudadas. No \autoref{chap:mapeamento} são apresentados os resultados do mapeamento sistemático da literatura. No \autoref{chap:metodologia} são discutidos os procedimentos metodológicos e no \autoref{chap:cronograma} é apresentado o cronograma para desenvolvimento deste projeto. Por fim, no \autoref{chap:conclusoes} são apresentadas as considerações finais acerca deste trabalho.
+Organização do Texto.
 
-Para finalizar o capítulo introdutório, é interessante que você anuncie ao leitor o 
-conteúdo que ele vai encontrar nos capítulos a seguir. Apresente a informação de que o segundo capítulo 
-é composto pela fundamentação teórica sobre os assuntos X, Y e Z, que o terceiro capítulo trás o 
-mapeamento sistemático, que o quarto capítulo é composto pela metodologia adotada, etc. Normalmente um ou dois parágrafos são suficientes.
+% O restante deste texto está organizado da seguinte forma: No \autoref{chap:fund} são apresentados os principais conceitos relacionados a <assunto estudado>, bem como as técnicas <X, Y e Z> estudadas. No \autoref{chap:mapeamento} são apresentados os resultados do mapeamento sistemático da literatura. No \autoref{chap:metodologia} são discutidos os procedimentos metodológicos e no \autoref{chap:cronograma} é apresentado o cronograma para desenvolvimento deste projeto. Por fim, no \autoref{chap:conclusoes} são apresentadas as considerações finais acerca deste trabalho.
+
+% Para finalizar o capítulo introdutório, é interessante que você anuncie ao leitor o conteúdo que ele vai encontrar nos capítulos a seguir. Apresente a informação de que o segundo capítulo é composto pela fundamentação teórica sobre os assuntos X, Y e Z, que o terceiro capítulo trás o mapeamento sistemático, que o quarto capítulo é composto pela metodologia adotada, etc. Normalmente um ou dois parágrafos são suficientes.
