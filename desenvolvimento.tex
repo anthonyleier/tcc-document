@@ -27,13 +27,44 @@ Abaixo é apresentada uma figura com o logotipo do Instituto Federal de Santa Ca
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
 
-O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para resolver o <Problema Proposto>. Esta revisão resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para <Soluções acerca do problema> de maneira que possam ser aplicados neste projeto de forma satisfatória.
+O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para agilizar a identificação e interpretação de análises de sangue. Esta revisão resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para a aplicação de Deep Learning em imagens de sangue em placas de petri de maneira que possam ser aplicados neste projeto de forma satisfatória.
 
 \section{Mapeamento Sistemático da Literatura}
 
-\subsection{Critérios de Inclusão}
+O mapeamento sistemático da literatura é realizado com base na busca e levantamento de artigos, para isso se utiliza uma string de busca para as principais bibliotecas e repositórios de artigos. Esses artigos serão analisados e selecionados conforme a sua área de pesquisa e a sua temática, para inclusão nesse estudo. Para isso, se é utilizado uma ferramenta para automatização dessa tarefa, que é o Parsifal\footnote[1]{https://parsif.al/}, de modo a definir a string de busca, salvar os artigos necessários e realizar a seleção.
+
+As questões de pesquisas levantadas para isso foram, "Como os algoritmos de Deep Learning podem ser utilizados para a interpretação de exames?" e "Como realizar o tratamento de imagens para reconhecimento por modelos de Deep Learning?". A partir dessas questões se foram extraídas palavras e termos para o direcionamento da pesquisa. Podemos visualizar estas palavras com seus sinônimos na Tabela 1.
+
+\begin{table}[]
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Palavra-Chave} & \textbf{Sinônimos} \\ \hline
+Blood Analysis & Blood Sample \\ \hline
+Classification & Interpretation, Recognition \\ \hline
+Deep Learning & Artificial Intelligence, Computer Vision, Machine Learning \\ \hline
+\end{tabular}
+\end{table}
+
+Na Tabela 2, são listadas as bases de dados em que foram pesquisados os artigos juntamente com
+a string de busca utilizada e o número de artigos que foram retornados com esta busca. Como pode ser
+notado, a mesma string de busca foi utilizada para as três bases de dados.
+
+\begin{table}[]
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Base de Dados} & \textbf{Artigos} & \textbf{String de Busca} \\ \hline
+ACM Digital Library & 37 & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}("classification" OR "interpretation" OR "recognition") AND\\  ("deep learning" OR "artificial intelligence" OR "computer vision" OR "machine learning") AND\\  ("blood analysis" OR "blood sample")("classification" OR "interpretation" OR "recognition") AND\\  ("deep learning" OR "artificial intelligence" OR "computer vision" OR "machine learning") AND\\  ("blood analysis" OR "blood sample")\end{tabular}} \\ \cline{1-2}
+IEEE Digital Library & 13 &  \\ \cline{1-2}
+Scopus & 114 &  \\ \hline
+\end{tabular}
+\end{table}
 
 \subsection{Critérios de Exclusão}
+
+
+
+\subsection{Critérios de Inclusão}
+
 
 \section{Análise dos trabalhos selecionados}
 
