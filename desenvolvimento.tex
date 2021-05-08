@@ -33,7 +33,7 @@ O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com
 
 O mapeamento sistemático da literatura é realizado com base na busca e levantamento de artigos, para isso se utiliza uma string de busca para as principais bibliotecas e repositórios de artigos. Esses artigos serão analisados e selecionados conforme a sua área de pesquisa e a sua temática, para inclusão nesse estudo. Para isso, se é utilizado uma ferramenta para automatização dessa tarefa, que é o Parsifal\footnote[1]{https://parsif.al/}, de modo a definir a string de busca, salvar os artigos necessários e realizar a seleção.
 
-As questões de pesquisas levantadas para isso foram, "Como os algoritmos de Deep Learning podem ser utilizados para a interpretação de exames?" e "Como realizar o tratamento de imagens para reconhecimento por modelos de Deep Learning?". A partir dessas questões se foram extraídas palavras e termos para o direcionamento da pesquisa. Podemos visualizar estas palavras com seus sinônimos na Tabela 1.
+As questões de pesquisas levantadas para isso foram, ``Como os algoritmos de Deep Learning podem ser utilizados para a interpretação de exames?'' e ``Como realizar o tratamento de imagens para reconhecimento por modelos de Deep Learning?''. A partir dessas questões se foram extraídas palavras e termos para o direcionamento da pesquisa. Podemos visualizar estas palavras com seus sinônimos na Tabela 1.
 
 \begin{center}
 Tabela 1 - Tabela com Palavras-Chave e Sinônimos
@@ -58,7 +58,7 @@ Tabela 2 - Bases de Dados e Quantidade de Artigos Selecionados
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Base de Dados} & \textbf{Artigos} & \textbf{String de Busca} \\ \hline
-\multirow{2}{*}{ACM Digital Library} & \multirow{2}{*}{37} & \multirow{6}{*}{\begin{tabular}[c]{@{}c@{}}(“classification” OR “interpretation” OR “recognition”) AND\\  (“deep learning” OR “artificial intelligence” \\ OR “computer vision” OR “machine learning”) AND\\  (“blood analysis” OR “blood sample”)\end{tabular}} \\
+\multirow{2}{*}{ACM Digital Library} & \multirow{2}{*}{37} & \multirow{6}{*}{\begin{tabular}[c]{@{}c@{}}(``classification'' OR ``interpretation'' OR ``recognition'') AND\\  (``deep learning'' OR ``artificial intelligence'' \\ OR ``computer vision'' OR ``machine learning'') AND\\  (``blood analysis'' OR ``blood sample'')\end{tabular}} \\
  &  &  \\ \cline{1-2}
 \multirow{2}{*}{IEEE Digital Library} & \multirow{2}{*}{13} &  \\
  &  &  \\ \cline{1-2}
@@ -79,23 +79,23 @@ Tabela 3 - Critérios de Exclusão
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Critério de Exclusão} & \textbf{Nº de Artigos Recusados} \\ \hline
-O estudo não faz parte da área de pesquisa & 100 \\ \hline
+O estudo não faz parte da área de pesquisa & 101 \\ \hline
 O estudo apresenta resultados fora da computação & 29 \\ \hline
-O estudo não é um estudo primário & 5 \\ \hline
+O estudo não é um estudo primário & 6 \\ \hline
 O estudo é duplicado & 16 \\ \hline
 \end{tabular}
 \end{center}
 Fonte: Elaborada pelo Autor
 \end{center}
 
-A seleção inciou com 164 artigos no total das três bases de dados buscadas. Com a aplicação dos critérios de exclusão, observa-se um resultante de apenas 14 artigos. Isso ocorreu pois 100 artigos foram eliminados no critério "O estudo não faz parte da área de pesquisa", que significa que esses artigos tinham alguma relação, porém eram voltados a outras áreas. Outros 29 artigos foram eliminados no critério "O estudo apresenta resultados fora da computação", que significa que eram da área de pesquisa, porém com resultados e métodos sem conexão com a computação. Foram também encontrados 5 artigos, que entraram no critério "O estudo não é um estudo primário", o que indica que o artigo pode ser uma revisão sistemática da literatura ou semelhante. Por fim, foram eliminados outros 16 artigos por serem duplicados.
+A seleção inciou com 164 artigos no total das três bases de dados buscadas. Com a aplicação dos critérios de exclusão, observa-se um resultante de apenas 14 artigos. Isso ocorreu pois 101 artigos foram eliminados no critério ``O estudo não faz parte da área de pesquisa'', que significa que esses artigos tinham alguma relação, porém eram voltados a outras áreas. Outros 29 artigos foram eliminados no critério ``O estudo apresenta resultados fora da computação'', que significa que eram da área de pesquisa, porém com resultados e métodos sem conexão com a computação. Foram também encontrados 6 artigos, que entraram no critério ``O estudo não é um estudo primário'', o que indica que o artigo pode ser uma revisão sistemática da literatura ou semelhante. Por fim, foram eliminados outros 16 artigos por serem duplicados.
 
 \subsection{Critérios de Inclusão}
 
 Os seguintes critérios de inclusão foram definidos:
 \begin{itemize}
 \item Nova tecnologia para análise de sangue;
-\item Processo, método ou técnica para contagem de células sanguíneas ;
+\item Processo, método ou técnica para contagem de células sanguíneas;
 \item Sistema para elaboração de hemogramas utilizando Deep Learning;
 \end{itemize}
 
@@ -109,18 +109,16 @@ Tabela 4 - Artigos Selecionados
 \textbf{ID} & \multicolumn{1}{c|}{\textbf{Título do Artigo}} & \multicolumn{1}{c|}{\textbf{Autores}} \\ \hline
 A1 & \begin{tabular}[c]{@{}l@{}}Analyzing microscopic images of \\ peripheral blood smear \\ using deep learning\end{tabular} & \begin{tabular}[c]{@{}l@{}}Mundhra, D. and Cheluvaraju, B. \\ and Rampure, J. and Rai Dastidar, T.\end{tabular} \\ \hline
 A2 & \begin{tabular}[c]{@{}l@{}}Automatic detection and classification \\ of leukocytes using \\ convolutional neural networks\end{tabular} & \begin{tabular}[c]{@{}l@{}}Zhao, J. and Zhang, M. \\ and Zhou, Z. and Chu, J. and Cao, F.\end{tabular} \\ \hline
-A3 & \begin{tabular}[c]{@{}l@{}}A survey on blood image \\ diseases detection \\ using deep learning\end{tabular} & \begin{tabular}[c]{@{}l@{}}Loey, M. and Naman, M.R. \\ and Zayed, H.H.\end{tabular} \\ \hline
-A4 & \begin{tabular}[c]{@{}l@{}}Automatic white blood cell classification \\ using pre-trained deep learning models: \\ ResNet and Inception\end{tabular} & \begin{tabular}[c]{@{}l@{}}Habibzadeh, M. and Jannesari, M. \\ and Rezaei, Z. and Baharvand, H. \\ and Totonchi, M.\end{tabular} \\ \hline
-A5 & \begin{tabular}[c]{@{}l@{}}Classification of Human White \\ Blood Cells Using Machine Learning \\ for Stain-Free Imaging \\ Flow Cytometry\end{tabular} & \begin{tabular}[c]{@{}l@{}}Lippeveld, M. and Knill, C. and \\ Ladlow, E. and \\ Fuller, A. and Michaelis, L.J. and \\ Saeys, Y. and Filby, A. and Peralta, D.\end{tabular} \\ \hline
-A6 & \begin{tabular}[c]{@{}l@{}}Blood cell classification using the hough\\ transform and \\ convolutional neural networks\end{tabular} & \begin{tabular}[c]{@{}l@{}}Molina-Cabello, M.A. and López-Rubio, E. \\ and Luque-Baena, R.M. and \\ Rodríguez-Espinosa, M.J. and \\ Thurnhofer-Hemsi, K.\end{tabular} \\ \hline
-A7 & \begin{tabular}[c]{@{}l@{}}White Blood Cells Image Classification \\ Using Deep Learning with \\ Canonical Correlation Analysis\end{tabular} & Patil, A.M. and Patil, M.D. and Birajdar, G.K. \\ \hline
-A8 & \begin{tabular}[c]{@{}l@{}}Image processing and machine learning\\ in the morphological analysis \\ of blood cells\end{tabular} & \begin{tabular}[c]{@{}l@{}}Rodellar, J. and Alférez, S. and Acevedo, A. \\ and Molina, A. and Merino, A.\end{tabular} \\ \hline
-A9 & \begin{tabular}[c]{@{}l@{}}Improving blood cells classification in \\ peripheral blood smears using \\ enhanced incremental training\end{tabular} & Al-qudah, R. and Suen, C.Y. \\ \hline
-A10 & \begin{tabular}[c]{@{}l@{}}Development of Abnormal \\ Red Blood Cells Classifier Using\\ Image Processing Techniques \\ with Support Vector Machine\end{tabular} & \begin{tabular}[c]{@{}l@{}}Hortinela, Carlos C. and Fausto, Janette C. \\ and Valiente, Flordeliza L. and \\ Divina, Paul Daniel C. \\ and Felices, John Philip T.\end{tabular} \\ \hline
-A11 & \begin{tabular}[c]{@{}l@{}}Corruption-Robust Enhancement of \\ Deep Neural Networks\\ for Classification of Peripheral \\ Blood Smear Images\end{tabular} & \begin{tabular}[c]{@{}l@{}}Zhang, S. and Ni, Q. and Li, B. and \\ Jiang, S. and \\ Cai, W. and Chen, H. and Luo, L.\end{tabular} \\ \hline
-A12 & \begin{tabular}[c]{@{}l@{}}Convolutional neural network and decision \\ support in medical imaging:\\ Case study of the recognition of \\ blood cell subtypes\end{tabular} & Diouf, D. and Seck, D. and Diop, M. and Ba, A. \\ \hline
-A13 & \begin{tabular}[c]{@{}l@{}}Combining Convolutional Neural Network\\ With Recursive Neural Network \\ for Blood Cell Image Classification\end{tabular} & \begin{tabular}[c]{@{}l@{}}Liang, G. and Hong, H. and Xie, W. and\\ Zheng, L.\end{tabular} \\ \hline
-A14 & \begin{tabular}[c]{@{}l@{}}Blood diseases detection using \\ classical machine learning algorithms\end{tabular} & Alsheref, F.K. and Gomaa, W.H. \\ \hline
+A3 & \begin{tabular}[c]{@{}l@{}}Automatic white blood cell classification \\ using pre-trained deep learning models: \\ ResNet and Inception\end{tabular} & \begin{tabular}[c]{@{}l@{}}Habibzadeh, M. and Jannesari, M. \\ and Rezaei, Z. and Baharvand, H. \\ and Totonchi, M.\end{tabular} \\ \hline
+A4 & \begin{tabular}[c]{@{}l@{}}Classification of Human White \\ Blood Cells Using Machine Learning \\ for Stain-Free Imaging \\ Flow Cytometry\end{tabular} & \begin{tabular}[c]{@{}l@{}}Lippeveld, M. and Knill, C. and \\ Ladlow, E. and \\ Fuller, A. and Michaelis, L.J. and \\ Saeys, Y. and Filby, A. and Peralta, D.\end{tabular} \\ \hline
+A5 & \begin{tabular}[c]{@{}l@{}}Blood cell classification using the hough\\ transform and \\ convolutional neural networks\end{tabular} & \begin{tabular}[c]{@{}l@{}}Molina-Cabello, M.A. and López-Rubio, E. \\ and Luque-Baena, R.M. and \\ Rodríguez-Espinosa, M.J. and \\ Thurnhofer-Hemsi, K.\end{tabular} \\ \hline
+A6 & \begin{tabular}[c]{@{}l@{}}White Blood Cells Image Classification \\ Using Deep Learning with \\ Canonical Correlation Analysis\end{tabular} & Patil, A.M. and Patil, M.D. and Birajdar, G.K. \\ \hline
+A7 & \begin{tabular}[c]{@{}l@{}}Image processing and machine learning\\ in the morphological analysis \\ of blood cells\end{tabular} & \begin{tabular}[c]{@{}l@{}}Rodellar, J. and Alférez, S. and Acevedo, A. \\ and Molina, A. and Merino, A.\end{tabular} \\ \hline
+A8 & \begin{tabular}[c]{@{}l@{}}Improving blood cells classification in \\ peripheral blood smears using \\ enhanced incremental training\end{tabular} & Al-qudah, R. and Suen, C.Y. \\ \hline
+A9 & \begin{tabular}[c]{@{}l@{}}Corruption-Robust Enhancement of \\ Deep Neural Networks\\ for Classification of Peripheral \\ Blood Smear Images\end{tabular} & \begin{tabular}[c]{@{}l@{}}Zhang, S. and Ni, Q. and Li, B. and \\ Jiang, S. and \\ Cai, W. and Chen, H. and Luo, L.\end{tabular} \\ \hline
+A10 & \begin{tabular}[c]{@{}l@{}}Convolutional neural network and decision \\ support in medical imaging:\\ Case study of the recognition of \\ blood cell subtypes\end{tabular} & Diouf, D. and Seck, D. and Diop, M. and Ba, A. \\ \hline
+A11 & \begin{tabular}[c]{@{}l@{}}Combining Convolutional Neural Network\\ With Recursive Neural Network \\ for Blood Cell Image Classification\end{tabular} & \begin{tabular}[c]{@{}l@{}}Liang, G. and Hong, H. and Xie, W. and\\ Zheng, L.\end{tabular} \\ \hline
+A12 & \begin{tabular}[c]{@{}l@{}}Blood diseases detection using \\ classical machine learning algorithms\end{tabular} & Alsheref, F.K. and Gomaa, W.H. \\ \hline
 \end{tabular}
 \end{center}
 Fonte: Elaborada pelo Autor
@@ -130,32 +128,9 @@ Todos os artigos selecionados estão relacionados à maneiras e recursos para au
 
 \section{Análise dos trabalhos selecionados}
 
-Por fim, com os artigos selecionados e classificados, é necessário realizar a extração dos dados desses trabalhos, sendo essa a última etapa desse Mapeamento Sistemático da Literatura. É possível perceber que os algoritmos e abordagens mais utilizando em grande parte dos trabalhos são
+Por fim, com os artigos selecionados e classificados, é necessário realizar a extração dos dados desses trabalhos, sendo essa a última etapa desse mapeamento sistemático da literatura. É possível perceber que os algoritmos e abordagens mais utilizados são técnicas de \emph{Deep Learning}, como por exemplo, o uso de \emph{Convolutional Neural Network (CNN)} (A1, A2, A3, A4, A5, A6, A8, A9, A10, A11) e de \emph{Recurrent Neural Network (RNN)} (A6, A11), que são abordagens de redes neurais para a classificação das células sanguíneas.
 
-Alguns autores
-
-Com base na análise e coleta de informações dos artigos selecionados, as técnicas e metologias foram estudadas de forma mais aprofundade, de modo a ter um aproveitamento do mapeamento sistemático da literatura, principalmente voltado ao
-
-Com base na análise dos artigos estudados, as técnicas identificadas
-foram estudadas de forma mais aprofundada, de modo que seja aproveitado o mapeamento da área de
-pesquisa, especialmente o assunto sobre Redes Neurais e Árvores de Decisão.
-
-A última etapa do Mapeamento Sistemático da Literatura foi a extração de dados dos trabalhos
-selecionados. Os algoritmos mais utilizados em grande parte dos trabalhos são o algoritmo de Naïve Bayes
-e derivados (A5, A6, A7, A8, A14, A16, A19), máquinas de vetores de suporte (A4, A6, A14), regressão
-logística (A4, A5, A13, A14, A15, A19), rede neural (A3, A4, A6, A8, A16), árvore de decisão (A1, A3,
-A4, A5, A6, A7, A8, A10, A12, A13, A15, A16, A19), floresta aleatória (A2, A4, A6, A14, A17, A18), e
-K-ésimo vizinho mais próximo (A6, A7, A8).
-
-Alguns autores preferiram utilizar ferramentas para realizar o processo de KDD, como a ferramenta
-WEKA (A1, A8). Outros algoritmos que foram usados em menor frequência são balanced bagging (A1),
-regressão do vetor de suporte e regressão quantílica (A11), K-means (A12), reforço adaptativo (A14).
-
-Os datasets foram fornecidos pela Diretoria de Tecnologia da Informação e Comunicação (DTIC).
-Os dados obtidos são do IFSC - Câmpus Caçador, com informações dos cursos solicitados e os dados dos
-alunos devidamente anonimizados. Com base na análise dos artigos estudados, as técnicas identificadas
-foram estudadas de forma mais aprofundada, de modo que seja aproveitado o mapeamento da área de
-pesquisa, especialmente o assunto sobre Redes Neurais e Árvores de Decisão.
+Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais para a classificação, como por exemplo, ocorre com o uso de \emph{Random Forest} ou \emph{Decision Trees}  (A2, A4, A7), que são estruturas de árvores de decisão. Também se encontra estudos fazendo uso de \emph{Support Vector Machine (SVM)} (A7) que utilizam vetores de suporte e por fim \emph{K-Means e K-Nearest Neighbors (KNN)} (A12), que faz a classificação levando em conta os vizinhos mais próximos.
 
 \chapter{Procedimentos Metodológicos}
 \label{chap:metodologia}
