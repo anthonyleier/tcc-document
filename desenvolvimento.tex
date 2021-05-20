@@ -1,3 +1,5 @@
+
+
 \chapter{Fundamentação Teórica}
 \label{chap:fund}
 
@@ -5,14 +7,35 @@ Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}
 
 \section{Exames Laboratoriais de Sangue}
 \label{sec:conceito1}
-Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples porém de extrema importância para a saúde humana. Através desse exame se pode descobrir diversas informações sobre o corpo da pessoa em questão, inclusive detectar doenças e problemas de forma antecipada, como por exemplo, para diagnosticar anemia, deficiências nutricionais, parasitemias, doenças virais e autoimunes, também é capaz de identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito sobre o corpo de vários tipos de estresse. \cite{bloodbook}
+Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples porém de extrema importância para a saúde humana. Através desse exame se pode descobrir diversas informações sobre o corpo da pessoa em questão, inclusive detectar doenças e problemas de forma antecipada, como por exemplo, para diagnosticar anemia, deficiências nutricionais, parasitemias, doenças virais e autoimunes, também é capaz de identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito de vários tipos de estresse sobre o corpo. \cite{bloodbook}
 
-Um exame poderá ser solicitado por um médico responsável e realizado em um laboratório de confiança, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado para o paciente. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade é muito caro para aquisição e manutenção.
+Um exame poderá ser solicitado por um médico responsável, ou a partir do interesse do próprio paciente, e realizado em um laboratório de confiança, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado para o paciente. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade é muito caro para aquisição e manutenção.
 
-\subsection{Complete Blood Count (CBC)}
-Um \emph{Complete Blood Count (CBC)}, ou conhecido no Brasil como Hemograma, é um tipo de análise de sangue que envolve a contagem das diferentes células sanguíneas, que podem ser classificadas em glóbulos vermelhos, glóbulos brancos e plaquetas. A partir dos números obtidos através dessa contagem e com a comparação desse valor com as faixas de normalidade, é possível chegar a diversas conclusões sobre a saúde do paciente e até mesmo já identificar alguma doença.
+\subsection{Sangue}
+O sangue é um elemento do corpo humano, que circula em estado líquido através de todo o sistema circulatório do organismo, sendo de importância para o funcionamento correto das células através da entrada e saída de substâncias que podem modificar a sua composição.
 
-\subsubsection{Red Blood Cells (RBC)}
+Pode ser dividido em duas principais partes, sendo o plasma ou soro, a parte de transporte das substâncias pelo sistema, e é formado pela ingestão de água e alimentos, essas duas nomenclaturas existem de acordo com o uso ou não de anticoagulantes para a separação do sangue, onde dependendo do objetivo e foco da análise, se pode adotar uma ou outra.
+
+A segunda parte do sangue, que será objeto de estudo para este trabalho, é a parte celular que contém todas as células presentes no sangue e se classificam como glóbulos vermelhos, glóbulos brancos e plaquetas. Geralmente se é observado, a presença de eritrócitos, vários tipos e classes de leucócitos e as plaquetas como um todo, que serão abordados um a um posteriormente.
+
+\subsection{Hemograma}
+Um hemograma, ou como conhecido externamente como \emph{Complete Blood Count (CBC)}, é um exame bastante comum e muito utilizado, onde se realiza uma análise de sangue que envolve a contagem das diferentes células sanguíneas, que podem ser classificadas em glóbulos vermelhos, glóbulos brancos e plaquetas. A partir dos números obtidos através dessa contagem e com a comparação desse valor com as faixas de normalidade, é possível chegar a diversas conclusões sobre a saúde do paciente e até mesmo já identificar alguma doença.
+
+Um hemograma pode estar 
+
+Diferentes etapas
+
+Falar dos métodos
+
+\subsubsection{Glóbulos Vermelhos}
+Os glóbulos vermelhos, ou como conhecimento externamente como \emph{Red Blood Cells (RBC)}, ou células vermelhas do sangue.
+
+São células pequenas, circulares, com forma aproximada de discos bicôncavos, com 
+7,5 mm de diâmetro e sem núcleo. São os mais numerosos tios celulares no sangue. Embora 
+seu número seja variável, um milímetro cúbico de sangue contém cerca de 4.5 a 6.1
+milhões dessas células nos homens e cerca de 4.1 a 5.3 milhões nas mulheres. Essas células 
+circulam pelo sangue circulante durante o período de aproximadamente 120 dias antes que 
+sejam destruídas.
 
 \begin{figure}[!htb]
     \centering
@@ -21,8 +44,19 @@ Um \emph{Complete Blood Count (CBC)}, ou conhecido no Brasil como Hemograma, é 
     \legend{Fonte: Dataset BCDD}
     \label{fig:exemplo1}
  \end{figure}
+ 
+\subsubsection{Glóbulos Brancos}
+Os glóbulos brancos, ou como conhecimento externamente como \emph{White Blood Cells (WBC)}, ou células brancas do sangue.
 
-\subsubsection{White Blood Cells (WBC)}
+São elementos figurados do sangue que estão envolvidos no sistema de defesa do 
+organismo contra doenças e infecções. Por meio de fagocitose, eles defendem os tecidos 
+contra invasão de organismos ou substâncias estranhas, removendo também os restos 
+resultantes da morte ou de ferimentos celulares.Alguns leucócitos são capazes de passar 
+através da parede intacta dos vasos chamada de diapedese; agindo assim principalmente no 
+tecido conjuntivo frouxo.
+São transportados pelo sangue para todo o corpo, a partir da medula óssea, onde são 
+formados. Os leucócitos estão presentes no sangue em muito menor número que os
+eritrócitos, com cerca de 4.000 a 10.000 leucócitos por milímetro cúbico de sangue. 
 
 \begin{figure}[!htb]
     \centering
@@ -32,7 +66,8 @@ Um \emph{Complete Blood Count (CBC)}, ou conhecido no Brasil como Hemograma, é 
     \label{fig:exemplo2}
  \end{figure}
  
-\subsubsection{Platelets}
+\subsubsection{Plaquetas}
+As plaquetas, ou como conhecimento externamente como \emph{Platelets}.
 
 \begin{figure}[!htb]
     \centering
