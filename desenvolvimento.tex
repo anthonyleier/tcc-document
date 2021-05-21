@@ -1,5 +1,3 @@
-
-
 \chapter{Fundamentação Teórica}
 \label{chap:fund}
 
@@ -7,9 +5,9 @@ Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}
 
 \section{Exames Laboratoriais de Sangue}
 \label{sec:conceito1}
-Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples porém de extrema importância para a saúde humana. Através desse exame se pode descobrir diversas informações sobre o corpo da pessoa em questão, inclusive detectar doenças e problemas de forma antecipada, como por exemplo, para diagnosticar anemia, deficiências nutricionais, parasitemias, doenças virais e autoimunes, também é capaz de identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito de vários tipos de estresse sobre o corpo. \cite{bloodbook}
+Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples porém de extrema importância para a saúde humana. Através desse exame se pode descobrir diversas informações sobre o corpo da pessoa em questão, inclusive detectar doenças e problemas de forma antecipada, como por exemplo para diagnosticar anemia, deficiências nutricionais, parasitemias, doenças virais e autoimunes, também é capaz de identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito de vários tipos de estresse sobre o corpo. \cite{bloodbook}
 
-Um exame poderá ser solicitado por um médico responsável, ou a partir do interesse do próprio paciente, e realizado em um laboratório de confiança, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado para o paciente. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade é muito caro para aquisição e manutenção.
+Um exame poderá ser solicitado por um médico, ou a partir do interesse do próprio paciente, e realizado em um laboratório de confiança, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade é muito caro para aquisição e manutenção.
 
 \subsection{Sangue}
 O sangue é um elemento do corpo humano, que circula em estado líquido através de todo o sistema circulatório do organismo, sendo de importância para o funcionamento correto das células através da entrada e saída de substâncias que podem modificar a sua composição.
@@ -21,21 +19,40 @@ A segunda parte do sangue, que será objeto de estudo para este trabalho, é a p
 \subsection{Hemograma}
 Um hemograma, ou como conhecido externamente como \emph{Complete Blood Count (CBC)}, é um exame bastante comum e muito utilizado, onde se realiza uma análise de sangue que envolve a contagem das diferentes células sanguíneas, que podem ser classificadas em glóbulos vermelhos, glóbulos brancos e plaquetas. A partir dos números obtidos através dessa contagem e com a comparação desse valor com as faixas de normalidade, é possível chegar a diversas conclusões sobre a saúde do paciente e até mesmo já identificar alguma doença.
 
-Um hemograma pode estar 
+Um hemograma geralmente é realizado em duas principais etapas, sendo a primeira relacionada ao eritrograma que se refere ao estudo das células vermelhas, conseguindo revelar até mesmo alguns tipos essenciais de alterações patológicas do sistema eritropoético, que é o sistema responsável pela produção do material vermelho do sangue, como aumento na produção de glóbulos vermelhos e anemias. A segunda está relacionada com o leucograma, que corresponde a contagem global e específica dos leucócitos, a parte branca do sangue. O quadro leucocitário resultante com o exame hematológico, possibilita ao médico tirar importantes conclusões.
 
-Diferentes etapas
+Os principais critérios e classificações de células são abordados na maioria dos hemogramas produzidos por laboratórios, cada um deles será detalhado posteriormente.
 
-Falar dos métodos
+\textbf{Eritrograma}
+\begin{itemize}
+    \item Eritrócitos
+    \item Hemoglobina
+    \item VCM
+    \item GCM
+    \item CHCM
+    \item RDW
+\end{itemize}
+
+\textbf{Leucograma}
+\begin{itemize}
+    \item Leucócitos
+    \item Neutrófilos Bastonetes
+    \item Neutrófilos Segmentados
+    \item Eosinófilos
+    \item Basófilos
+    \item Linfócitos
+    \item Linfócitos Atípicos
+    \item Monócitos
+    \item Blastos
+    \item Promielócitos
+    \item Mielócitos
+    \item Metamielócitos
+\end{itemize}
+
+\textbf{Plaquetas}
 
 \subsubsection{Glóbulos Vermelhos}
-Os glóbulos vermelhos, ou como conhecimento externamente como \emph{Red Blood Cells (RBC)}, ou células vermelhas do sangue.
-
-São células pequenas, circulares, com forma aproximada de discos bicôncavos, com 
-7,5 mm de diâmetro e sem núcleo. São os mais numerosos tios celulares no sangue. Embora 
-seu número seja variável, um milímetro cúbico de sangue contém cerca de 4.5 a 6.1
-milhões dessas células nos homens e cerca de 4.1 a 5.3 milhões nas mulheres. Essas células 
-circulam pelo sangue circulante durante o período de aproximadamente 120 dias antes que 
-sejam destruídas.
+Os glóbulos vermelhos, ou como conhecimento externamente como \emph{Red Blood Cells (RBC)}, ou células vermelhas do sangue são pequenas e circulares, geralmente em formatos de discos e não possuem núcleo. As células vermelhas do sangue corresponde a grande maioria dos elementos sanguíneos, estando presente em grande quantidade. Essas células possuem uma vida útil de aproximadamente 120 dias até que o próprio sistema as elimine caso ainda estejam presentes.
 
 \begin{figure}[!htb]
     \centering
@@ -46,17 +63,17 @@ sejam destruídas.
  \end{figure}
  
 \subsubsection{Glóbulos Brancos}
-Os glóbulos brancos, ou como conhecimento externamente como \emph{White Blood Cells (WBC)}, ou células brancas do sangue.
+Os glóbulos brancos, ou como conhecimento externamente como \emph{White Blood Cells (WBC)}, ou células brancas do sangue são as células de defesa do organismo contra as principais ameaças do corpo humano presentes no sistema sanguíneo. Através da fagocitose, que é um processo de englobamento de partículas sólidas pela célula, elas realizam a defesa do sangue, contra a invasão de partículas estranhas. São criados na medula óssea e estão presentes em todo o sangue, também em grande quantidade.
 
-São elementos figurados do sangue que estão envolvidos no sistema de defesa do 
-organismo contra doenças e infecções. Por meio de fagocitose, eles defendem os tecidos 
-contra invasão de organismos ou substâncias estranhas, removendo também os restos 
-resultantes da morte ou de ferimentos celulares.Alguns leucócitos são capazes de passar 
-através da parede intacta dos vasos chamada de diapedese; agindo assim principalmente no 
-tecido conjuntivo frouxo.
-São transportados pelo sangue para todo o corpo, a partir da medula óssea, onde são 
-formados. Os leucócitos estão presentes no sangue em muito menor número que os
-eritrócitos, com cerca de 4.000 a 10.000 leucócitos por milímetro cúbico de sangue. 
+Existe também diferentes classificações e tipos de células brancas, onde no hemograma é necessário fazer a contagem a partir de cada uma dessas classificações.
+
+\begin{itemize}
+    \item \textbf{Neutrófilos}: células brancas mais abundantes capazes de entrar nos tecidos, onde conseguem realizar a defesa do organismos, fagocitando partículas estranhas. Essas células são conhecidas como Neutrófilos Segmentados, pois existe uma célula percursora, que é o bastão, ou também chamado de Neutrófilos Bastonetes, que possuem essa nomenclatura pois seu núcleo não está amadurecido, ou seja ainda são jovens, e geralmente são identificados quando há infecções em fase aguda. 
+    \item \textbf{Eosinófilos}: células brancas responsáveis na defesa contra parasitas, geralmente estão presentes em grande quantidade no sangue durante reações alérgicas e infestações parasitárias.
+    \item \textbf{Basófilos}: células brancas atuantes em respostas alérgicas e na coagulação do sangue. São capazes de liberar histamina, contribuindo para respostas alérgicas ao dilatar e permeabilizar os vasos sanguíneos e também liberam heparina que é capaz de prevenir a coagulação do sangue.
+    \item \textbf{Monócitos}: células brancas capaz de entrarem no tecido conjuntivo frouxo, onde conseguem se desenvolver em grandes células fagocíticas, com grande efeito fagocítico denominadas macrófagos, que conseguem ingerir partículas estranhas ao organismo.
+    \item \textbf{Linfócitos}: segundo tipo de células brancas mais abundante, são responsáveis e de extrema importância nas respostas imunes específicas do corpo humano, inclusive na produção de anticorpos.
+\end{itemize}
 
 \begin{figure}[!htb]
     \centering
