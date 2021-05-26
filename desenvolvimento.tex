@@ -26,7 +26,7 @@ Os glóbulos vermelhos, também conhecidos como \emph{Red Blood Cells (RBC)}, s�
     \caption{Glóbulos Vermelhos (RBC)}
     \includegraphics[width=0.40\textwidth]{img/rbc.jpg}
     \legend{Fonte: \cite{datasetBCCD}}
-    \label{fig:fig1}
+    \label{fig:rbc}
  \end{figure}
  
 \subsubsection{Glóbulos Brancos}
@@ -39,7 +39,7 @@ Se faz necessário a classificação dos diferentes tipos de células brancas e 
     \caption{Glóbulos Brancos (WBC)}
     \includegraphics[width=0.40\textwidth]{img/wbc.jpg}
     \legend{Fonte: \cite{datasetBCCD}}
-    \label{fig:fig2}
+    \label{fig:wbc}
  \end{figure}
  
 \begin{itemize}
@@ -60,7 +60,7 @@ Devido ao fato de serem fragmentos de uma célula, as plaquetas não possuem nú
     \caption{Plaquetas (Platelets)}
     \includegraphics[width=0.40\textwidth]{img/plt.jpg}
     \legend{Fonte: \cite{datasetBCCD}}
-    \label{fig:exemplo3}
+    \label{fig:plaquetas}
  \end{figure}
  
 \subsection{Hemograma}
@@ -73,15 +73,42 @@ O objetivo do eritrograma ao realizar a análise da parte vermelha do sangue, é
 
 Depois dessa principal contagem é calculado alguns índices importantes, sendo o primeiro deles o cálculo do volume corpuscular médio (VCM), que é o volume médio das hemácias, calculado pelo quociente de um determinado volume de hemácias pelo número de células contidas no mesmo volume. Outro importante atributo é a hemoglobina corpuscular média (HCM), que semelhante ao VCM, é o conteúdo médio da hemoglobina, calculado pelo quociente de conteúdo de hemoglobina em um determinado volume de hemácias pelo número de células contidas no mesmo volume \cite{interpretacaoHemograma, manualHematologia}.
 
-Também temos outro índice que é a concentração de hemoglobina corpuscular média (CHCM), sendo a percentagem da hemoglobina em uma amostra de 100ml de hemácias. Por fim temos, a amplitude de distribuição dos glóbulos vermelhos, que em inglês significa \emph{Red Cell Distribution Width (RDW)}, que será responsável por avaliar a variação de tamanho entre as hemácias \cite{interpretacaoHemograma, manualHematologia}. 
+Também temos outro índice que é a concentração de hemoglobina corpuscular média (CHCM), sendo a percentagem da hemoglobina em uma amostra de 100ml de hemácias. Por fim temos, a amplitude de distribuição dos glóbulos vermelhos, que em inglês significa \emph{Red Cell Distribution Width (RDW)}, que será responsável por avaliar a variação de tamanho entre as hemácias \cite{interpretacaoHemograma, manualHematologia}.
 
+\begin{figure}[!htb]
+    \centering
+    \caption{Exemplo de Eritrograma e seus Atributos}
+    \includegraphics[width=0.80\textwidth]{img/eritrograma.jpg}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:hemograma}
+ \end{figure}
+ 
 \subsubsection{Leucograma}
 O objetivo do leucograma ao realizar a análise da parte branca do sangue, assim como no eritrograma, é analisar alguns atributos chave, porém diferente do processo anterior, essa etapa terá um foco muito maior na classificação e contagem de diferentes células brancas.
 
 Primeiramente é feita uma contagem geral de leucócitos em mm³. Depois é realizada a contagem de forma a classificar cada tipo de leucócito presente, com neutrófilos, eosinófilos, basófilos, linfócitos, monócitos e também os granulócitos imaturos (promielócitos, mielócitos, metamielócitos). Por fim, também é calculado o número presente de plaquetas no sangue em mm³ \cite{interpretacaoHemograma, manualHematologia}.
 
-\section{Deep Learning}
+\begin{figure}[!htb]
+    \centering
+    \caption{Exemplo de Leucograma e seus Atributos}
+    \includegraphics[width=0.80\textwidth]{img/leucograma.jpg}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:hemograma}
+ \end{figure}
+
+\section{Machine Learning e Deep Learning}
 \label{sec:conceito2}
+
+\subsection{Machine Learning}
+Machine Learning e Deep Learning
+Machine Learning: Raso, direto ao ponto, principais aplicações, supervisionado ou não, classificação e regressão.
+
+\subsection{Deep Learning}
+Deep Learning: Aprofundar, falar como subseção de Machine Learning e seus estudos, aplicar para imagens, como que funciona, citar bibliotecas e links como Tensorflow e Keras de forma a mostrar que sabe como fazer. Utilizar também algum exemplo de tratamento de imagens. 
+
+\subsubsection{Algoritmos e Abordagens}
+Algoritmos: Falar sobre os principais algoritmos utilizados e quais as vantagens e desvantagens, e também de métodos de medição da qualidade do modelo, ou seja, métricas.
+
 
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
@@ -94,9 +121,10 @@ O mapeamento sistemático da literatura é realizado com base na busca e levanta
 
 As questões de pesquisas levantadas para isso foram, ``Como os algoritmos de Deep Learning podem ser utilizados para a interpretação de exames?'' e ``Como realizar o tratamento de imagens para reconhecimento por modelos de Deep Learning?''. A partir dessas questões se foram extraídas palavras e termos para o direcionamento da pesquisa. Podemos visualizar estas palavras com seus sinônimos na Tabela 1.
 
-\begin{center}
-Tabela 1 - Tabela com Palavras-Chave e Sinônimos
-\begin{center}
+\begin{table}[!htb]
+\centering
+\caption{Palavras-Chave e Sinônimos}
+\label{tbl:palavrasChave}
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Palavra-Chave} & \textbf{Sinônimos} \\ \hline
@@ -104,16 +132,16 @@ Blood Analysis & Blood Sample \\ \hline
 Classification & Interpretation, Recognition \\ \hline
 Deep Learning & Artificial Intelligence, Computer Vision, Machine Learning \\ \hline
 \end{tabular}
-\end{center}
-Fonte: Elaborada pelo Autor
-\end{center}
+\vspace{6pt}
+\legend{Fonte: Elaborada pelo autor.}
+\end{table}
 
 Na Tabela 2, é listado as bases de dados onde os artigos foram coletados, a quantidade de cada um de les e a string de busca utilizada na seleção. A mesma string de busca foi utilizado nas três bases de dados, e os artigos encontrados foram dos últimos 5 anos.
 
-\clearpage
-\begin{center}
-Tabela 2 - Bases de Dados e Quantidade de Artigos Selecionados
-\begin{center}
+\begin{table}[!htb]
+\centering
+\caption{Bases de Dados e Número de Artigos Selecionados}
+\label{tbl:basesDeDados}
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Base de Dados} & \textbf{Artigos} & \textbf{String de Busca} \\ \hline
@@ -124,17 +152,18 @@ Tabela 2 - Bases de Dados e Quantidade de Artigos Selecionados
 \multirow{2}{*}{Scopus} & \multirow{2}{*}{114} &  \\
  &  &  \\ \hline
 \end{tabular}
-\end{center}
-Fonte: Elaborada pelo Autor
-\end{center}
+\vspace{6pt}
+\legend{Fonte: Elaborada pelo autor.}
+\end{table}
 
 \subsection{Critérios de Exclusão}
 
 Os artigos coletados na pesquisa através da string de busca, passaram por critérios de exclusão por não se adequarem a esta pesquisa, esses critérios podem ser observados na Tabela 3. 
 
-\begin{center}
-Tabela 3 - Critérios de Exclusão
-\begin{center}
+\begin{table}[!htb]
+\centering
+\caption{Critérios de Exclusão}
+\label{tbl:exclusao}
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Critério de Exclusão} & \textbf{Nº de Artigos Recusados} \\ \hline
@@ -143,9 +172,9 @@ O estudo apresenta resultados fora da computação & 29 \\ \hline
 O estudo não é um estudo primário & 6 \\ \hline
 O estudo é duplicado & 16 \\ \hline
 \end{tabular}
-\end{center}
-Fonte: Elaborada pelo Autor
-\end{center}
+\vspace{6pt}
+\legend{Fonte: Elaborada pelo autor.}
+\end{table}
 
 A seleção inciou com 164 artigos no total das três bases de dados buscadas. Com a aplicação dos critérios de exclusão, observa-se um resultante de apenas 14 artigos. Isso ocorreu pois 101 artigos foram eliminados no critério ``O estudo não faz parte da área de pesquisa'', que significa que esses artigos tinham alguma relação, porém eram voltados a outras áreas. Outros 29 artigos foram eliminados no critério ``O estudo apresenta resultados fora da computação'', que significa que eram da área de pesquisa, porém com resultados e métodos sem conexão com a computação. Foram também encontrados 6 artigos, que entraram no critério ``O estudo não é um estudo primário'', o que indica que o artigo pode ser uma revisão sistemática da literatura ou semelhante. Por fim, foram eliminados outros 16 artigos por serem duplicados.
 
@@ -160,9 +189,10 @@ Os seguintes critérios de inclusão foram definidos:
 
 Na tabela 4, podemos encontrar todos os 14 artigos selecionados com base nos critérios de inclusão, todos eles se enquadram em pelo menos um deles.
 
-\begin{center}
-Tabela 4 - Artigos Selecionados
-\begin{center}
+\begin{table}[!htb]
+\centering
+\caption{Artigos Selecionados}
+\label{tbl:mapeamento}
 \begin{tabular}{|c|l|l|}
 \hline
 \textbf{ID} & \multicolumn{1}{c|}{\textbf{Título do Artigo}} & \multicolumn{1}{c|}{\textbf{Autores}} \\ \hline
@@ -179,9 +209,9 @@ A10 & \begin{tabular}[c]{@{}l@{}}Convolutional neural network and decision \\ su
 A11 & \begin{tabular}[c]{@{}l@{}}Combining Convolutional Neural Network\\ With Recursive Neural Network \\ for Blood Cell Image Classification\end{tabular} & \begin{tabular}[c]{@{}l@{}}Liang, G. and Hong, H. and Xie, W. and\\ Zheng, L.\end{tabular} \\ \hline
 A12 & \begin{tabular}[c]{@{}l@{}}Blood diseases detection using \\ classical machine learning algorithms\end{tabular} & Alsheref, F.K. and Gomaa, W.H. \\ \hline
 \end{tabular}
-\end{center}
-Fonte: Elaborada pelo Autor
-\end{center}
+\vspace{6pt}
+\legend{Fonte: Elaborada pelo autor.}
+\end{table}
 
 Todos os artigos selecionados estão relacionados à maneiras e recursos para auxiliar na interpretação de exames de sangue utilizando conceitos de Deep Learning e Machine Learning.
 
