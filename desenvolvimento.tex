@@ -96,19 +96,99 @@ Primeiramente é feita uma contagem geral de leucócitos em mm³. Depois é real
     \label{fig:leucograma}
  \end{figure}
 
-\section{Machine Learning e Deep Learning}
+\section{Inteligência Artificial: Machine Learning e Deep Learning}
 \label{sec:conceito2}
+A abordagem de Deep Learning que é objeto de estudo desse trabalho é uma das subareas de Machine Learning que por sua vez é subarea de Inteligência Artificial, portanto antes de abordar cada um desses conceitos, quais suas diferenças e aplicações, se faz necessário explicar e citar sobre a Inteligência Artificial.
+
+A Inteligência Artificial é uma abordagem para a resolução de problemas de diversas naturezas através de uma forma automatizada, ou seja, é uma maneira de se resolver problemas sem a necessidade de um humano ou usuário específico para esse trabalho. Essa área está muito em alta nos dias de hoje, buscando cada vez novas maneiras de automatizar a vida humana. Podemos encontrar essa abordagem em diversos segmentos da indústria e atualmente também vem crescendo o uso dentro das residências para os mais diversos usos.
+
+O intuito dessa área é buscar formas de ensinar máquinas e computadores a serem capazes de ter uma inteligência cada vez mais semelhante aos seres humanos, isso ocorre geralmente através do reconhecimento de padrões por esses dispositivos, onde eles serão ensinados a analisar dados e interpretar de alguma forma, muito semelhante ao que acontece para o aprendizado de seres humanos. Porém, diferente de nós, as máquinas geralmente precisam de um volume massivo de dados para que sejam capazes de aprender algo básico.
 
 \subsection{Machine Learning}
-Machine Learning e Deep Learning
-Machine Learning: Raso, direto ao ponto, principais aplicações, supervisionado ou não, classificação e regressão.
+A resolução de problemas através de ferramentas da computação é bastante comum e para isso se faz uso de algortmos programados para essa finalidade específica, porém não é em todos os problemas que podemos aplicar essa abordagem tradicional, devido ao fato de que nem sempre se sabe um caminho único de etapas a serem seguidas para resolução dos problemas. No caso, quando se sabe a entrada de dados e o resultado onde queremos chegar, mas não os meios para se chegar nesse resultado, se deve utilizar um modelo de Machine Learning para realizar a predição. Podemos pensar que na abordagem de algoritmos tradicionais de programação possuímos os parametros necessários e conhecemos o método para assim chegar ao resultado, mas na aplicação de machine learning, conhecemos os parametros e o resultado, porém o método será aprendido e apresentado pela máquina. %Citar o livro 1
+
+Podemos pensar em um modelo de Machine Learning como uma criança que está a aprender algo novo, logo todo modelo passará por três principais etapas, primeiramente o pré-processamento dos dados, depois pela fase de treinamento e por fim será realizado os devidos testes. Dessa forma, um modelo de Machine Learning deverá ser treinado antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados por cada um deles. Dessa forma o modelo poderá aprender a entender e interpretar os dados de forma correta, para assim ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados.
+
+Após o treinamento do modelo como um todo, na fase de teste, para testar e avaliar o treinamento do modelo, também é possível aplicar algumas formas e técnicas para medir o desempenho como um todo, apontando fatores interessantes como o nível de assertividade, a precisão e também o número de acertos e erros relacionados com falsos positivos e falsos negativos através de uma matriz de confusão.
+
+%Imagem da Matriz de Confusão
+
+Existem várias abordagens de Machine Learning e elas podem ser classificadas em várias categorias diferentes, porém sempre podemos dividir em duas principais abordagens mais utilizadas, sendo elas a regressão e a classificação. Os modelos de regressão serão responsáveis pela predição de valores reais, enquanto que os modelos de classificação serão responsáveis pela rotulação dos dados em determinadas classes. Além disso, também podemos classficar os algoritmos em supervisionados ou não supervisionados. No aprendizado supervisionado, sabemos o resultado correto, ou seja, onde o modelo deverá chegar a partir dos dados obtidos, porém no aprendizado não supervisionado, o modelo terá que lidar com dados não estruturados e sem um resultado claro. %Citar livro 2
 
 \subsection{Deep Learning}
-Deep Learning: Aprofundar, falar como subseção de Machine Learning e seus estudos, aplicar para imagens, como que funciona, citar bibliotecas e links como Tensorflow e Keras de forma a mostrar que sabe como fazer. Utilizar também algum exemplo de tratamento de imagens. 
+Existe alguns casos que o Machine Learning não é suficiente para o aprendizado a partir dos dados, isso ocorre pois o aprendizado acontece através de reconhecimento de padrões com base nos dados e esses dados não podem ser utilizados de qualquer forma, devem ser preparados e adaptados para cada modelo, ou seja, a máquina não será capaz de aprender por conta própria pois sempre precisará de intervensão humana para o processamento dos dados. Logo se necessita de uma abordagem muito mais parecida com a forma de pensar dos seres humanos, como o Deep Learning. %Citar livro penultimo
 
-\subsubsection{Algoritmos e Abordagens}
-Algoritmos: Falar sobre os principais algoritmos utilizados e quais as vantagens e desvantagens, e também de métodos de medição da qualidade do modelo, ou seja, métricas.
+O Deep Learning busca uma abordagem bastante parecida com o cérebro humano, isso acontece pois utiliza uma estrutura composta de perceptrons, que são uma versão computadorizada de algo parecido com um neurônio humano. O perceptron será capaz de receber inputs, ou seja dados de entrada, e reproduzir uma saída esperada, bastante parecido com os modelos de machine learning como visto anteriormente, porém a diferança desse método é a sua utilização, pois não se usará apenas um perceptron, para se assemelhar ao cérebro humano serão utilizados diversos perceptrons, em diferentes camadas dentro do modelo, podemos chamar toda essa estrutura de rede neural artificial ou artificial neural network (ANN). %Conferir e complementar sobre o Perceptron %Falar de Neural Network %Citar ultimo Livro
 
+As camadas utilizadas no Deep Learning, podem conter um número variável de perceptrons. Onde geralmente se adotará uma camada de entrada para os inputs e uma camada de saída para os outputs, que são justamente o resultado esperado ou proposto. Entre essas camadas terá as camadas ocultas, que serão responsáveis por toda a parte lógica do sistema. %Falar mais sobre as camadas
+
+Como a ANN Aprende?
+A ANN aprende com base no uso de um algoritmo de backpropagation, que significa propagação regressiva, durante o treinamento ocorre o uso desse recurso, onde primeiramente ele irá inicialiar a rede com pesos aleatórios,
+
+2. For all training cases, follow these steps:
+° Forward pass: Calculates the network's error, that is, the difference 
+between the desired output and the actual output
+° Backward pass: For all layers, starting with the output layer back to 
+input layer:
+i: Shows the network layer's output with the correct input (error 
+function).
+ii: Adapts the weights in the current layer to minimize the error 
+function. This is backpropagation's optimization step.
+
+O processo de treinamento irá terminar quando o erro no dataset de validação começar aumentar, isso ocorre pois nesse momento ocorre o inicio de uma fase de overfitting, onde basicamente o algoritmo não será capaz de interpretar novos dados a não ser aqueles que ele foi treinado.
+
+The training process ends when the error on the validation set begins to increase 
+because this could mark the beginning of a phase overfitting, that is, the phase 
+in which the network tends to interpolate the training data at the expense of 
+generalizability.
+
+Otimização dos pesos
+A Otimização de pesos é um componente essencial para uma rede neural funcionar, para isso são escolhidos valores aleátorios como parâmetros iniciais para o modelo, é computado
+
+
+
+Weight optimization
+The availability of efficient algorithms to optimize weights, therefore, constitutes an 
+essential tool for the construction of neural networks. The problem can be solved 
+with an iterative numerical technique called Gradient Descent (GD). This technique
+works according to the following algorithm:
+1. Randomly choose initial values for the parameters of the model
+2. Compute the gradient G of the error function with respect to each parameter 
+of the model
+3. Change the model's parameters so that they move in the direction of 
+decreasing the error, that is, in the direction of -G
+4. Repeat steps 2 and 3 until the value of G approaches zero
+The gradient (G) of the error function E provides the direction in which the error 
+function with the current values has the steeper slope; so to decrease E, we have to 
+make some small steps in the opposite direction, -G.
+By repeating this operation several times in an iterative manner, we move down
+towards the minimum of E, to reach a point where G = 0, in such a way that no 
+further progress is possible:
+
+
+%Possivel Imagem de ajuste de pesos
+
+The learning process of a neural network is configured as an iterative process of the 
+optimization of the weights and is therefore of the supervised type. The weights are 
+modified because of the network's performance on a set of examples belonging to the 
+training set, that is, the set where you know the classes that the examples belong to. 
+The aim is to minimize the loss function, which indicates the degree to which the 
+behavior of the network deviates from the desired behavior. The performance of the 
+network is then verified on a testing set consisting of objects (for example, images in 
+an image classification problem) other than those in the training set.
+
+\subsubsection{Métodos}
+DNN E depois CNN e RNN
+Convolutional Neural Network (CNN)
+%Diferentes tipos de organizações de camadas
+%Imagens
+
+\subsubsection{Bibliotecas e Recursos}
+%TensorFlow e Keras
+%Exemplo do TensorFlow de imagens
+%Citar livro 3
+
+%Todos os livros que eu peguei tem boas referências
 
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
