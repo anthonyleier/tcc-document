@@ -5,14 +5,14 @@ Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}
 
 \section{Exames Laboratoriais de Sangue}
 \label{sec:conceito1}
-Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples porém de extrema importância para a saúde humana. Através desses exames se pode descobrir diversas informações sobre o organismo da pessoa em questão, inclusive detectar doenças e problemas de forma antecipada, como por exemplo para diagnosticar anemia, deficiências nutricionais, parasitas no sangue, doenças virais e autoimunes. Também é possível se identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito de vários tipos de estresse sobre o corpo \cite{abcOfCbc, atlasDeHematologiaEAnalise}.
+Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples porém de extrema importância para a saúde humana. Através desses exames pode-se descobrir diversas informações sobre o organismo da pessoa em questão, inclusive detectar doenças e problemas de forma antecipada, como por exemplo para diagnosticar anemia, deficiências nutricionais, parasitas no sangue, doenças virais e autoimunes. Também é possível identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito de vários tipos de estresse sobre o corpo \cite{abcOfCbc, atlasDeHematologiaEAnalise}.
 
 Um exame poderá ser solicitado por um médico, ou a partir do interesse do próprio paciente, e realizado em um laboratório de confiança, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade é muito caro para aquisição e manutenção.
 
 \subsection{Sangue}
 O sangue é um elemento do corpo humano, que circula em estado líquido através de todo o sistema circulatório do organismo, sendo de importância para o funcionamento correto das células através da entrada e saída de substâncias que podem modificar a sua composição \cite{manualHematologia}.
 
-Pode ser dividido em duas principais partes, sendo o plasma ou soro, a parte de transporte das substâncias pelo sistema, formado pela ingestão de água e alimentos, essas duas nomenclaturas existem de acordo com o uso ou não de anticoagulantes para a separação do sangue, onde dependendo do objetivo e foco da análise, se pode adotar uma ou outra \cite{manualHematologia}.
+Pode ser dividido em duas principais partes: o plasma (ou soro) e a parte celular. O plasma é a principal parte de transporte de substâncias pelo sistema, sendo este formado pela ingestão de água e alimentos. Também pode ser chamado de soro, sendo possível diferenciá-los pela presença ou não de anticoagulantes utilizados dependendo do tipo da análise buscada e da intenção da pesquisa \cite{manualHematologia}.
 
 A segunda parte do sangue, que será objeto de estudo para este trabalho, é a parte celular que contém todas as células presentes no sangue e se classificam como glóbulos vermelhos, glóbulos brancos e plaquetas. Geralmente observa-se a presença de eritrócitos, vários tipos e classes de leucócitos e as plaquetas como um todo, que serão abordados um a um posteriormente \cite{manualHematologia}.
 
@@ -32,7 +32,7 @@ Os glóbulos vermelhos, também conhecidos como \emph{Red Blood Cells (RBC)}, s�
 \subsubsection{Glóbulos Brancos}
 Os glóbulos brancos, também conhecidos como \emph{White Blood Cells (WBC)}, são as células brancas do sangue, sendo responsáveis pela defesa do organismo contra as principais ameaças do corpo humano presentes no sistema sanguíneo. Através da fagocitose, que é um processo de englobamento de partículas sólidas pelas células, é realizado ações de defesa contra a invasão de fragmentos estranhos. Os glóbulos brancos são criados na medula óssea e estão presentes em todo o sangue, também em grande quantidade \cite{manualHematologia}.
 
-Se faz necessário a classificação dos diferentes tipos de células brancas e de suas importâncias para o sistema de defesa do organismo. É importante frisar que essa classificação se refere aos leucócitos maduros, mas também se pode encontrar presente os leucócitos imaturos (promielócitos, mielócitos, metamielócitos) \cite{manualHematologia}.
+Se faz necessário a classificação dos diferentes tipos de células brancas e de suas importâncias para o sistema de defesa do organismo. É importante frisar que essa classificação se refere aos leucócitos maduros, mas também pode-se encontrar presente os leucócitos imaturos (promielócitos, mielócitos, metamielócitos) \cite{manualHematologia}.
 
 \begin{figure}[!htb]
 	\centering
@@ -51,7 +51,7 @@ Se faz necessário a classificação dos diferentes tipos de células brancas e 
 \end{itemize}
 
 \subsubsection{Plaquetas}
-As plaquetas, também conhecidas e citadas como \emph{Platelets}, são os menores componentes do sangue e possuem grande responsabilidade na hemostasia, que é uma resposta fisiológica para a prevenção e interrupção de sangramentos e hemorragias, ou seja, elas atuam na manutenção dos vasos sanguíneos. As plaquetas são fragmentos do citoplasma de megacariócitos, ou seja, elas são produzidas na medula óssea como parte dessas células especializadas que irão se dividir posteriormente e gerar um grande número de plaquetas. Aproximadamente, para cada 1 megacariócito, se pode produzir cerca de 4000 plaquetas \cite{abcOfCbc}.
+As plaquetas, também conhecidas e citadas como \emph{Platelets}, são os menores componentes do sangue e possuem grande responsabilidade na hemostasia, que é uma resposta fisiológica para a prevenção e interrupção de sangramentos e hemorragias, ou seja, elas atuam na manutenção dos vasos sanguíneos. As plaquetas são fragmentos do citoplasma de megacariócitos, ou seja, elas são produzidas na medula óssea como parte dessas células especializadas que irão se dividir posteriormente e gerar um grande número de plaquetas. Aproximadamente, para cada 1 megacariócito, pode-se produzir cerca de 4000 plaquetas \cite{abcOfCbc}.
 
 Devido ao fato de serem fragmentos de uma célula, as plaquetas não possuem núcleo e são muito pequenas, com aproximadamente de 1–3 µm de diâmetro, com a coloração azul-acinzentado. A vida útil das plaquetas dura em média de 9 a 12 dias, e elas são removidas pelo baço quando estão velhas ou danificadas \cite{abcOfCbc}.
 
@@ -176,7 +176,7 @@ As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande v
 Essa eficiência se deve também ao fato de que uma CNN quando aprender a interpretar algum recurso ou elemento específico na imagem, ela será capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprenderia a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
 
 \subsubsection{Bibliotecas e Recursos}
-Para se trabalhar com \emph{Deep Learning} e seus principais arquiteturas e recursos, existem algumas bibliotecas disponíveis no mercado de forma gratuita para esse facilitar e orientar esse trabalho. Dessa forma, se pode encontrar o Tensorflow e o Keras, que são duas bibliotecas desenvolvidas em Python e C++, com a possibilidade de se trabalhar em conjunto bastante utilizadas pela comunidade de \emph{Deep Learning} em geral \cite{deepLearningTensorFlow}.
+Para se trabalhar com \emph{Deep Learning} e seus principais arquiteturas e recursos, existem algumas bibliotecas disponíveis no mercado de forma gratuita para esse facilitar e orientar esse trabalho. Dessa forma, pode-se encontrar o Tensorflow e o Keras, que são duas bibliotecas desenvolvidas em Python e C++, com a possibilidade de se trabalhar em conjunto bastante utilizadas pela comunidade de \emph{Deep Learning} em geral \cite{deepLearningTensorFlow}.
 
 Através da documentação do Tensorflow, é possível encontrar informações para desenvolver uma rede neural convolucional por exemplo, onde existe toda a parte teórica e também a demonstração de um exemplo prático voltado a esse fim. Também é possível através dessa biblioteca e da sua documentação estar realizando a classificação de imagens com base em um \emph{dataset} de imagens \cite{websiteTensorFlow}.
 
@@ -188,7 +188,7 @@ Através da documentação do Tensorflow, é possível encontrar informações p
 	\label{fig:tensorflowExample}
 \end{figure}
 
-Nesse \emph{dataset} se encontra 3700 fotos de flores em 5 classes distintas, que irão passar pelo tratamento das imagens, divisão do \emph{dataset} em treino e teste, criação do modelo como um todo e o treinamento do modelo. Com isso é possível chegar aos resultados do treinamento comparando seu desempenho no \emph{dataset} de testes, além disso também é interessante prever novos dados externos ao \emph{dataset} para observar como o modelo se comporta e com isso tudo se pode realizar melhorias e adaptações tanto no modelo quanto no \emph{dataset} para obter resultados ainda melhores \cite{websiteTensorFlow}.
+Nesse \emph{dataset} se encontra 3700 fotos de flores em 5 classes distintas, que irão passar pelo tratamento das imagens, divisão do \emph{dataset} em treino e teste, criação do modelo como um todo e o treinamento do modelo. Com isso é possível chegar aos resultados do treinamento comparando seu desempenho no \emph{dataset} de testes, além disso também é interessante prever novos dados externos ao \emph{dataset} para observar como o modelo se comporta e com isso tudo pode-se realizar melhorias e adaptações tanto no modelo quanto no \emph{dataset} para obter resultados ainda melhores \cite{websiteTensorFlow}.
 
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
@@ -320,7 +320,7 @@ A Tabela \ref{tbl:cronograma} apresenta o cronograma de atividades propostas par
 	\caption{Cronograma das atividades previstas.}
 	\label{tbl:cronograma}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
-\hline
+\hline 
 \multicolumn{1}{|c|}{\textbf{Etapa}} & \multicolumn{10}{c|}{\textbf{Meses}} \\ \hline
  & Fev & Mar & Abr & Mai & Jun & Ago & Set & Out & Nov & Dez \\ \hline
 Fundamentação Teórica & X & X &  &  &  &  &  &  &  &  \\ \hline
