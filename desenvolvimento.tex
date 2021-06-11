@@ -17,9 +17,11 @@ Pode ser dividido em duas principais partes: o plasma (ou soro) e a parte celula
 A segunda parte do sangue, que será objeto de estudo para este trabalho, é a parte celular que contém todas as células presentes no sangue e se classificam como glóbulos vermelhos, glóbulos brancos e plaquetas. Geralmente observa-se a presença de eritrócitos, vários tipos e classes de leucócitos e as plaquetas como um todo, que serão abordados um a um posteriormente \cite{manualHematologia}.
 
 \subsubsection{Glóbulos Vermelhos}
-Os glóbulos vermelhos, também conhecidos como \emph{Red Blood Cells (RBC)}, são as hemácias presentes no sangue, também podem ser citadas em exames e registros médicos como eritrócitos, essas células são pequenas e circulares, geralmente em formatos de discos e não possuem núcleo. Estão presentes em grande quantidade, possuindo uma vida útil de aproximadamente 120 dias até que o próprio sistema as elimine \cite{manualHematologia}.
+Os glóbulos vermelhos, também conhecidos como \emph{Red Blood Cells (RBC)}, são as hemácias presentes no sangue, também podem ser citadas em exames e registros médicos como eritrócitos. Essas células são pequenas e circulares, geralmente em formatos de discos e não possuem núcleo. Estão presentes em grande quantidade, possuindo uma vida útil de aproximadamente 120 dias até que o próprio sistema as elimine \cite{manualHematologia}.
 
 É indispensável ao falar sobre a parte vermelha do sangue, citar a hemoglobina que é uma proteína presente nas hemácias e de extrema importância para o funcionamento do sistema, pois através dela é possível realizar o transporte de oxigênio e gás carbônico pelo sistema sanguíneo, permitindo as trocas gasosas necessárias \cite{manualHematologia}.
+
+Podemos perceber a presença dos glóbulos vermelhos na imagem \ref{fig:rbc}, onde estão em grande quantidade em comparação com as outras células. 
 
 \begin{figure}[!htb]
 	\centering
@@ -28,20 +30,14 @@ Os glóbulos vermelhos, também conhecidos como \emph{Red Blood Cells (RBC)}, s�
 	\legend{Fonte: \cite{datasetBCCD}}
 	\label{fig:rbc}
 \end{figure}
+
+A imagem \ref{fig:rbc} foi retirada de um \emph{dataset} específico de classificação de células sanguíneas, classificando em RBC (Red Blood Cells) para glóbulos vermelhos, WBC (White Blood Cells) para glóbulos brancos e Platelets para plaquetas.
  
 \subsubsection{Glóbulos Brancos}
-Os glóbulos brancos, também conhecidos como \emph{White Blood Cells (WBC)}, são as células brancas do sangue, sendo responsáveis pela defesa do organismo contra as principais ameaças do corpo humano presentes no sistema sanguíneo. Através da fagocitose, que é um processo de englobamento de partículas sólidas pelas células, é realizado ações de defesa contra a invasão de fragmentos estranhos. Os glóbulos brancos são criados na medula óssea e estão presentes em todo o sangue, também em grande quantidade \cite{manualHematologia}.
+Os glóbulos brancos, também conhecidos como \emph{White Blood Cells (WBC)}, são as células brancas do sangue, sendo responsáveis pela defesa do organismo contra as principais ameaças do corpo humano presentes no sistema sanguíneo. Através da fagocitose, que é um processo de englobamento de partículas sólidas pelas células, são realizadas ações de defesa contra a invasão de fragmentos estranhos. Os glóbulos brancos são criados na medula óssea e estão presentes em todo o sangue, também em grande quantidade \cite{manualHematologia}.
 
 Se faz necessário a classificação dos diferentes tipos de células brancas e de suas importâncias para o sistema de defesa do organismo. É importante frisar que essa classificação se refere aos leucócitos maduros, mas também pode-se encontrar presente os leucócitos imaturos (promielócitos, mielócitos, metamielócitos) \cite{manualHematologia}.
 
-\begin{figure}[!htb]
-	\centering
-	\caption{Glóbulos Brancos (WBC)}
-	\includegraphics[width=0.40\textwidth]{img/wbc.jpg}
-	\legend{Fonte: \cite{datasetBCCD}}
-	\label{fig:wbc}
-\end{figure}
- 
 \begin{itemize}
 	\item \textbf{Neutrófilos}: células brancas mais abundantes capazes de entrar nos tecidos, onde conseguem realizar a defesa do organismo, fagocitando partículas estranhas. Essas células são conhecidas como neutrófilos segmentados, pois existe uma célula percursora, que é o bastão, ou também chamado de neutrófilos bastonetes, que possuem essa nomenclatura pois seu núcleo não está amadurecido, ou seja ainda são jovens, e geralmente são identificados quando há infecções em fase aguda. 
 	\item \textbf{Eosinófilos}: células brancas responsáveis na defesa contra parasitas, geralmente estão presentes em grande quantidade no sangue durante reações alérgicas e infestações parasitárias.
@@ -50,10 +46,24 @@ Se faz necessário a classificação dos diferentes tipos de células brancas e 
 	\item \textbf{Linfócitos}: segundo tipo de célula branca mais abundante, são responsáveis e de extrema importância nas respostas imunes específicas do corpo humano, inclusive na produção de anticorpos.
 \end{itemize}
 
+Podemos perceber também na imagem \ref{fig:wbc} a presença dos glóbulos brancos entre os vermelhos.
+
+\begin{figure}[!htb]
+	\centering
+	\caption{Glóbulos Brancos (WBC)}
+	\includegraphics[width=0.40\textwidth]{img/wbc.jpg}
+	\legend{Fonte: \cite{datasetBCCD}}
+	\label{fig:wbc}
+\end{figure}
+
+Com visto na imagem \ref{fig:wbc}, embora existam várias classificações de glóbulos brancos, no \emph{dataset} onde a imagem foi coletada não era objetivo de estudo realizar essa análise específica de cada célula.
+
 \subsubsection{Plaquetas}
 As plaquetas, também conhecidas e citadas como \emph{Platelets}, são os menores componentes do sangue e possuem grande responsabilidade na hemostasia, que é uma resposta fisiológica para a prevenção e interrupção de sangramentos e hemorragias, ou seja, elas atuam na manutenção dos vasos sanguíneos. As plaquetas são fragmentos do citoplasma de megacariócitos, ou seja, elas são produzidas na medula óssea como parte dessas células especializadas que irão se dividir posteriormente e gerar um grande número de plaquetas. Aproximadamente, para cada 1 megacariócito, pode-se produzir cerca de 4000 plaquetas \cite{abcOfCbc}.
 
 Devido ao fato de serem fragmentos de uma célula, as plaquetas não possuem núcleo e são muito pequenas, com aproximadamente de 1–3 µm de diâmetro, com a coloração azul-acinzentado. A vida útil das plaquetas dura em média de 9 a 12 dias, e elas são removidas pelo baço quando estão velhas ou danificadas \cite{abcOfCbc}.
+
+Podemos perceber também através da imagem \ref{fig:plaquetas}, a presença do último elemento visível abordado por este trabalho no \emph{dataset} utilizado como base. Onde é possível visualizar múltiplas plaquetas agrupadas em um dos cantos da imagem, além de outras no meio dos demais elementos do sangue.
 
 \begin{figure}[!htb]
 	\centering
@@ -62,18 +72,20 @@ Devido ao fato de serem fragmentos de uma célula, as plaquetas não possuem nú
 	\legend{Fonte: \cite{datasetBCCD}}
 	\label{fig:plaquetas}
 \end{figure}
- 
+
 \subsection{Hemograma}
 Um hemograma, também conhecido e citado como \emph{Complete Blood Count (CBC)}, é um exame bastante comum e muito utilizado, onde se realiza uma análise de sangue que envolve a contagem das diferentes células sanguíneas. A partir dos números obtidos através dessa contagem e com a comparação desse valor com as faixas de normalidade, é possível chegar a diversas conclusões sobre a saúde do paciente e até mesmo já identificar alguma doença ou problema \cite{manualHematologia, abcOfCbc}.
 
 Um hemograma geralmente é realizado em duas principais etapas, sendo a primeira relacionada ao eritrograma que se refere à análise das células vermelhas, de forma a revelar até mesmo alguns tipos essenciais de alterações patológicas do sistema eritropoético, que é o sistema responsável pela produção do material vermelho do sangue, como aumento na produção de glóbulos vermelhos e anemias. A segunda parte está relacionada com o leucograma, que corresponde à contagem global e específica dos leucócitos, a parte branca do sangue. O quadro leucocitário resultante com o exame hematológico, possibilita ao médico tirar importantes conclusões \cite{manualHematologia, abcOfCbc}.
 
 \subsubsection{Eritrograma}
-O objetivo do eritrograma ao realizar a análise da parte vermelha do sangue, é analisar alguns atributos chave, primeiramente é realizado a contagem geral dos eritrócitos adotando uma escala de milhões/mm³. A hemoglobina também será calculada e registrada em uma escala de g/dl \cite{interpretacaoHemograma, manualHematologia}.
+O objetivo do eritrograma ao realizar a análise da parte vermelha do sangue, é analisar alguns atributos chave. Primeiramente é realizado a contagem geral dos eritrócitos adotando uma escala de milhões/mm³. A hemoglobina também será calculada e registrada em uma escala de g/dl \cite{interpretacaoHemograma, manualHematologia}.
 
-Depois dessa principal contagem é calculado alguns índices importantes, sendo o primeiro deles o cálculo do volume corpuscular médio (VCM), que é o volume médio das hemácias, calculado pelo quociente de um determinado volume de hemácias pelo número de células contidas no mesmo volume. Outro importante atributo é a hemoglobina corpuscular média (HCM), que semelhante ao VCM, é o conteúdo médio da hemoglobina, calculado pelo quociente de conteúdo de hemoglobina em um determinado volume de hemácias pelo número de células contidas no mesmo volume \cite{interpretacaoHemograma, manualHematologia}.
+Depois dessa principal contagem são calculados alguns índices importantes, sendo o primeiro deles o cálculo do volume corpuscular médio (VCM), que é o volume médio das hemácias, calculado pelo quociente de um determinado volume de hemácias pelo número de células contidas no mesmo volume. Outro importante atributo é a hemoglobina corpuscular média (HCM), que semelhante ao VCM, é o conteúdo médio da hemoglobina, calculado pelo quociente de conteúdo de hemoglobina em um determinado volume de hemácias pelo número de células contidas no mesmo volume \cite{interpretacaoHemograma, manualHematologia}.
 
 Também temos outro índice que é a concentração de hemoglobina corpuscular média (CHCM), sendo a percentagem da hemoglobina em uma amostra de 100ml de hemácias. Por fim temos, a amplitude de distribuição dos glóbulos vermelhos, que em inglês significa \emph{Red Cell Distribution Width (RDW)}, que será responsável por avaliar a variação de tamanho entre as hemácias \cite{interpretacaoHemograma, manualHematologia}.
+
+Podemos visualizar a forma que esses índices do eritrograma estão presentes e são abordados em um hemograma real através da imagem \ref{fig:eritrograma}.
 
 \begin{figure}[!htb]
 	\centering
@@ -88,6 +100,8 @@ O objetivo do leucograma ao realizar a análise da parte branca do sangue, assim
 
 Primeiramente é feita uma contagem geral de leucócitos em mm³. Depois é realizada a contagem de forma a classificar cada tipo de leucócito presente, com neutrófilos, eosinófilos, basófilos, linfócitos, monócitos e também os granulócitos imaturos (promielócitos, mielócitos, metamielócitos). Por fim, também é calculado o número presente de plaquetas no sangue em mm³ \cite{interpretacaoHemograma, manualHematologia}.
 
+Podemos visualizar a maneira que os índices e classificações são abordados em um hemograma real através da imagem \ref{fig:leucograma}.
+
 \begin{figure}[!htb]
 	\centering
 	\caption{Exemplo de Leucograma e seus Atributos}
@@ -98,7 +112,7 @@ Primeiramente é feita uma contagem geral de leucócitos em mm³. Depois é real
 
 \section{Inteligência Artificial: Machine Learning e Deep Learning}
 \label{sec:conceito2}
-A abordagem de \emph{Deep Learning} que é objeto de estudo desse trabalho é uma das subáreas de \emph{Machine Learning} que por sua vez é subárea de Inteligência Artificial, portanto antes de abordar cada um desses conceitos, quais suas diferenças e aplicações, se faz necessário explicar e citar sobre a Inteligência Artificial.
+A abordagem de \emph{Deep Learning} que é objeto de estudo desse trabalho é uma das subáreas de \emph{Machine Learning} que por sua vez é subárea de Inteligência Artificial, portanto antes de abordar cada um desses conceitos, quais suas diferenças e aplicações, se faz necessário comentar sobre a Inteligência Artificial.
 
 A Inteligência Artificial é uma abordagem para a resolução de problemas de diversas naturezas através de uma forma automatizada, ou seja, é uma maneira de se resolver problemas sem a necessidade de um humano ou usuário específico para esse trabalho. Essa área está muito em alta nos dias de hoje, buscando cada vez novas maneiras de automatizar a vida humana. Podemos encontrar essa abordagem em diversos segmentos da indústria e atualmente também vem crescendo o uso dentro das residências para os mais diversos usos \cite{inteligenciaArtificial}.
 
@@ -106,17 +120,17 @@ O intuito dessa área é buscar formas de ensinar máquinas e computadores a ser
 
 \subsection{Machine Learning}
 
-A resolução de problemas através de ferramentas da computação é bastante comum e para isso se faz uso de algoritmos programados para essa finalidade específica, porém não é em todos os problemas que podemos aplicar essa abordagem tradicional, devido ao fato de que nem sempre se sabe um caminho único de etapas a serem seguidas para resolução dos problemas. No caso, quando se sabe a entrada de dados e o resultado onde queremos chegar, mas não os meios para se chegar nesse resultado, se deve utilizar um modelo de \emph{Machine Learning} para realizar a predição. Podemos pensar que na abordagem de algoritmos tradicionais de programação possuímos os parâmetros necessários e conhecemos o método para assim chegar ao resultado, mas na aplicação de \emph{Machine Learning}, conhecemos os parâmetros e o resultado, porém o método será aprendido e apresentado pela máquina \cite{machineLearning}.
+A resolução de problemas através de ferramentas da computação é bastante comum e para isso se faz uso de algoritmos programados para essa finalidade específica, porém não é em todos os problemas que podemos aplicar essa abordagem tradicional, devido ao fato de que nem sempre se sabe um caminho único de etapas a serem seguidas para resolução dos problemas. No caso, quando se sabe a entrada de dados e o resultado onde queremos chegar, mas não os meios para se chegar nesse resultado, é possível utilizar um modelo de \emph{Machine Learning} para realizar a predição. Podemos pensar que na abordagem de algoritmos tradicionais de programação possuímos os parâmetros necessários e conhecemos o método para assim chegar ao resultado, mas na aplicação de \emph{Machine Learning}, conhecemos os parâmetros e o resultado, porém o método será aprendido e apresentado pela máquina \cite{machineLearning}.
 
-Podemos pensar em um modelo de \emph{Machine Learning} como uma criança que está a aprender algo novo, logo todo modelo passará por três principais etapas, primeiramente o pré-processamento dos dados, depois pela fase de treinamento e por fim será realizado os devidos testes. Dessa forma, um modelo de \emph{Machine Learning} deverá ser treinado antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados por cada um deles. Dessa forma o modelo poderá aprender a entender e interpretar os dados de forma correta, para assim ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados \cite{machineLearningPython}.
+É possível fazer uma analogia entre um modelo de \emph{Machine Learning} com uma criança que está a aprender algo novo, onde todo modelo passará por três principais etapas, primeiramente o pré-processamento dos dados, depois pela fase de treinamento e por fim será realizado os devidos testes. Dessa forma, um modelo de \emph{Machine Learning} deverá ser treinado antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados por cada um deles. Dessa forma o modelo poderá aprender a entender e interpretar os dados de forma correta, para assim ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados \cite{machineLearningPython}.
 
-Após o treinamento do modelo como um todo, na fase de teste, para testar e avaliar o treinamento do modelo, também é possível aplicar algumas formas e técnicas para medir o desempenho como um todo, apontando fatores interessantes como o nível de assertividade, a precisão e também o número de acertos e erros relacionados com falsos positivos e falsos negativos através de uma matriz de confusão \cite{machineLearningTensorFlow}.
+Após o treinamento do modelo como um todo, na fase de teste, para testar e avaliar o treinamento do modelo, também é possível aplicar algumas formas e técnicas para medir o desempenho como um todo, apontando fatores interessantes como o nível de assertividade, a precisão e também o número de acertos e erros relacionados com falsos positivos e falsos negativos através de uma matriz de confusão semelhante à imagem \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
 
 \begin{figure}[!htb]
 	\centering
 	\caption{Matriz de Confusão}
 	\includegraphics[width=0.50\textwidth]{img/confusionMatrix.jpg}
-	\legend{Fonte: \cite{machineLearningTensorFlow}}
+	\legend{Fonte: Elaborada pelo autor.}
 	\label{fig:confusionMatrix}
 \end{figure}
 
@@ -125,7 +139,9 @@ Existem várias abordagens de \emph{Machine Learning} e elas podem ser classific
 \subsection{Deep Learning}
 Existe alguns casos que o \emph{Machine Learning} não é suficiente para o aprendizado a partir dos dados, isso ocorre pois o aprendizado acontece através de reconhecimento de padrões com base nos dados e esses dados não podem ser utilizados de qualquer forma, devem ser preparados e adaptados para cada modelo, ou seja, a máquina não será capaz de aprender por conta própria pois sempre precisará de intervenção humana para o processamento dos dados. Logo se necessita de uma abordagem muito mais parecida com a forma de pensar dos seres humanos, como o \emph{Deep Learning} \cite{deepLearningPython, deepLearningTensorFlow}.
 
-O \emph{Deep Learning} busca uma abordagem bastante parecida com o cérebro humano, isso acontece pois utiliza uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} será capaz de receber inputs (os dados de entrada) e reproduzir uma saída esperada, porém ao se trabalhar com apenas um \emph{perceptron}, muitas vezes não possui o processamento necessário para se chegar a uma solução, portanto é necessário utilizar um número maior de \emph{perceptrons} conectados uns aos outros se assemelhando ainda mais ao cérebro humano, para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network (ANN)} \cite{deepLearning, deepLearningTensorFlow}.
+O \emph{Deep Learning} busca uma abordagem bastante parecida com o cérebro humano, isso acontece pois utiliza uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} será capaz de receber inputs (os dados de entrada) e reproduzir uma saída esperada, porém ao se trabalhar com apenas um \emph{perceptron}, muitas vezes não possui o processamento necessário para se chegar a uma solução, portanto é necessário utilizar um número maior de \emph{perceptrons} conectados uns aos outros se assemelhando ainda mais ao cérebro humano. Para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network (ANN)} \cite{deepLearning, deepLearningTensorFlow}.
+
+A figura \ref{fig:perceptron} apresenta toda a estrutura de um perceptron, onde o X representa a informação repassada, o W representa os pesos de cada informação, a letra Sigma o somatório, o F a função de ativação e por fim o Y representará a saída.
 
 \begin{figure}[!htb]
 	\centering
@@ -136,7 +152,7 @@ O \emph{Deep Learning} busca uma abordagem bastante parecida com o cérebro huma
 \end{figure}
 
 \subsubsection{Artificial Neural Network (ANN)}
-Uma \emph{Artificial Neural Network} é uma estrutura formada por diversos neurônios, conhecidos como \emph{perceptrons}, organizados de forma a imitar o processamento de um cérebro humano. Sua estrutura é definida em diversas camadas, geralmente adotando uma camada de entrada, outra de saída e camadas intermediárias chamadas de camadas ocultas que serão responsáveis pelo processamento como um todo, onde cada uma delas podem conter um número variável de \emph{perceptrons} \cite{deepLearningTensorFlow}.
+Uma \emph{Artificial Neural Network} é uma estrutura formada por diversos neurônios, conhecidos como \emph{perceptrons}, organizados de forma a imitar o processamento de um cérebro humano. Sua estrutura é definida em diversas camadas, geralmente adotando uma camada de entrada, outra de saída e camadas intermediárias chamadas de camadas ocultas que serão responsáveis pelo processamento como um todo, onde cada uma delas pode conter um número variável de \emph{perceptrons} \cite{deepLearningTensorFlow}.
 
 \begin{figure}[!htb]
 	\centering
@@ -152,7 +168,7 @@ Dessa forma, uma ANN poderá aprender a realizar diversos tipos de tarefas, como
 
 Primeiramente, o algoritmo inicializará a rede artificial com pesos aleatórios, entrando em modo de treino para realizar o aprendizado. Durante o treinamento, o algoritmo será capaz de realizar predições de resultados que serão comparados com os valores corretos, para saber se está obtendo sucesso ou não. O algoritmo de \emph{backpropagation} então irá calcular a diferença do resultado obtido com o real, e essa informação do erro será repassada para todas as camadas anteriores de forma a realizar um ajuste nos pesos e minimizar o erro \cite{deepLearningTensorFlow}.
 
-Todo esse processo é realizado muitas vezes durante o treinamento, e só irá encerrar quando os ajustes levarem ao aumento do erro novamente, indicando que foi os pesos foram ajustados até o limite. Essa etapa de otimização dos pesos utilizados pela rede é muito importante de forma a ser essencial para o funcionamento da rede neural, pois através dela que é possível para o modelo aprender com os seus erros \cite{deepLearningTensorFlow}.
+Todo esse processo é realizado muitas vezes durante o treinamento, e só irá encerrar quando os ajustes levarem ao aumento do erro novamente, indicando que os pesos foram ajustados até o limite. Essa etapa de otimização dos pesos utilizados pela rede é muito importante de forma a ser essencial para o funcionamento da rede neural, pois através dela que é possível para o modelo aprender com os seus erros \cite{deepLearningTensorFlow}.
 
 \subsubsection{Deep Neural Networks (DNNs)}
 As \emph{Deep Neural Networks}, ou Redes Neurais Profundas, são uma arquitetura de rede neural extremamente orientada ao \emph{Deep Learning}, ou seja, embora possuam uma arquitetura semelhante às redes neurais tradicionais, são muito mais complexas em seus modelos, com um número maior de neurônios, camadas ocultas e conexões entre neurônios. Além do fato de utilizarem os princípios de aprendizagem do \emph{Machine Learning} tradicional, como o aprendizado supervisionado, como visto anteriormente \cite{deepLearningTensorFlow}.
@@ -176,7 +192,7 @@ As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande v
 Essa eficiência se deve também ao fato de que uma CNN quando aprender a interpretar algum recurso ou elemento específico na imagem, ela será capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprenderia a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
 
 \subsubsection{Bibliotecas e Recursos}
-Para se trabalhar com \emph{Deep Learning} e seus principais arquiteturas e recursos, existem algumas bibliotecas disponíveis no mercado de forma gratuita para esse facilitar e orientar esse trabalho. Dessa forma, pode-se encontrar o Tensorflow e o Keras, que são duas bibliotecas desenvolvidas em Python e C++, com a possibilidade de se trabalhar em conjunto bastante utilizadas pela comunidade de \emph{Deep Learning} em geral \cite{deepLearningTensorFlow}.
+Para se trabalhar com \emph{Deep Learning} e suas principais arquiteturas e recursos, existem algumas bibliotecas disponíveis no mercado de forma gratuita para esse facilitar e orientar esse trabalho. Dessa forma, pode-se encontrar o Tensorflow e o Keras, que são duas bibliotecas desenvolvidas em Python e C++, com a possibilidade de se trabalhar em conjunto bastante utilizadas pela comunidade de \emph{Deep Learning} em geral \cite{deepLearningTensorFlow}.
 
 Através da documentação do Tensorflow, é possível encontrar informações para desenvolver uma rede neural convolucional por exemplo, onde existe toda a parte teórica e também a demonstração de um exemplo prático voltado a esse fim. Também é possível através dessa biblioteca e da sua documentação estar realizando a classificação de imagens com base em um \emph{dataset} de imagens \cite{websiteTensorFlow}.
 
@@ -188,7 +204,7 @@ Através da documentação do Tensorflow, é possível encontrar informações p
 	\label{fig:tensorflowExample}
 \end{figure}
 
-Nesse \emph{dataset} se encontra 3700 fotos de flores em 5 classes distintas, que irão passar pelo tratamento das imagens, divisão do \emph{dataset} em treino e teste, criação do modelo como um todo e o treinamento do modelo. Com isso é possível chegar aos resultados do treinamento comparando seu desempenho no \emph{dataset} de testes, além disso também é interessante prever novos dados externos ao \emph{dataset} para observar como o modelo se comporta e com isso tudo pode-se realizar melhorias e adaptações tanto no modelo quanto no \emph{dataset} para obter resultados ainda melhores \cite{websiteTensorFlow}.
+Nesse \emph{dataset} encontra-se 3700 fotos de flores em 5 classes distintas, que irão passar pelo tratamento das imagens, divisão do \emph{dataset} em treino e teste, criação do modelo como um todo e o treinamento do modelo. Com isso é possível chegar aos resultados do treinamento comparando seu desempenho no \emph{dataset} de testes, além disso também é interessante prever novos dados externos ao \emph{dataset} para observar como o modelo se comporta e com isso tudo pode-se realizar melhorias e adaptações tanto no modelo quanto no \emph{dataset} para obter resultados ainda melhores \cite{websiteTensorFlow}.
 
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
@@ -304,6 +320,18 @@ Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais 
 \chapter{Procedimentos Metodológicos}
 \label{chap:metodologia}
 
+Aplicada para detectar sangue
+será empirica onde serao realizados diversos testes com diferentes modelos que serao comparados
+descrever as metricas utilizadas
+iniciou com uma pesquisa exploratoria para delimitar o escopo e compreender melhor os aspectos que estao sendo aplicados para esse dominio de problema
+
+essa pesquisa exploratoria compreeendendeu um mapeamento siste da lit onde se identifiocu que
+
+A epsquisa bibliografico compreendeu o mapeamento e fundamentacao teorica
+PESQUISA EXPERIMENTAL
+
+Pesquisa bibliográfica
+pesquisa experimental -> classificacao
 
 \section{Recursos}
 \label{chap:recursos}
