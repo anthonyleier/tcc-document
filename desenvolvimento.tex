@@ -46,7 +46,7 @@ Se faz necessário a classificação dos diferentes tipos de células brancas e 
 	\item \textbf{Linfócitos}: segundo tipo de célula branca mais abundante, são responsáveis e de extrema importância nas respostas imunes específicas do corpo humano, inclusive na produção de anticorpos.
 \end{itemize}
 
-Podemos perceber também na imagem \ref{fig:wbc} a presença dos glóbulos brancos entre os vermelhos.
+Podemos perceber também na imagem \ref{fig:wbc} a presença dos glóbulos brancos entre os vermelhos, porém em menor quantidade.
 
 \begin{figure}[!htb]
 	\centering
@@ -56,7 +56,7 @@ Podemos perceber também na imagem \ref{fig:wbc} a presença dos glóbulos branc
 	\label{fig:wbc}
 \end{figure}
 
-Com visto na imagem \ref{fig:wbc}, embora existam várias classificações de glóbulos brancos, no \emph{dataset} onde a imagem foi coletada não era objetivo de estudo realizar essa análise específica de cada célula.
+Como visto na imagem \ref{fig:wbc}, embora existam várias classificações de glóbulos brancos, no \emph{dataset} onde a imagem foi coletada não era objetivo de estudo realizar essa análise específica de cada célula.
 
 \subsubsection{Plaquetas}
 As plaquetas, também conhecidas e citadas como \emph{Platelets}, são os menores componentes do sangue e possuem grande responsabilidade na hemostasia, que é uma resposta fisiológica para a prevenção e interrupção de sangramentos e hemorragias, ou seja, elas atuam na manutenção dos vasos sanguíneos. As plaquetas são fragmentos do citoplasma de megacariócitos, ou seja, elas são produzidas na medula óssea como parte dessas células especializadas que irão se dividir posteriormente e gerar um grande número de plaquetas. Aproximadamente, para cada 1 megacariócito, pode-se produzir cerca de 4000 plaquetas \cite{abcOfCbc}.
@@ -85,7 +85,7 @@ Depois dessa principal contagem são calculados alguns índices importantes, sen
 
 Também temos outro índice que é a concentração de hemoglobina corpuscular média (CHCM), sendo a percentagem da hemoglobina em uma amostra de 100ml de hemácias. Por fim temos, a amplitude de distribuição dos glóbulos vermelhos, que em inglês significa \emph{Red Cell Distribution Width (RDW)}, que será responsável por avaliar a variação de tamanho entre as hemácias \cite{interpretacaoHemograma, manualHematologia}.
 
-Podemos visualizar a forma que esses índices do eritrograma estão presentes e são abordados em um hemograma real através da imagem \ref{fig:eritrograma}.
+Podemos visualizar a forma que esses índices do eritrograma estão presentes e são abordados em um hemograma real através da imagem \ref{fig:eritrograma}, assim como os seus respectivos valores de referência.
 
 \begin{figure}[!htb]
 	\centering
@@ -100,7 +100,7 @@ O objetivo do leucograma ao realizar a análise da parte branca do sangue, assim
 
 Primeiramente é feita uma contagem geral de leucócitos em mm³. Depois é realizada a contagem de forma a classificar cada tipo de leucócito presente, com neutrófilos, eosinófilos, basófilos, linfócitos, monócitos e também os granulócitos imaturos (promielócitos, mielócitos, metamielócitos). Por fim, também é calculado o número presente de plaquetas no sangue em mm³ \cite{interpretacaoHemograma, manualHematologia}.
 
-Podemos visualizar a maneira que os índices e classificações são abordados em um hemograma real através da imagem \ref{fig:leucograma}.
+Podemos visualizar a maneira que os índices e classificações são abordados em um hemograma real através da imagem \ref{fig:leucograma}, assim como os seus respectivos valores de referência.
 
 \begin{figure}[!htb]
 	\centering
@@ -124,7 +124,7 @@ A resolução de problemas através de ferramentas da computação é bastante c
 
 É possível fazer uma analogia entre um modelo de \emph{Machine Learning} com uma criança que está a aprender algo novo, onde todo modelo passará por três principais etapas, primeiramente o pré-processamento dos dados, depois pela fase de treinamento e por fim será realizado os devidos testes. Dessa forma, um modelo de \emph{Machine Learning} deverá ser treinado antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados por cada um deles. Dessa forma o modelo poderá aprender a entender e interpretar os dados de forma correta, para assim ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados \cite{machineLearningPython}.
 
-Após o treinamento do modelo como um todo, na fase de teste, para testar e avaliar o treinamento do modelo, também é possível aplicar algumas formas e técnicas para medir o desempenho como um todo, apontando fatores interessantes como o nível de assertividade, a precisão e também o número de acertos e erros relacionados com falsos positivos e falsos negativos através de uma matriz de confusão semelhante à imagem \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
+Após o treinamento do modelo como um todo, na fase de teste, para testar e avaliar o treinamento do modelo, também é possível aplicar algumas formas e técnicas para medir o desempenho como um todo, apontando fatores interessantes como o nível de assertividade, a precisão e também o número de acertos e erros relacionados com falsos positivos e falsos negativos através de uma matriz de confusão apresentado na imagem \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
 
 \begin{figure}[!htb]
 	\centering
@@ -154,6 +154,8 @@ A figura \ref{fig:perceptron} apresenta toda a estrutura de um perceptron, onde 
 \subsubsection{Artificial Neural Network (ANN)}
 Uma \emph{Artificial Neural Network} é uma estrutura formada por diversos neurônios, conhecidos como \emph{perceptrons}, organizados de forma a imitar o processamento de um cérebro humano. Sua estrutura é definida em diversas camadas, geralmente adotando uma camada de entrada, outra de saída e camadas intermediárias chamadas de camadas ocultas que serão responsáveis pelo processamento como um todo, onde cada uma delas pode conter um número variável de \emph{perceptrons} \cite{deepLearningTensorFlow}.
 
+Podemos visualizar esta estrutura na imagem \ref{fig:neuralNetwork}, onde temos a camada de entrada no \emph{input layer}. A camada escondida sendo uma ou mais no \emph{hidden} e por fim a camada de saída no \emph{output}.
+
 \begin{figure}[!htb]
 	\centering
 	\caption{Artificial Neural Network}
@@ -181,6 +183,10 @@ As Convolutional Neural Networks, ou Redes Neurais Convolucionais, são uma arqu
 
 As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande volume de dados, que nesse caso será cada pixel da imagem, o modelo teria muita dificuldade para aprender, logo nasceu a necessidade das CNNs. Para resolver esse problema, as CNNs foram desenvolvidas para usar camadas parcialmente conectadas e com grande reutilização dos pesos, dessa forma terá muito menos parâmetros a interpretar e passar adiante e consequentemente será mais rápido para treinar, terá menos risco de sobre-ajuste e requer muito menos dados de treinamento \cite{deepLearningTensorFlow}.
 
+Essa eficiência se deve também ao fato de que uma CNN quando aprender a interpretar algum recurso ou elemento específico na imagem, ela será capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprenderia a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
+
+Esse recurso pode ser observado dentro da camada convolucional. Como podemos observar na imagem \ref{fig:cnn}, a diferença de uma CNN para uma rede neural tradicional. Na CNN podemos perceber a presença de uma camada adicional além das normais, que é a \emph{convolutional layer} que representa a camada convolucional.
+
 \begin{figure}[!htb]
 	\centering
 	\caption{Convolutional Neural Network}
@@ -189,20 +195,10 @@ As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande v
 	\label{fig:cnn}
 \end{figure}
 
-Essa eficiência se deve também ao fato de que uma CNN quando aprender a interpretar algum recurso ou elemento específico na imagem, ela será capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprenderia a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
-
 \subsubsection{Bibliotecas e Recursos}
 Para se trabalhar com \emph{Deep Learning} e suas principais arquiteturas e recursos, existem algumas bibliotecas disponíveis no mercado de forma gratuita para esse facilitar e orientar esse trabalho. Dessa forma, pode-se encontrar o Tensorflow e o Keras, que são duas bibliotecas desenvolvidas em Python e C++, com a possibilidade de se trabalhar em conjunto bastante utilizadas pela comunidade de \emph{Deep Learning} em geral \cite{deepLearningTensorFlow}.
 
 Através da documentação do Tensorflow, é possível encontrar informações para desenvolver uma rede neural convolucional por exemplo, onde existe toda a parte teórica e também a demonstração de um exemplo prático voltado a esse fim. Também é possível através dessa biblioteca e da sua documentação estar realizando a classificação de imagens com base em um \emph{dataset} de imagens \cite{websiteTensorFlow}.
-
-\begin{figure}[!htb]
-	\centering
-	\caption{Classificação de Flores com Tensorflow}
-	\includegraphics[width=0.60\textwidth]{img/tensorflowExample.png}
-	\legend{Fonte: \cite{websiteTensorFlow}}
-	\label{fig:tensorflowExample}
-\end{figure}
 
 Nesse \emph{dataset} encontra-se 3700 fotos de flores em 5 classes distintas, que irão passar pelo tratamento das imagens, divisão do \emph{dataset} em treino e teste, criação do modelo como um todo e o treinamento do modelo. Com isso é possível chegar aos resultados do treinamento comparando seu desempenho no \emph{dataset} de testes, além disso também é interessante prever novos dados externos ao \emph{dataset} para observar como o modelo se comporta e com isso tudo pode-se realizar melhorias e adaptações tanto no modelo quanto no \emph{dataset} para obter resultados ainda melhores \cite{websiteTensorFlow}.
 
@@ -349,21 +345,20 @@ A Tabela \ref{tbl:cronograma} apresenta o cronograma de atividades propostas par
 	\centering
 	\caption{Cronograma das atividades previstas.}
 	\label{tbl:cronograma}
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
 \hline 
-\multicolumn{1}{|c|}{\textbf{Etapa}} & \multicolumn{10}{c|}{\textbf{Meses}} \\ \hline
- & Fev & Mar & Abr & Mai & Jun & Ago & Set & Out & Nov & Dez \\ \hline
-Fundamentação Teórica & X & X &  &  &  &  &  &  &  &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Mapeamento Sistemático\\ da Literatura\end{tabular} &  &  & X & X &  &  &  &  &  &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Escrita do Projeto de\\  TCC e Defesa\end{tabular} &  &  & X & X & X &  &  &  &  &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Análise e Tratamento\\ dos Dados\end{tabular} &  &  &  &  &  & X &  &  &  &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Treinamento dos Modelos\\ de Deep Learning\end{tabular} &  &  &  &  &  &  & X &  &  &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Análise dos Resultados\\ dos Modelos\end{tabular} &  &  &  &  &  &  & X & X &  &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Verificação de Aceitação\\ dos Resultados\end{tabular} &  &  &  &  &  &  &  & X &  &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Comparação dos Resultados\\ com a Literatura\end{tabular} &  &  &  &  &  &  &  & X & X &  \\ \hline
-Exposição dos Resultados &  &  &  &  &  &  &  &  & X &  \\ \hline
-Escrita do TCC &  &  &  &  &  &  &  &  & X & X \\ \hline
-Defesa do TCC &  &  &  &  &  &  &  &  &  & X \\ \hline
+\multicolumn{1}{|c|}{\textbf{Etapa}} & \multicolumn{11}{c|}{\textbf{Meses}} \\ \hline
+                                                    & Fev & Mar & Abr & Mai & Jun & Jul & Ago & Set & Out & Nov & Dez \\ \hline
+      \begin{tabular}[c]{@{}l@{}}Mapeamento Sistemático\\ da Literatura\end{tabular} & X  & X & &  & & &  &  &  &  &  \\ \hline
+                                                               Fundamentação Teórica &  &  & X & X &  & & &  &  &  &  \\ \hline
+      \begin{tabular}[c]{@{}l@{}}Escrita do Projeto de\\  TCC e Defesa\end{tabular} &  &  &  & X & X & X & &  &  &  &  \\ \hline
+             \begin{tabular}[c]{@{}l@{}}Análise e Tratamento\\ dos Dados\end{tabular} &  &  &  &  &  & X &  & & &  &  \\ \hline
+   \begin{tabular}[c]{@{}l@{}}Treinamento dos Modelos\\ de Deep Learning\end{tabular} &  &  &  &  & & X & X & X &  &  &  \\ \hline
+        \begin{tabular}[c]{@{}l@{}}Análise dos Resultados\\ dos Modelos\end{tabular} &  &  &  &  &  & & X & X &  &  &  \\ \hline
+    \begin{tabular}[c]{@{}l@{}}Verificação de Aceitação\\ dos Resultados\end{tabular} &  &  &  &  & & &  & X & X &  &  \\ \hline
+\begin{tabular}[c]{@{}l@{}}Comparação dos Resultados\\ com a Literatura\end{tabular} &  &  &  & & &  &  & X & X &  &  \\ \hline
+Escrita do TCC &  &  &  &  &  &  & & &  & X & X \\ \hline
+Defesa do TCC &  &  &  &  &  &  & & &  &  & X \\ \hline
 \end{tabular}
 	\vspace{6pt}
 	\legend{Fonte: Elaborada pelo autor.}
