@@ -122,9 +122,13 @@ O intuito dessa área é buscar formas de ensinar máquinas e computadores a ser
 
 A resolução de problemas através de ferramentas da computação é bastante comum e para isso se faz uso de algoritmos programados para essa finalidade específica, porém não é em todos os problemas que podemos aplicar essa abordagem tradicional, devido ao fato de que nem sempre se sabe um caminho único de etapas a serem seguidas para resolução dos problemas. No caso, quando se sabe a entrada de dados e o resultado onde queremos chegar, mas não os meios para se chegar nesse resultado, é possível utilizar um modelo de \emph{Machine Learning} para realizar a predição. Podemos pensar que na abordagem de algoritmos tradicionais de programação possuímos os parâmetros necessários e conhecemos o método para assim chegar ao resultado, mas na aplicação de \emph{Machine Learning}, conhecemos os parâmetros e o resultado, porém o método será aprendido e apresentado pela máquina \cite{machineLearning}.
 
-É possível fazer uma analogia entre um modelo de \emph{Machine Learning} com uma criança que está a aprender algo novo, onde todo modelo passará por três principais etapas, primeiramente o pré-processamento dos dados, depois pela fase de treinamento e por fim será realizado os devidos testes. Dessa forma, um modelo de \emph{Machine Learning} deverá ser treinado antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados por cada um deles. Dessa forma o modelo poderá aprender a entender e interpretar os dados de forma correta, para assim ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados \cite{machineLearningPython}.
+É possível fazer uma analogia entre um modelo de \emph{Machine Learning} com uma criança que está a aprender algo novo, onde todo modelo passará por três principais etapas, o pré-processamento dos dados, a fase de treinamento, e o teste do modelo. Na fase de pré-processamento, os dados serão analisados e adaptados para um melhor entendimento do modelo, retirando informações inúteis, alterando o formato para o mais adequado, entre outras práticas \cite{machineLearningPython}.
 
-Após o treinamento do modelo como um todo, na fase de teste, para testar e avaliar o treinamento do modelo, também é possível aplicar algumas formas e técnicas para medir o desempenho como um todo, apontando fatores interessantes como o nível de assertividade, a precisão e também o número de acertos e erros relacionados com falsos positivos e falsos negativos através de uma matriz de confusão apresentado na imagem \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
+Logo após, o modelo de \emph{Machine Learning} deverá ser treinado de acordo com o método desejado antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados por cada um deles além dos parâmetros e configurações necessárias para o treinamento. Dessa forma o modelo poderá aprender a entender e interpretar os dados de forma correta, para assim ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados \cite{machineLearningPython}.
+
+Por fim, após o treinamento do modelo como um todo ocorre a fase de teste. Na fase de teste, o modelo será testado e avaliado com base em algumas técnicas para medir o seu desempenho, calculando métricas como a acurácia, a precisão e a revocação. A acurácia indicará uma performance geral, quantas classes o modelo classificou corretamente. A precisão dirá dentre as classificações que o modelo classificou como positivo, quantas estão corretas. A revocação, também citada como \emph{recall} apontará dentre todas as classificações como positivo como valor esperado, quantas estão corretas. Além dessas métricas, também existe o F1-Score que irá realizar uma média harmônica entre precisão e recall \cite{machineLearningTensorFlow}.
+
+Para uma melhor visualização, e para realizar o cálculo das métricas citadas anteriormente, podemos utilizar uma matriz de confusão, que irá descrever o número de acertos e erros relacionados com os verdadeiros ou falsos positivos e os verdadeiros ou falsos negativos como podemos observar na imagem \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
 
 \begin{figure}[!htb]
 	\centering
@@ -134,12 +138,29 @@ Após o treinamento do modelo como um todo, na fase de teste, para testar e aval
 	\label{fig:confusionMatrix}
 \end{figure}
 
+\subsubsection{Algoritmos Tradicionais}
+
 Existem várias abordagens de \emph{Machine Learning} e elas podem ser classificadas em várias categorias diferentes, porém sempre podemos dividir em duas principais abordagens mais utilizadas, sendo elas a regressão e a classificação. Os modelos de regressão serão responsáveis pela predição de valores reais, enquanto que os modelos de classificação serão responsáveis pela rotulação dos dados em determinadas classes. Além disso, também podemos classificar os algoritmos em supervisionados ou não supervisionados. No aprendizado supervisionado, sabemos o resultado correto, ou seja, onde o modelo deverá chegar a partir dos dados obtidos, porém no aprendizado não supervisionado, o modelo terá que lidar com dados não estruturados e sem um resultado claro \cite{machineLearningPython}.
 
-\subsection{Deep Learning}
-Existe alguns casos que o \emph{Machine Learning} não é suficiente para o aprendizado a partir dos dados, isso ocorre pois o aprendizado acontece através de reconhecimento de padrões com base nos dados e esses dados não podem ser utilizados de qualquer forma, devem ser preparados e adaptados para cada modelo, ou seja, a máquina não será capaz de aprender por conta própria pois sempre precisará de intervenção humana para o processamento dos dados. Logo se necessita de uma abordagem muito mais parecida com a forma de pensar dos seres humanos, como o \emph{Deep Learning} \cite{deepLearningPython, deepLearningTensorFlow}.
+Quando trabalhamos com regressão de dados, podemos citar alguns exemplos de abordagens mais utilizadas.
+\begin{itemize}
+    \item \textbf{Linear Regression:}
+    \item \textbf{Decision Tree:}
+    \item \textbf{Random Forest:}
+\end{itemize}
 
-O \emph{Deep Learning} busca uma abordagem bastante parecida com o cérebro humano, isso acontece pois utiliza uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} será capaz de receber inputs (os dados de entrada) e reproduzir uma saída esperada, porém ao se trabalhar com apenas um \emph{perceptron}, muitas vezes não possui o processamento necessário para se chegar a uma solução, portanto é necessário utilizar um número maior de \emph{perceptrons} conectados uns aos outros se assemelhando ainda mais ao cérebro humano. Para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network (ANN)} \cite{deepLearning, deepLearningTensorFlow}.
+Quando trabalhamos com classificação de dados, podemos citar alguns exemplos de algoritmos mais utilizados.
+\begin{itemize}
+    \item \textbf{K-nearest neighbors (KNN):} o KNN que é um algoritmo que busca realizar a classificação com base na comparação de um dado com dados semelhantes a ele
+    \item \textbf{Decision Tree:} A árvore de decisão que busca encontrar padrões por meio da segmentação dos dados, ou seja, através da divisão dos dados em grupos se encontrará critérios que serão decisivos na hora de classificar um dado novo.
+\end{itemize}
+
+Além desses algoritmos, é importante ressaltar uma abordagem diferente da convencional que são as redes neurais, esse tipo de abordagem se difere dos algoritmos tradicionais e será objeto de estudo desse trabalho. 
+
+\subsubsection{Redes Neurais}
+\label{sec:redesneurais}
+
+As redes neurais buscam uma abordagem bastante parecida com o cérebro humano, isso acontece pois utiliza uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} será capaz de receber inputs (os dados de entrada) e reproduzir uma saída esperada, porém ao se trabalhar com apenas um \emph{perceptron}, muitas vezes não possui o processamento necessário para se chegar a uma solução, portanto é necessário utilizar um número maior de \emph{perceptrons} conectados uns aos outros se assemelhando ainda mais ao cérebro humano. Para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network (ANN)} \cite{deepLearning, deepLearningTensorFlow}.
 
 A figura \ref{fig:perceptron} apresenta toda a estrutura de um perceptron, onde o X representa a informação repassada, o W representa os pesos de cada informação, a letra Sigma o somatório, o F a função de ativação e por fim o Y representará a saída.
 
@@ -151,7 +172,6 @@ A figura \ref{fig:perceptron} apresenta toda a estrutura de um perceptron, onde 
 	\label{fig:perceptron}
 \end{figure}
 
-\subsubsection{Artificial Neural Network (ANN)}
 Uma \emph{Artificial Neural Network} é uma estrutura formada por diversos neurônios, conhecidos como \emph{perceptrons}, organizados de forma a imitar o processamento de um cérebro humano. Sua estrutura é definida em diversas camadas, geralmente adotando uma camada de entrada, outra de saída e camadas intermediárias chamadas de camadas ocultas que serão responsáveis pelo processamento como um todo, onde cada uma delas pode conter um número variável de \emph{perceptrons} \cite{deepLearningTensorFlow}.
 
 Podemos visualizar esta estrutura na imagem \ref{fig:neuralNetwork}, onde temos a camada de entrada no \emph{input layer}. A camada escondida sendo uma ou mais no \emph{hidden} e por fim a camada de saída no \emph{output}.
@@ -172,13 +192,19 @@ Primeiramente, o algoritmo inicializará a rede artificial com pesos aleatórios
 
 Todo esse processo é realizado muitas vezes durante o treinamento, e só irá encerrar quando os ajustes levarem ao aumento do erro novamente, indicando que os pesos foram ajustados até o limite. Essa etapa de otimização dos pesos utilizados pela rede é muito importante de forma a ser essencial para o funcionamento da rede neural, pois através dela que é possível para o modelo aprender com os seus erros \cite{deepLearningTensorFlow}.
 
-\subsubsection{Deep Neural Networks (DNNs)}
-As \emph{Deep Neural Networks}, ou Redes Neurais Profundas, são uma arquitetura de rede neural extremamente orientada ao \emph{Deep Learning}, ou seja, embora possuam uma arquitetura semelhante às redes neurais tradicionais, são muito mais complexas em seus modelos, com um número maior de neurônios, camadas ocultas e conexões entre neurônios. Além do fato de utilizarem os princípios de aprendizagem do \emph{Machine Learning} tradicional, como o aprendizado supervisionado, como visto anteriormente \cite{deepLearningTensorFlow}.
+\subsection{Deep Learning}
+Existe alguns casos que o \emph{Machine Learning} não é suficiente para o aprendizado a partir dos dados, isso ocorre pois o aprendizado acontece através de reconhecimento de padrões com base nos dados e esses dados não podem ser utilizados de qualquer forma, devem ser preparados e adaptados para cada modelo, ou seja, a máquina não será capaz de aprender por conta própria pois sempre precisará de intervenção humana para o processamento dos dados. Logo se necessita de uma abordagem muito mais parecida com a forma de pensar dos seres humanos, como o \emph{Deep Learning} \cite{deepLearningPython, deepLearningTensorFlow}.
+
+O \emph{Deep Learning} busca formas de levar o conceito das redes neurais abordado na seção \ref{sec:redesneurais} ainda mais longe. Primeiramente, se trabalhando com as \emph{Deep Neural Networks (DNNs)}, ou Redes Neurais Profundas, que são uma arquitetura de rede neural extremamente orientada ao \emph{Deep Learning}, ou seja, embora possuam uma arquitetura semelhante às redes neurais tradicionais, são muito mais complexas em seus modelos, com um número maior de neurônios, camadas ocultas e conexões entre neurônios. Além do fato de utilizarem os princípios de aprendizagem do \emph{Machine Learning} tradicional, como o aprendizado supervisionado, como visto anteriormente \cite{deepLearningTensorFlow}.
+
+Com as possibilidades que as redes neurais profundas trouxeram, surgiram algumas variantes interessantes e focadas em um nicho específico, buscando se assemelhar ainda mais a natureza humana para realizar tarefas e criar inteligência. Algumas dessas variantes se aplicam a processamento de linguagem falada, como é o caso das RNNs abordadas na seção \ref{sec:rnn}, ou também abordam o reconhecimento e interpretação de imagens como é o caso das CNNs abordadas na seção \ref{sec:cnn} e é assunto de interesse para a continuidade deste trabalho.
 
 \subsubsection{Recurrent Neural Networks (RNNs)}
+\label{sec:rnn}
 As Recurrent Neural Networks, ou Redes Neurais Recorrentes, são uma arquitetura de rede neural desenvolvida para a interpretação de dados temporais em sequência, ou seja, é capaz de realizar predições de variáveis em relação ao tempo. Sua estrutura é desenvolvida para permitir conexões de feedback das informações repassadas, ou seja, possui loops que permite que as informações persistam, como se a rede fosse executada várias vezes. As RNNs são desenvolvidos para utilizar informações que possuem uma sequência fixa, como é o caso de informações que são atualizadas em decorrência do tempo \cite{deepLearningTensorFlow}.
 
 \subsubsection{Convolutional Neural Networks (CNNs)}
+\label{sec:cnn}
 As Convolutional Neural Networks, ou Redes Neurais Convolucionais, são uma arquitetura de rede neural desenvolvida especificamente para o reconhecimento de imagens, com a capacidade de interpretar imagens dividido-as em partes importantes. Essa rede trabalha inicialmente com 3 informações base, interpretando imagens como matrizes de 3 dimensões, sendo a altura, a largura e a cor \cite{deepLearningTensorFlow}.
 
 As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande volume de dados, que nesse caso será cada pixel da imagem, o modelo teria muita dificuldade para aprender, logo nasceu a necessidade das CNNs. Para resolver esse problema, as CNNs foram desenvolvidas para usar camadas parcialmente conectadas e com grande reutilização dos pesos, dessa forma terá muito menos parâmetros a interpretar e passar adiante e consequentemente será mais rápido para treinar, terá menos risco de sobre-ajuste e requer muito menos dados de treinamento \cite{deepLearningTensorFlow}.
@@ -186,6 +212,8 @@ As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande v
 Essa eficiência se deve também ao fato de que uma CNN quando aprender a interpretar algum recurso ou elemento específico na imagem, ela será capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprenderia a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
 
 Esse recurso pode ser observado dentro da camada convolucional. Como podemos observar na imagem \ref{fig:cnn}, a diferença de uma CNN para uma rede neural tradicional. Na CNN podemos perceber a presença de uma camada adicional além das normais, que é a \emph{convolutional layer} que representa a camada convolucional.
+
+Explorar mais o CNN, e como avaliar o resultado?
 
 \begin{figure}[!htb]
 	\centering
@@ -198,9 +226,13 @@ Esse recurso pode ser observado dentro da camada convolucional. Como podemos obs
 \subsubsection{Bibliotecas e Recursos}
 Para se trabalhar com \emph{Deep Learning} e suas principais arquiteturas e recursos, existem algumas bibliotecas disponíveis no mercado de forma gratuita para esse facilitar e orientar esse trabalho. Dessa forma, pode-se encontrar o Tensorflow e o Keras, que são duas bibliotecas desenvolvidas em Python e C++, com a possibilidade de se trabalhar em conjunto bastante utilizadas pela comunidade de \emph{Deep Learning} em geral \cite{deepLearningTensorFlow}.
 
-Através da documentação do Tensorflow, é possível encontrar informações para desenvolver uma rede neural convolucional por exemplo, onde existe toda a parte teórica e também a demonstração de um exemplo prático voltado a esse fim. Também é possível através dessa biblioteca e da sua documentação estar realizando a classificação de imagens com base em um \emph{dataset} de imagens \cite{websiteTensorFlow}.
+O Tensorflow é uma plataforma completa de código aberto para \emph{Machine Learning} para uma grande variedade de tarefas com um foco nas redes neurais, porém suas funcionalidades também se estendem até o \emph{Deep Learning}. As APIs disponibilizadas do Tensorflow utilizam como base o próprio Keras para definir e treinar as redes neurais. Desenvolvido pelo Google desde 2011, em 2018 a equipe decidiu integrar o Keras na biblioteca principal do Tensorflow \cite{websiteTensorFlow}.
 
-Nesse \emph{dataset} encontra-se 3700 fotos de flores em 5 classes distintas, que irão passar pelo tratamento das imagens, divisão do \emph{dataset} em treino e teste, criação do modelo como um todo e o treinamento do modelo. Com isso é possível chegar aos resultados do treinamento comparando seu desempenho no \emph{dataset} de testes, além disso também é interessante prever novos dados externos ao \emph{dataset} para observar como o modelo se comporta e com isso tudo pode-se realizar melhorias e adaptações tanto no modelo quanto no \emph{dataset} para obter resultados ainda melhores \cite{websiteTensorFlow}.
+O Keras foi desenvolvido para permitir uma experimentação e prototipação rápida, com um principal foco nas redes neurais profundas. Promete se fácil de utilizar, modular e ainda ser extensível. Possui vários recursos próprios, como a utilização de camadas, funções de perda, funções de ativação, entre outros. Além do foco em redes neurais profundas, possui módulos voltados a redes neurais convolucionais e recorrentes \cite{websiteKeras}.
+
+O conjunto dessas duas bibliotecas para o trabalho com \emph{Machine Learning} e \emph{Deep Learning}, torna-se uma ferramenta extramente útil para este fim, possibilitando trabalhar com vários tipos de dados, como número, texto, áudio e também imagens.
+
+Através da documentação do Tensorflow, é possível encontrar informações para desenvolver uma rede neural convolucional por exemplo, onde existe toda a parte teórica e também a demonstração de um exemplo prático voltado a esse fim. Também é possível através dessa biblioteca e da sua documentação estar realizando a classificação de imagens com base em um \emph{dataset} de imagens \cite{websiteTensorFlow}.
 
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
