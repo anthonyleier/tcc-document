@@ -144,18 +144,19 @@ Existem várias abordagens de \emph{Machine Learning} e elas podem ser classific
 
 Quando trabalhamos com regressão de dados, podemos citar alguns exemplos de abordagens mais utilizadas.
 \begin{itemize}
-    \item \textbf{Linear Regression:}
-    \item \textbf{Decision Tree:}
-    \item \textbf{Random Forest:}
+    \item \textbf{Linear Regression:} método mais clássico e simples para abordar regressão, onde é traçado uma reta através dos dados e então realizado a predição com base nessa reta. Possui variações como na \emph{Multiple Linear Regression} onde são usadas mais variáveis e também na \emph{Polynomial Linear Regression} onde a reta se tornará uma curva, utilizando variáveis com exponenciação, tornando o resultado mais assertivo.
+    \item \textbf{Decision Tree:} as árvores de decisão são uma técnica utilizada para prever valores através de critérios aprendidos pelo modelo. Esses critérios serão aprendidos através da divisão dos dados conhecidos em grupos semelhantes de forma a encontrar padrões em cada um dos grupos de dados.
+    \item \textbf{Random Forest:} as florestas aleatória são uma técnica utilizada de forma a combinar o poder de processamento de várias árvores de decisão diferentes de forma a ter um trabalho mais minucioso e geralmente chegar em um resultado mais preciso.
 \end{itemize}
 
 Quando trabalhamos com classificação de dados, podemos citar alguns exemplos de algoritmos mais utilizados.
 \begin{itemize}
-    \item \textbf{K-nearest neighbors (KNN):} o KNN que é um algoritmo que busca realizar a classificação com base na comparação de um dado com dados semelhantes a ele
-    \item \textbf{Decision Tree:} A árvore de decisão que busca encontrar padrões por meio da segmentação dos dados, ou seja, através da divisão dos dados em grupos se encontrará critérios que serão decisivos na hora de classificar um dado novo.
+    \item \textbf{K-Nearest Neighbors (KNN):} o KNN é uma abordagem de um algortmo que busca realizar a classificação com base na comparação de um dado com dados semelhantes a ele. É considerado uma abordagem \emph{lazy} ou seja preguiçosa, pois não apresenta um modelo inteligente em si, apenas armazena os dados e realiza comparações.
+    \item \textbf{Decision Tree Classifier:} assim como na regressão, as árvores de decisão são uma técnica utilizada para predizer classes para dados específicos a partir de uma série de critérios aprendidos pelo modelo. Esses critérios serão aprendidos através da divisão dos dados conhecidos em grupos semelhantes de forma a encontrar padrões que nesse caso seriam as classes necessárias para a interpretação em cada um dos grupos divididos de dados.
+    \item \textbf{Random Forest Classifier:} assim como na regressão, as florestas aleatória são uma técnica utilizada de forma a combinar o poder de processamento de várias árvores de decisão voltadas à classificação, buscando ter um trabalho mais minucioso e geralmente chegar em um resultado mais preciso.
 \end{itemize}
 
-Além desses algoritmos, é importante ressaltar uma abordagem diferente da convencional que são as redes neurais, esse tipo de abordagem se difere dos algoritmos tradicionais e será objeto de estudo desse trabalho. 
+Além desses algoritmos, é importante ressaltar uma abordagem diferente da convencional que são as redes neurais, que podem ser utilizadas tanto para regressão quanto para classificação. Esse tipo de abordagem se difere dos algoritmos tradicionais e será objeto de estudo desse trabalho.
 
 \subsubsection{Redes Neurais}
 \label{sec:redesneurais}
@@ -212,8 +213,6 @@ As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande v
 Essa eficiência se deve também ao fato de que uma CNN quando aprender a interpretar algum recurso ou elemento específico na imagem, ela será capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprenderia a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
 
 Esse recurso pode ser observado dentro da camada convolucional. Como podemos observar na imagem \ref{fig:cnn}, a diferença de uma CNN para uma rede neural tradicional. Na CNN podemos perceber a presença de uma camada adicional além das normais, que é a \emph{convolutional layer} que representa a camada convolucional.
-
-Explorar mais o CNN, e como avaliar o resultado?
 
 \begin{figure}[!htb]
 	\centering
