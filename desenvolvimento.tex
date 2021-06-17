@@ -1,13 +1,13 @@
 \chapter{Fundamentação Teórica}
 \label{chap:fund}
 
-Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}, assim como as técnicas e algoritmos aplicados para auxiliar os profissionais de laboratório a realizarem exames de sangue de uma forma automatizada e eficiente. Além disso, será detalhado sobre os hemogramas e diferentes dados coletados através de uma análise de sangue.
+Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}, assim como as técnicas e algoritmos aplicados para auxiliar os profissionais de laboratório a realizarem exames de sangue de uma forma automatizada e eficiente. Além disso, serão apresentados os dados coletados de uma análise de sangue que dão subsídio para a geração de hemogramas.
 
 \section{Exames Laboratoriais de Sangue}
 \label{sec:conceito1}
-Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples, porém de extrema importância para a saúde humana. Através desses exames pode-se descobrir diversas informações sobre o organismo da pessoa em questão, inclusive detectar doenças e problemas antecipadamente, por exemplo, para diagnosticar anemia, deficiências nutricionais, parasitas no sangue, doenças virais e autoimunes. Também é possível identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito de vários tipos de estresses sobre o corpo \cite{abcOfCbc, atlasDeHematologiaEAnalise}.
+Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples, porém de extrema importância para a saúde humana. Através desses exames pode-se descobrir diversas informações sobre o organismo da pessoa examinada, inclusive detectar doenças e problemas antecipadamente, por exemplo, para diagnosticar anemia, deficiências nutricionais, parasitas no sangue, doenças virais e autoimunes. Também é possível identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito de vários tipos de estresses sobre o corpo \cite{abcOfCbc, atlasDeHematologiaEAnalise}.
 
-Um exame poderá ser solicitado por um médico, ou a partir do interesse do próprio paciente, e realizado em um laboratório de confiança, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade é muito caro para aquisição e manutenção.
+Um exame poderá ser solicitado por um médico, ou a partir do interesse do próprio paciente, e realizado em um laboratório de análises clínicas, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade constitui preço expressivo para aquisição e manutenção.
 
 \subsection{Sangue}
 O sangue é um elemento do corpo humano, que circula em estado líquido através de todo o sistema circulatório do organismo, sendo de importância para o funcionamento correto das células através da entrada e saída de substâncias que podem modificar a sua composição \cite{manualHematologia}.
@@ -17,11 +17,11 @@ Pode ser dividido em duas principais partes: o plasma (ou soro) e a parte celula
 A segunda parte do sangue, que será objeto de estudo para este trabalho, é a parte celular que contém todas as células presentes no sangue e se classificam como glóbulos vermelhos, glóbulos brancos e plaquetas. Geralmente observa-se a presença de eritrócitos, vários tipos e classes de leucócitos e as plaquetas como um todo, que serão abordados um a um posteriormente \cite{manualHematologia}.
 
 \subsubsection{Glóbulos Vermelhos}
-Os glóbulos vermelhos, também conhecidos como \emph{Red Blood Cells (RBC)}, são as hemácias presentes no sangue, também podem ser citadas em exames e registros médicos como eritrócitos. Essas células são pequenas e circulares, geralmente em formatos de discos e não possuem núcleo. Estão presentes em grande quantidade, possuindo uma vida útil de aproximadamente 120 dias até que o próprio sistema as elimine \cite{manualHematologia}.
+Os glóbulos vermelhos, também conhecidos como \emph{Red Blood Cells (RBC)}, são as hemácias presentes no sangue, também podem ser vistas em exames e registros médicos como eritrócitos. Essas células são pequenas e circulares, geralmente em formatos de discos e não possuem núcleo. Estão presentes em grande quantidade, possuindo uma vida útil de aproximadamente 120 dias até que o próprio sistema as elimine \cite{manualHematologia}.
 
-É indispensável ao falar sobre a parte vermelha do sangue, citar a hemoglobina que é uma proteína presente nas hemácias e de extrema importância para o funcionamento do sistema, pois através dela é possível realizar o transporte de oxigênio e gás carbônico pelo sistema sanguíneo, permitindo as trocas gasosas necessárias \cite{manualHematologia}.
+É indispensável, ao falar sobre a parte vermelha do sangue, citar a hemoglobina que é uma proteína presente nas hemácias e de extrema importância para o funcionamento do sistema, pois através dela é possível realizar o transporte de oxigênio e gás carbônico pelo sistema sanguíneo, permitindo as trocas gasosas necessárias \cite{manualHematologia}.
 
-Podemos perceber a presença dos glóbulos vermelhos na imagem \ref{fig:rbc}, onde estão em grande quantidade em comparação com as outras células. 
+Podemos perceber a presença dos glóbulos vermelhos na Figura \ref{fig:rbc}, onde estão em grande quantidade em comparação com as outras células. 
 
 \begin{figure}[!htb]
 	\centering
@@ -31,22 +31,22 @@ Podemos perceber a presença dos glóbulos vermelhos na imagem \ref{fig:rbc}, on
 	\label{fig:rbc}
 \end{figure}
 
-A imagem \ref{fig:rbc} foi retirada de um \emph{dataset} específico de classificação de células sanguíneas, classificando em RBC (Red Blood Cells) para glóbulos vermelhos, WBC (White Blood Cells) para glóbulos brancos e Platelets para plaquetas.
+A Figura \ref{fig:rbc} faz parte de um \emph{dataset} específico de classificação de células sanguíneas, classificando em \emph{RBC (Red Blood Cells)} para glóbulos vermelhos, \emph{WBC (White Blood Cells)} para glóbulos brancos e \emph{Platelets} para plaquetas.
  
 \subsubsection{Glóbulos Brancos}
 Os glóbulos brancos, também conhecidos como \emph{White Blood Cells (WBC)}, são as células brancas do sangue, sendo responsáveis pela defesa do organismo contra as principais ameaças do corpo humano presentes no sistema sanguíneo. Através da fagocitose, que é um processo de englobamento de partículas sólidas pelas células, são realizadas ações de defesa contra a invasão de fragmentos estranhos. Os glóbulos brancos são criados na medula óssea e estão presentes em todo o sangue, também em grande quantidade \cite{manualHematologia}.
 
-Se faz necessário a classificação dos diferentes tipos de células brancas e de suas importâncias para o sistema de defesa do organismo. É importante frisar que essa classificação se refere aos leucócitos maduros, mas também pode-se encontrar presente os leucócitos imaturos (promielócitos, mielócitos, metamielócitos) \cite{manualHematologia}.
+Algumas células brancas podem ser encontradas na sua forma imatura, que ocorre quando o leucócito ainda não teve uma função definida pelo processo de maturação (promielócitos, mielócitos, metamielócitos). A maturação quando ocorre de forma adequada origina os seguintes tipos de leucócitos, cada qual com sua importância para o sistema de defesa do organismo \cite{manualHematologia}.
 
 \begin{itemize}
-	\item \textbf{Neutrófilos}: células brancas mais abundantes capazes de entrar nos tecidos, onde conseguem realizar a defesa do organismo, fagocitando partículas estranhas. Essas células são conhecidas como neutrófilos segmentados, pois existe uma célula percursora, que é o bastão, ou também chamado de neutrófilos bastonetes, que possuem essa nomenclatura pois seu núcleo não está amadurecido, ou seja ainda são jovens, e geralmente são identificados quando há infecções em fase aguda. 
+	\item \textbf{Neutrófilos}: células brancas mais abundantes, capazes de entrar nos tecidos, onde conseguem realizar a defesa do organismo, fagocitando partículas estranhas. Essas células são conhecidas como neutrófilos segmentados, pois existe uma célula percursora, que é o bastão, ou também chamado de neutrófilos bastonetes, que possuem essa nomenclatura pois seu núcleo não está amadurecido, ou seja ainda são jovens, e geralmente são identificados quando há infecções em fase aguda. 
 	\item \textbf{Eosinófilos}: células brancas responsáveis na defesa contra parasitas, geralmente estão presentes em grande quantidade no sangue durante reações alérgicas e infestações parasitárias.
 	\item \textbf{Basófilos}: células brancas atuantes em respostas alérgicas e na coagulação do sangue. São capazes de liberar histamina, contribuindo para respostas alérgicas ao dilatar e permeabilizar os vasos sanguíneos e também liberam heparina que é capaz de prevenir a coagulação do sangue.
-	\item \textbf{Monócitos}: células brancas capazes de entrar no tecido conjuntivo frouxo, onde conseguem se desenvolver em grandes células com grande efeito fagocítico denominadas macrófagos, de forma a ingerir partículas estranhas ao organismo.
+	\item \textbf{Monócitos}: células brancas capazes de entrar no tecido conjuntivo frouxo, onde conseguem se desenvolver em grandes células, com grande efeito fagocítico denominadas macrófagos, de forma a ingerir partículas estranhas ao organismo.
 	\item \textbf{Linfócitos}: segundo tipo de célula branca mais abundante, são responsáveis e de extrema importância nas respostas imunes específicas do corpo humano, inclusive na produção de anticorpos.
 \end{itemize}
 
-Podemos perceber também na imagem \ref{fig:wbc} a presença dos glóbulos brancos entre os vermelhos, porém em menor quantidade.
+Podemos perceber também na Figura \ref{fig:wbc}, a presença dos glóbulos brancos entre os vermelhos, porém em menor quantidade.
 
 \begin{figure}[!htb]
 	\centering
@@ -56,14 +56,14 @@ Podemos perceber também na imagem \ref{fig:wbc} a presença dos glóbulos branc
 	\label{fig:wbc}
 \end{figure}
 
-Como visto na imagem \ref{fig:wbc}, embora existam várias classificações de glóbulos brancos, no \emph{dataset} onde a imagem foi coletada não era objetivo de estudo realizar essa análise específica de cada célula.
+Como visto na Figura \ref{fig:wbc}, embora existam várias classificações de glóbulos brancos, no \emph{dataset} onde foi coletada, não era objetivo de estudo realizar essa análise específica de cada célula.
 
 \subsubsection{Plaquetas}
 As plaquetas, também conhecidas e citadas como \emph{Platelets}, são os menores componentes do sangue e possuem grande responsabilidade na hemostasia, que é uma resposta fisiológica para a prevenção e interrupção de sangramentos e hemorragias, ou seja, elas atuam na manutenção dos vasos sanguíneos. As plaquetas são fragmentos do citoplasma de megacariócitos, ou seja, elas são produzidas na medula óssea como parte dessas células especializadas que irão se dividir posteriormente e gerar um grande número de plaquetas. Aproximadamente, para cada 1 megacariócito, pode-se produzir cerca de 4000 plaquetas \cite{abcOfCbc}.
 
 Por serem fragmentos de uma célula, as plaquetas não possuem núcleo e são muito pequenas, com cerca de 1–3 µm de diâmetro, com a coloração azul-acinzentado. A vida útil das plaquetas dura em média de 9 a 12 dias, e elas são removidas pelo baço quando estão velhas ou danificadas \cite{abcOfCbc}.
 
-Podemos perceber também através da imagem \ref{fig:plaquetas}, a presença do último elemento visível abordado por este trabalho no \emph{dataset} utilizado como base. Onde é possível visualizar múltiplas plaquetas agrupadas em um dos cantos da imagem, além de outras no meio dos demais elementos do sangue.
+Podemos perceber também através da Figura \ref{fig:plaquetas}, a presença do último elemento visível abordado por este trabalho no \emph{dataset} utilizado como base. Nela é possível visualizar múltiplas plaquetas agrupadas em um dos cantos, além de outras no meio dos demais elementos do sangue.
 
 \begin{figure}[!htb]
 	\centering
@@ -79,13 +79,13 @@ Um hemograma, também conhecido e citado como \emph{Complete Blood Count (CBC)},
 Um hemograma é geralmente realizado em duas principais etapas, sendo a primeira relacionada ao eritrograma que se refere à análise das células vermelhas, de forma a revelar até mesmo alguns tipos essenciais de alterações patológicas do sistema eritropoético, sendo o sistema responsável pela produção do material vermelho do sangue, como aumento na produção de glóbulos vermelhos e anemias. A segunda parte está relacionada com o leucograma, que corresponde à contagem global e específica dos leucócitos, a parte branca do sangue. O quadro leucocitário resultante com o exame hematológico, possibilita ao médico tirar importantes conclusões \cite{manualHematologia, abcOfCbc}.
 
 \subsubsection{Eritrograma}
-O objetivo do eritrograma ao realizar a análise da parte vermelha do sangue, é analisar alguns atributos-chave. Primeiramente é realizado a contagem geral dos eritrócitos adotando uma escala de milhões/mm³. A hemoglobina também será calculada e registrada em uma escala de g/dl \cite{interpretacaoHemograma, manualHematologia}.
+O objetivo do eritrograma ao realizar a análise da parte vermelha do sangue, é analisar alguns atributos-chave. Primeiramente é realizada a contagem geral dos eritrócitos adotando uma escala de milhões/mm³. A hemoglobina também é calculada e registrada em uma escala de g/dl \cite{interpretacaoHemograma, manualHematologia}.
 
-Depois dessa principal contagem são calculados alguns índices importantes, sendo o primeiro deles o cálculo do volume corpuscular médio (VCM), sendo o volume médio das hemácias, calculado pelo quociente de um determinado volume de hemácias pelo número de células contidas no mesmo. Outro importante atributo é a hemoglobina corpuscular média (HCM), que semelhante ao VCM, é o conteúdo médio da hemoglobina, calculado pelo quociente de conteúdo de hemoglobina em um determinado volume de hemácias pelo número de células contidas no mesmo volume \cite{interpretacaoHemograma, manualHematologia}.
+Depois dessa principal contagem são calculados alguns índices, que apresenta o primeiro deles o cálculo do volume corpuscular médio (VCM), sendo o volume médio das hemácias, calculado pelo quociente de um determinado volume de hemácias pelo número de células contidas no mesmo. Outro importante atributo é a hemoglobina corpuscular média (HCM), que semelhante ao VCM, apresenta o conteúdo médio da hemoglobina, calculado pelo quociente de conteúdo de hemoglobina em um determinado volume de hemácias pelo número de células contidas no mesmo volume \cite{interpretacaoHemograma, manualHematologia}.
 
 Também temos outro índice que é a concentração de hemoglobina corpuscular média (CHCM), sendo a percentagem da hemoglobina em uma amostra de 100ml de hemácias. Por fim temos, a amplitude de distribuição dos glóbulos vermelhos, que em inglês significa \emph{Red Cell Distribution Width (RDW)}, que será responsável por avaliar a variação de tamanho entre as hemácias \cite{interpretacaoHemograma, manualHematologia}.
 
-Podemos visualizar a forma que esses índices do eritrograma estão presentes e são abordados em um hemograma real através da imagem \ref{fig:eritrograma}, assim como os seus respectivos valores de referência.
+Podemos visualizar a forma que esses índices do eritrograma estão presentes e são abordados em um hemograma real através da Figura \ref{fig:eritrograma}, assim como os seus respectivos valores de referência.
 
 \begin{figure}[!htb]
 	\centering
@@ -96,11 +96,11 @@ Podemos visualizar a forma que esses índices do eritrograma estão presentes e 
 \end{figure}
  
 \subsubsection{Leucograma}
-O objetivo do leucograma ao realizar a análise da parte branca do sangue, assim como no eritrograma, é analisar alguns atributos-chave, porém diferente do processo anterior, essa etapa terá um foco muito maior na classificação e contagem de diferentes células brancas.
+O objetivo do leucograma ao realizar a análise da parte branca do sangue, assim como no eritrograma, é analisar alguns atributos-chave, porém, diferente do processo anterior, essa etapa tem um foco muito maior na classificação e contagem de diferentes células brancas.
 
 Primeiramente é feita uma contagem geral de leucócitos em mm³. Depois é realizada a contagem de forma a classificar cada tipo de leucócito presente, com neutrófilos, eosinófilos, basófilos, linfócitos, monócitos e também os granulócitos imaturos (promielócitos, mielócitos, metamielócitos). Por fim, também é calculado o número presente de plaquetas no sangue em mm³ \cite{interpretacaoHemograma, manualHematologia}.
 
-Podemos visualizar a maneira que os índices e classificações são abordados em um hemograma real através da imagem \ref{fig:leucograma}, assim como os seus respectivos valores de referência.
+Podemos visualizar a maneira que os índices e classificações são abordados em um hemograma real através da Figura \ref{fig:leucograma}, assim como os seus respectivos valores de referência.
 
 \begin{figure}[!htb]
 	\centering
@@ -110,25 +110,25 @@ Podemos visualizar a maneira que os índices e classificações são abordados e
 	\label{fig:leucograma}
 \end{figure}
 
-\section{Inteligência Artificial: Machine Learning e Deep Learning}
+\section{Inteligência Artificial: \emph{Machine Learning e Deep Learning}}
 \label{sec:conceito2}
-A abordagem de \emph{Deep Learning} que é objeto de estudo desse trabalho é uma das subáreas de \emph{Machine Learning} que por sua vez é subárea de Inteligência Artificial, portanto antes de abordar cada um desses conceitos, quais suas diferenças e aplicações, se faz necessário comentar sobre a Inteligência Artificial.
+A abordagem de \emph{Deep Learning}, que é objeto de estudo desse trabalho é uma das subáreas de \emph{Machine Learning}, que, por sua vez, é subárea de Inteligência Artificial, portanto antes de abordar cada um desses conceitos, quais suas diferenças e aplicações, se faz necessário introduzir o conceito de Inteligência Artificial.
 
-A Inteligência Artificial é uma abordagem para a resolução de problemas de diversas naturezas através de uma forma automatizada, ou seja, é uma maneira de se resolver problemas sem a necessidade de um humano ou usuário específico para esse trabalho. Essa área está muito em alta atualmente, buscando cada vez novas maneiras de automatizar a vida humana. Podemos encontrar essa abordagem em diversos segmentos da indústria e atualmente também vem crescendo o uso nas residências para os mais diversos usos \cite{inteligenciaArtificial}.
+A Inteligência Artificial é uma abordagem para a resolução de problemas de diversas naturezas de forma automatizada, ou seja, é uma maneira de se resolver problemas sem a necessidade de um humano ou usuário específico para esse trabalho. Essa área está recebendo muita atenção atualmente, buscando, cada vez mais, novas maneiras de automatizar a vida humana. Podemos encontrar essa abordagem em diversos segmentos da indústria e atualmente também vem crescendo o uso nas residências para as mais diversas finalidades \cite{inteligenciaArtificial}.
 
-O intuito dessa área é buscar formas de ensinar máquinas e computadores a serem capazes de ter uma inteligência cada vez mais semelhante aos seres humanos, isso ocorre geralmente através do reconhecimento de padrões por esses dispositivos, onde eles serão ensinados a analisar dados e interpretar-los, muito semelhante ao que acontece para o aprendizado de seres humanos. Porém, diferente de nós, as máquinas geralmente precisam de um volume massivo de dados para que sejam capazes de aprender algo básico \cite{IAAprendizadoMaquina}.
+O intuito dessa área é buscar formas de ensinar máquinas e computadores a serem capazes de ter uma inteligência cada vez mais semelhante aos seres humanos. Isso ocorre geralmente através do reconhecimento de padrões através de diversas técnicas, que permitem que os computadores sejam ensinados a analisar e interpretar dados, de forma semelhante ao que acontece para o aprendizado de seres humanos. Porém, diferente de nós, as máquinas geralmente precisam de um volume massivo de dados para que sejam capazes de aprender algo básico \cite{IAAprendizadoMaquina}.
 
 \subsection{Machine Learning}
 
-A resolução de problemas através de ferramentas da computação é bastante comum e para isso se faz uso de algoritmos programados para essa finalidade específica, porém não é em todos os problemas que podemos aplicar essa abordagem tradicional, porque nem sempre se sabe um caminho único de etapas a serem seguidas para chegar a uma resolução. No caso, quando se sabe a entrada de dados e o resultado onde queremos chegar, mas não os meios para se chegar nesse resultado, é possível utilizar um modelo de \emph{Machine Learning} para realizar a predição. Podemos pensar que na abordagem de algoritmos tradicionais de programação possuímos os parâmetros necessários e conhecemos o método para assim chegar ao resultado, mas na aplicação de \emph{Machine Learning}, conhecemos os parâmetros e o resultado, porém o método será aprendido e apresentado pela máquina \cite{machineLearning}.
+A resolução de problemas através de ferramentas da computação é bastante comum e para isso se faz uso de algoritmos programados para finalidades específicas, porém não é em todos os problemas que podemos aplicar essa abordagem tradicional, porque nem sempre se sabe um caminho único de etapas a serem seguidas para chegar a uma resolução. Nesses casos, quando se sabe a entrada de dados e o resultado desejado, mas não os meios para se chegar nesse resultado, é possível utilizar um modelo de \emph{Machine Learning} para realizar a predição. Podemos pensar que, na abordagem de algoritmos tradicionais de programação, possuímos os parâmetros necessários e conhecemos o método para assim chegar ao resultado, mas na aplicação de \emph{Machine Learning}, conhecemos os parâmetros e o resultado, porém o método será aprendido e apresentado pela própria máquina \cite{machineLearning}.
 
-É possível fazer uma analogia entre um modelo de \emph{Machine Learning} com uma criança que aprenderá algo novo, onde todo modelo passará por três principais etapas, o pré-processamento dos dados, a fase de treinamento, e por fim o teste. Na fase de pré-processamento, os dados serão analisados e adaptados para um melhor entendimento do modelo, retirando informações inúteis, alterando o formato para o mais adequado, entre outras práticas \cite{machineLearningPython}.
+É possível fazer uma analogia entre um modelo de \emph{Machine Learning} e uma criança que aprende algo novo, onde todo modelo passa por três principais etapas: o pré-processamento dos dados, a fase de treinamento, e por fim o teste. Na fase de pré-processamento, os dados são analisados e adaptados para um melhor entendimento do modelo, retirando informações inúteis, alterando o formato para um mais adequado, entre outras práticas \cite{machineLearningPython}.
 
-Logo após, o modelo de \emph{Machine Learning} deverá ser treinado conforme o método desejado antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados por cada um deles além dos parâmetros e configurações necessárias para o treinamento. Dessa forma o modelo poderá aprender a entender e interpretar os dados corretamente, para assim ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados \cite{machineLearningPython}.
+Logo após, o modelo de \emph{Machine Learning} deve ser treinado conforme o método desejado, antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados em cada um deles, além dos parâmetros e configurações necessárias para o treinamento. Dessa forma o modelo aprende a entender e interpretar os dados, tornando-se ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados \cite{machineLearningPython}.
 
-Por fim, após o treinamento do modelo como um todo ocorre a fase de teste. Na fase de teste, o modelo será testado e avaliado com base em algumas técnicas para medir o seu desempenho, calculando métricas como a acurácia, a precisão e a revocação. A acurácia indicará uma performance geral, quantas classes o modelo classificou corretamente. A precisão dirá dentre as classificações que o modelo classificou como positivo, quantas estão corretas. A revocação, também citada como \emph{recall} apontará dentre todas as classificações como positivo como valor esperado, quantas estão corretas. Além dessas métricas, também existe o F1-Score que irá realizar uma média harmônica entre precisão e recall \cite{machineLearningTensorFlow}.
+Por fim, após o treinamento do modelo como um todo ocorre a fase de teste. Nesta fase, o modelo será testado e avaliado com base em algumas técnicas para medir o seu desempenho, calculando métricas como a acurácia, a precisão e a revocação. A acurácia indicará uma performance geral, ou seja, quantas classes o modelo classificou corretamente. A precisão dirá, dentre as classificações que o modelo classificou como positivo, quantas estão corretas. A revocação, também citada como \emph{recall} apontará, dentre todas as classificações como positivo como valor esperado, quantas estão corretas. Além dessas métricas, também existe o F1-Score que realiza uma média harmônica entre precisão e recall \cite{machineLearningTensorFlow}.
 
-Para uma melhor visualização, e para realizar o cálculo das métricas citadas anteriormente, podemos utilizar uma matriz de confusão, que irá descrever o número de acertos e erros relacionados com os verdadeiros ou falsos positivos e os verdadeiros ou falsos negativos como podemos observar na imagem \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
+Para uma melhor visualização, e para realizar o cálculo das métricas citadas anteriormente, podemos utilizar uma matriz de confusão, que descreve o número de acertos e erros relacionados com os verdadeiros ou falsos positivos e os verdadeiros ou falsos negativos como podemos observar na Figura \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
 
 \begin{figure}[!htb]
 	\centering
@@ -140,20 +140,22 @@ Para uma melhor visualização, e para realizar o cálculo das métricas citadas
 
 \subsubsection{Algoritmos Tradicionais}
 
-Existem várias abordagens de \emph{Machine Learning} e elas podem ser classificadas em várias categorias diferentes, porém sempre podemos dividir em duas principais abordagens mais utilizadas, sendo elas a regressão e a classificação. Os modelos de regressão serão responsáveis pela predição de valores reais, enquanto que os modelos de classificação serão responsáveis pela rotulação dos dados em determinadas classes. Além disso, também podemos classificar os algoritmos em supervisionados ou não supervisionados. No aprendizado supervisionado, sabemos o resultado correto, ou seja, onde o modelo deverá chegar a partir dos dados obtidos, porém no aprendizado não supervisionado, o modelo terá que lidar com dados não estruturados e sem um resultado claro \cite{machineLearningPython}.
+Existem várias abordagens de \emph{Machine Learning}, que são divididas em duas metodologias diferentes: supervisionados ou não supervisionados. No aprendizado supervisionado, sabemos o resultado correto, ou seja, onde o modelo deverá chegar a partir dos dados obtidos, porém no aprendizado não supervisionado, o modelo terá que lidar com dados não estruturados e sem um resultado claro \cite{machineLearningPython}.
 
-Quando trabalhamos com regressão de dados, podemos citar alguns exemplos de abordagens mais utilizadas.
+Dentro do aprendizado supervisionado, encontra-se duas abordagens mais utilizadas, a regressão e a classificação. Os modelos de regressão serão responsáveis pela predição de valores reais, enquanto que os modelos de classificação serão responsáveis pela rotulação dos dados em determinadas classes \cite{machineLearningPython}.
+
+Quando trabalhamos com regressão de dados, podemos citar alguns exemplos de abordagens mais utilizadas \cite{machineLearningTensorFlow}.
 \begin{itemize}
     \item \textbf{Linear Regression:} método mais clássico e simples para abordar regressão, onde é traçado uma reta através dos dados e então realizado a predição com base nessa reta. Possui variações como na \emph{Multiple Linear Regression} onde são usadas mais variáveis e também na \emph{Polynomial Linear Regression} onde a reta se tornará uma curva, utilizando variáveis com exponenciação, tornando o resultado mais assertivo.
-    \item \textbf{Decision Tree:} as árvores de decisão são uma técnica utilizada para prever valores através de critérios aprendidos pelo modelo. Esses critérios serão aprendidos através da divisão dos dados conhecidos em grupos semelhantes de forma a encontrar padrões em cada um dos grupos de dados.
-    \item \textbf{Random Forest:} as florestas aleatória são uma técnica utilizada de forma a combinar o poder de processamento de várias árvores de decisão diferentes de forma a ter um trabalho mais minucioso e geralmente chegar em um resultado mais preciso.
+    \item \textbf{Decision Tree:} árvore de decisão é uma técnica utilizada para prever valores através de critérios aprendidos pelo modelo. Esses critérios serão aprendidos através da divisão dos dados conhecidos em grupos semelhantes de forma a encontrar padrões em cada um dos grupos de dados.
+    \item \textbf{Random Forest:} floresta aleatória é uma técnica utilizada de forma a combinar o poder de processamento de várias árvores de decisão diferentes, de forma a ter um trabalho mais minucioso e geralmente chegar em um resultado mais preciso.
 \end{itemize}
 
-Quando trabalhamos com classificação de dados, podemos citar alguns exemplos de algoritmos mais utilizados.
+Quando trabalhamos com classificação de dados, podemos citar alguns exemplos de algoritmos mais utilizados \cite{machineLearningPython}.
 \begin{itemize}
     \item \textbf{K-Nearest Neighbors (KNN):} o KNN é uma abordagem de um algoritmo que realizará a classificação com base na comparação de um dado com dados semelhantes a ele. É considerado uma abordagem \emph{lazy}, ou seja, preguiçosa, pois não apresenta um modelo inteligente, apenas armazena os dados e realiza comparações.
-    \item \textbf{Decision Tree Classifier:} assim como na regressão, as árvores de decisão são uma técnica utilizada para predizer classes para dados específicos a partir de uma série de critérios aprendidos pelo modelo. Esses critérios serão aprendidos através da divisão dos dados conhecidos em grupos semelhantes de forma a encontrar padrões que nesse caso seriam as classes necessárias para a interpretação em cada um dos grupos divididos de dados.
-    \item \textbf{Random Forest Classifier:} assim como na regressão, as florestas aleatória são uma técnica utilizada de forma a combinar o poder de processamento de várias árvores de decisão voltadas à classificação, buscando ter um trabalho mais minucioso e geralmente chegar em um resultado mais preciso.
+    \item \textbf{Decision Tree Classifier:} assim como na regressão, árvore de decisão é uma técnica utilizada para predizer classes para dados específicos a partir de uma série de critérios aprendidos pelo modelo. Esses critérios serão aprendidos através da divisão dos dados conhecidos em grupos semelhantes de forma a encontrar padrões que nesse caso seriam as classes necessárias para a interpretação em cada um dos grupos divididos de dados.
+    \item \textbf{Random Forest Classifier:} assim como na regressão, floresta aleatória é uma técnica utilizada de forma a combinar o poder de processamento de várias árvores de decisão voltadas à classificação, buscando ter um trabalho mais minucioso e geralmente chegar em um resultado mais preciso.
 \end{itemize}
 
 Além desses algoritmos, é importante ressaltar uma abordagem diferente da convencional que são as redes neurais, que podem ser utilizadas tanto para regressão quanto para classificação. Esse tipo de abordagem se difere dos algoritmos tradicionais e será objeto de estudo desse trabalho.
@@ -161,9 +163,9 @@ Além desses algoritmos, é importante ressaltar uma abordagem diferente da conv
 \subsubsection{Redes Neurais}
 \label{sec:redesneurais}
 
-As redes neurais buscam uma abordagem bastante parecida com o cérebro humano, pois utilizam uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} será capaz de receber inputs (os dados de entrada) e reproduzir uma saída esperada, porém ao se trabalhar com apenas um \emph{perceptron}, muitas vezes não possui o processamento necessário para se chegar a uma solução, portanto é necessário utilizar um número maior de \emph{perceptrons} conectados uns aos outros se assemelhando ainda mais ao cérebro humano. Para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network (ANN)} \cite{deepLearning, deepLearningTensorFlow}.
+As redes neurais buscam uma abordagem bastante parecida com o cérebro humano, pois utilizam uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} é capaz de receber \emph{inputs} (os dados de entrada) e produzir uma saída. O desempenho do uso de \emph{perceptrons} pode ser melhorado ao utilizar vários em conjunto formando uma rede, assim unindo o poder de processamento de cada um deles e chegando a um resultado mais assertivo em menor tempo. Para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network (ANN)} \cite{deepLearning, deepLearningTensorFlow}.
 
-A figura \ref{fig:perceptron} apresenta toda a estrutura de um perceptron, onde o X representa a informação repassada, o W representa os pesos de cada informação, a letra Sigma o somatório, o F a função de ativação e por fim o Y representará a saída.
+A Figura \ref{fig:perceptron} apresenta toda a estrutura de um perceptron, onde o X representa a informação repassada, o W representa os pesos de cada informação, a letra Sigma o somatório, o F a função de ativação e por fim o Y representa a saída.
 
 \begin{figure}[!htb]
 	\centering
@@ -175,13 +177,13 @@ A figura \ref{fig:perceptron} apresenta toda a estrutura de um perceptron, onde 
 
 Uma \emph{Artificial Neural Network} é uma estrutura formada por diversos neurônios, conhecidos como \emph{perceptrons}, organizados de forma a imitar o processamento de um cérebro humano. Sua estrutura é definida em diversas camadas, geralmente adotando uma camada de entrada, outra de saída e camadas intermediárias chamadas de ocultas que serão responsáveis pelo processamento na totalidade, onde cada uma delas pode conter um número variável de \emph{perceptrons} \cite{deepLearningTensorFlow}
 
-Podemos visualizar esta estrutura na imagem \ref{fig:neuralNetwork}, onde temos a camada de entrada no \emph{input layer}. A camada escondida sendo uma ou mais no \emph{hidden} e por fim a camada de saída no \emph{output}.
+Podemos visualizar esta estrutura na Figura \ref{fig:neuralNetwork}, com a presença da camada de entrada, as camadas escondidas e por fim a camada de saída.
 
 \begin{figure}[!htb]
 	\centering
 	\caption{Artificial Neural Network}
-	\includegraphics[width=0.40\textwidth]{img/neuralNetwork.jpg}
-	\legend{Fonte: \cite{deepLearningPython}}
+	\includegraphics[width=0.40\textwidth]{img/neuralNetwork.png}
+	\legend{Fonte: Elaborada pelo autor.}
 	\label{fig:neuralNetwork}
 \end{figure}
 
@@ -189,30 +191,30 @@ Podemos visualizar esta estrutura na imagem \ref{fig:neuralNetwork}, onde temos 
 
 Dessa forma, uma ANN poderá aprender a realizar diversos tipos de tarefas, como classificação, por exemplo, através do uso de um algoritmo de \emph{backpropagation} que significa propagação regressiva, responsável por gerir a taxa de aprendizado do modelo, seguindo alguns passos \cite{deepLearningTensorFlow}.
 
-Primeiramente, o algoritmo inicializará a rede artificial com pesos aleatórios, entrando em modo de treino para realizar o aprendizado. Durante o treinamento, o algoritmo será capaz de realizar predições de resultados que serão comparados com os valores corretos, para saber se está obtendo sucesso ou não. O algoritmo de \emph{backpropagation} então irá calcular a diferença do resultado obtido com o real, e essa informação do erro será repassada para todas as camadas anteriores de forma a realizar um ajuste nos pesos e minimizar o erro \cite{deepLearningTensorFlow}.
+Primeiramente, o algoritmo inicia a rede artificial com pesos aleatórios, entrando em modo de treino para realizar o aprendizado. Durante o treinamento, o algoritmo é capaz de realizar predições de resultados que serão comparados com os valores corretos, para saber se está obtendo sucesso ou não. O algoritmo de \emph{backpropagation} então calcula a diferença do resultado obtido com o real, e essa informação do erro é repassada para todas as camadas anteriores de forma a realizar um ajuste nos pesos e minimizar o erro \cite{deepLearningTensorFlow}.
 
-Todo esse processo é realizado muitas vezes durante o treinamento, e só irá encerrar quando os ajustes levarem ao aumento do erro novamente, indicando que os pesos foram ajustados até o limite. Essa etapa de otimização dos pesos utilizados pela rede é muito importante de forma a ser essencial para o funcionamento da rede neural, pois através dela que é possível para o modelo aprender com os seus erros \cite{deepLearningTensorFlow}.
+Todo esse processo é realizado muitas vezes durante o treinamento, e só encerra quando os ajustes levam ao aumento do erro novamente, indicando que os pesos foram ajustados até o limite. Essa etapa de otimização dos pesos utilizados pela rede é muito importante, sendo essencial para o funcionamento da rede neural, pois através dela que é possível para o modelo aprender com os seus erros \cite{deepLearningTensorFlow}.
 
 \subsection{Deep Learning}
-Existem alguns casos que o \emph{Machine Learning} não é suficiente para o aprendizado a partir dos dados, pois o aprendizado acontece através de reconhecimento de padrões com base nos dados que não podem ser utilizados de qualquer forma, devem ser preparados e adaptados para cada modelo, ou seja, a máquina não será capaz de aprender por conta própria, pois precisará sempre de intervenção humana para o processamento dos dados. Logo se necessita de uma abordagem muito mais parecida com a forma de pensar dos seres humanos, como o \emph{Deep Learning} \cite{deepLearningPython, deepLearningTensorFlow}.
+Existem alguns casos que o \emph{Machine Learning} não é suficiente para o aprendizado a partir dos dados, pois o aprendizado acontece através de reconhecimento de padrões com base nos dados que não podem ser utilizados de qualquer forma, devem ser preparados e adaptados para cada modelo, ou seja, a máquina não é capaz de aprender por conta própria, pois precisa sempre de intervenção humana para o processamento dos dados. Logo, é preciso uma abordagem muito mais parecida com a forma de pensar dos seres humanos, como o \emph{Deep Learning} \cite{deepLearningPython, deepLearningTensorFlow}.
 
-O \emph{Deep Learning} busca formas de levar o conceito das redes neurais abordado na seção \ref{sec:redesneurais} ainda mais longe. Primeiramente, se trabalhando com as \emph{Deep Neural Networks (DNNs)}, ou Redes Neurais Profundas, que são uma arquitetura de rede neural extremamente orientada ao \emph{Deep Learning}, ou seja, embora possuam uma arquitetura semelhante às redes neurais tradicionais, são muito mais complexas em seus modelos, com um número maior de neurônios, camadas ocultas e conexões entre neurônios. Além do fato de utilizarem os princípios de aprendizagem do \emph{Machine Learning} tradicional, como o aprendizado supervisionado, como visto anteriormente \cite{deepLearningTensorFlow}.
+O \emph{Deep Learning} busca formas de levar o conceito das redes neurais abordado na seção \ref{sec:redesneurais} ainda mais longe, utilizando \emph{Deep Neural Networks (DNNs)}. As \emph{Deep Neural Networks (DNNs)}, ou Redes Neurais Profundas, são uma arquitetura de rede neural orientada ao \emph{Deep Learning}, ou seja, são muito mais complexas em seus modelos, com um número maior de neurônios, camadas ocultas em configurações mais complexas e conexões específicas entre os neurônios \cite{deepLearningTensorFlow}.
 
-Com as possibilidades que as redes neurais profundas trouxeram, surgiram algumas variantes interessantes e focadas em um nicho específico, buscando se assemelhar ainda mais a natureza humana para realizar tarefas e criar inteligência. Algumas dessas variantes se aplicam a processamento de linguagem falada, como é o caso das RNNs abordadas na seção \ref{sec:rnn}, ou também abordam o reconhecimento e interpretação de imagens como é o caso das CNNs abordadas na seção \ref{sec:cnn} e é assunto de interesse para a continuidade deste trabalho.
+Com as possibilidades que as redes neurais profundas trouxeram, surgiram algumas variantes interessantes e focadas em um nicho específico, buscando se assemelhar ainda mais a natureza humana para realizar tarefas e criar inteligência. Algumas dessas variantes se aplicam a processamento de linguagem natural, como é o caso das RNNs abordadas na seção \ref{sec:rnn}, ou também abordam o reconhecimento e interpretação de imagens como é o caso das CNNs abordadas na seção \ref{sec:cnn} e é assunto de interesse para a continuidade deste trabalho.
 
-\subsubsection{Recurrent Neural Networks (RNNs)}
+\subsubsection{\emph{Recurrent Neural Networks (RNNs)}}
 \label{sec:rnn}
-As Recurrent Neural Networks, ou Redes Neurais Recorrentes, são uma arquitetura de rede neural desenvolvida para a interpretação de dados temporais em sequência, ou seja, pode realizar predições de variáveis em relação ao tempo. Sua estrutura é desenvolvida para permitir conexões de feedback das informações repassadas, ou seja, possui loops que permite que as informações persistam, como se a rede fosse executada várias vezes. As RNNs são desenvolvidos para utilizar informações que possuem uma sequência fixa, como é o caso de informações que são atualizadas em decorrência do tempo \cite{deepLearningTensorFlow}.
+As \emph{Recurrent Neural Networks}, ou Redes Neurais Recorrentes, são uma arquitetura de rede neural desenvolvida para a interpretação de dados temporais em sequência, ou seja, podem realizar predições de variáveis em relação ao tempo. Sua estrutura é desenvolvida para permitir conexões de feedback das informações repassadas, ou seja, possui \emph{loops} que permitem que as informações persistam, como se a rede fosse executada várias vezes. As RNNs são desenvolvidas para utilizar informações que possuem uma sequência fixa, como é o caso de informações que são atualizadas em decorrência do tempo \cite{deepLearningTensorFlow}.
 
-\subsubsection{Convolutional Neural Networks (CNNs)}
+\subsubsection{\emph{Convolutional Neural Networks (CNNs)}}
 \label{sec:cnn}
-As Convolutional Neural Networks, ou Redes Neurais Convolucionais, são uma arquitetura de rede neural desenvolvida especificamente para o reconhecimento de imagens, com a capacidade de interpretar imagens dividido-as em partes importantes. Essa rede trabalha inicialmente com 3 informações base, interpretando imagens como matrizes de 3 dimensões, sendo a altura, a largura e a cor \cite{deepLearningTensorFlow}.
+As \emph{Convolutional Neural Networks}, ou Redes Neurais Convolucionais, são uma arquitetura de rede neural desenvolvida especificamente para o reconhecimento de imagens, com a capacidade de interpretar imagens dividindo-as em partes importantes. Essa rede trabalha inicialmente com 3 informações base, interpretando imagens como matrizes de 3 dimensões, sendo a altura, a largura e a cor \cite{deepLearningTensorFlow}.
 
-As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande volume de dados, que nesse caso será cada pixel da imagem, o modelo teria muita dificuldade para aprender, logo nasceu a necessidade das CNNs. Para resolver esse problema, as CNNs foram desenvolvidas para usar camadas parcialmente conectadas e com grande reutilização dos pesos, dessa forma terá muito menos parâmetros a interpretar e passar adiante e consequentemente será mais rápido para treinar, terá menos risco de sobre-ajuste e requer muito menos dados de treinamento \cite{deepLearningTensorFlow}.
+As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande volume de dados, que nesse caso será cada pixel da imagem, o modelo teria muita dificuldade para aprender, logo nasceu a necessidade das CNNs. Para resolver esse problema, as CNNs foram desenvolvidas para usar camadas parcialmente conectadas e com grande reutilização dos pesos, dessa forma tem muito menos parâmetros à interpretar e passar adiante e consequentemente são mais rápidas para treinar, tendo menor risco de sobre-ajuste e necessitando de um volume menor de dados de treinamento \cite{deepLearningTensorFlow}.
 
-Essa eficiência se deve também ao fato de que uma CNN quando aprender a interpretar algum recurso ou elemento específico na imagem, ela será capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprenderia a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
+Essa eficiência se deve também ao fato de que uma CNN, quando aprender a interpretar algum recurso ou elemento específico na imagem, se torna capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprendem a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
 
-Esse recurso pode ser observado dentro da camada convolucional. Como podemos observar na imagem \ref{fig:cnn}, a diferença de uma CNN para uma rede neural tradicional. Na CNN podemos perceber a presença de uma camada adicional além das normais, que é a \emph{convolutional layer} que representa a camada convolucional.
+Esse recurso pode ser encontrado dentro da camada convolucional, que está presente no início do processo e pode ser observada na Figura \ref{fig:cnn}. 
 
 \begin{figure}[!htb]
 	\centering
@@ -223,9 +225,9 @@ Esse recurso pode ser observado dentro da camada convolucional. Como podemos obs
 \end{figure}
 
 \subsubsection{Bibliotecas e Recursos}
-Para se trabalhar com \emph{Deep Learning} e suas principais arquiteturas e recursos, existem algumas bibliotecas disponíveis no mercado gratuitamente para esse facilitar e orientar esse trabalho. Dessa forma, pode-se encontrar o Tensorflow e o Keras, sendo duas bibliotecas desenvolvidas em Python e C++, com a possibilidade de se trabalhar em conjunto e muito utilizadas pela comunidade de \emph{Deep Learning}, em geral \cite{deepLearningTensorFlow}.
+Para se trabalhar com \emph{Deep Learning} e suas principais arquiteturas e recursos, existem algumas bibliotecas disponíveis no mercado gratuitamente, as quais tendem a facilitar e orientar esse trabalho. Dessa forma, pode-se encontrar o Tensorflow e o Keras, sendo duas bibliotecas desenvolvidas em Python e C++, com a possibilidade de se trabalhar em conjunto e muito utilizadas pela comunidade de \emph{Deep Learning} em geral \cite{deepLearningTensorFlow}.
 
-O Tensorflow é uma plataforma completa de código aberto para \emph{Machine Learning} para uma grande variedade de tarefas com um foco nas redes neurais, porém suas funcionalidades também se estendem até o \emph{Deep Learning}. As APIs disponibilizadas do Tensorflow utilizam como base o próprio Keras para definir e treinar as redes neurais. Desenvolvido pelo Google desde 2011, em 2018 a equipe decidiu integrar o Keras na biblioteca principal do Tensorflow \cite{websiteTensorFlow}.
+O Tensorflow é uma plataforma completa de código aberto para \emph{Machine Learning}, a qual considera uma grande variedade de tarefas com um foco nas redes neurais, porém suas funcionalidades também se estendem ao \emph{Deep Learning}. As APIs disponibilizadas do Tensorflow utilizam como base o próprio Keras para definir e treinar as redes neurais. Desenvolvido pelo Google desde 2011, em 2018 a equipe decidiu integrar o Keras na biblioteca principal do Tensorflow \cite{websiteTensorFlow}.
 
 O Keras foi desenvolvido para permitir uma experimentação e prototipação rápida, com um principal foco nas redes neurais profundas. Promete se fácil de utilizar, modular e ainda ser extensível. Possui vários recursos próprios, como a utilização de camadas, funções de perda, funções de ativação, entre outros. Além do foco em redes neurais profundas, possui módulos voltados a redes neurais convolucionais e recorrentes \cite{websiteKeras}.
 
@@ -236,13 +238,13 @@ Através da documentação do Tensorflow, é possível encontrar informações p
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
 
-O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para agilizar a identificação e interpretação de análises de sangue. Esta revisão resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para a aplicação de \emph{Deep Learning} em imagens de sangue em placas de petri de maneira que possam ser aplicados neste projeto de forma satisfatória.
+O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para agilizar a identificação e interpretação de análises de sangue. Este mapeamento resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para a aplicação de \emph{Deep Learning} em imagens de sangue em placas de Petri de maneira que possam ser obtidas informações para a geração automatizada de hemogramas.
 
 \section{Mapeamento Sistemático da Literatura}
 
-O mapeamento sistemático da literatura é realizado com base na busca e levantamento de artigos, para isso se utiliza uma string de busca para as principais bibliotecas e repositórios de artigos. Esses artigos serão analisados e selecionados conforme a sua área de pesquisa e a sua temática, para inclusão nesse estudo. Para isso, se é utilizado uma ferramenta para automatização dessa tarefa, que é o Parsifal\footnote[1]{https://parsif.al/}, de modo a definir a string de busca, salvar os artigos necessários e realizar a seleção.
+O mapeamento sistemático da literatura foi realizado com base na busca e levantamento de artigos, utilizando uma string de busca nas principais bibliotecas e repositórios de artigos. Esses artigos foram analisados e selecionados conforme a sua área de pesquisa e a sua temática, para inclusão nesse estudo. Para gerenciar o mapeamento sistemático foi utilizado a ferramenta Parsifal\footnote[1]{https://parsif.al/}, a qual auxilia na definição da string de busca, e permite salvar os artigos necessários e realizar a seleção.
 
-As questões de pesquisas levantadas para isso foram, ``Como os algoritmos de \emph{Deep Learning} podem ser utilizados para a interpretação de exames?'' e ``Como realizar o tratamento de imagens para reconhecimento por modelos de \emph{Deep Learning}?''. A partir dessas questões se foram extraídas palavras e termos para o direcionamento da pesquisa. Podemos visualizar estas palavras com seus sinônimos na Tabela 1.
+As questões de pesquisas levantadas para isso foram, ``Como os algoritmos de \emph{Deep Learning} podem ser utilizados para a interpretação de exames?'' e ``Como realizar o tratamento de imagens para reconhecimento por modelos de \emph{Deep Learning}?''. A partir dessas questões foram extraídas palavras e termos para o direcionamento da pesquisa. Podemos visualizar estas palavras com seus sinônimos na Tabela 1.
 
 \begin{table}[!htb]
 	\centering
@@ -259,7 +261,7 @@ As questões de pesquisas levantadas para isso foram, ``Como os algoritmos de \e
 	\legend{Fonte: Elaborada pelo autor.}
 \end{table}
 
-Na Tabela 2, é listado as bases de dados onde os artigos foram coletados, a quantidade de cada um deles e a string de busca utilizada na seleção. A mesma string de busca foi utilizado nas três bases de dados, e os artigos encontrados foram dos últimos 5 anos.
+Na Tabela 2, são listadas as bases de dados onde os artigos foram coletados, a quantidade de cada um deles e a string de busca utilizada na seleção. A mesma string de busca foi utilizada nas três bases de dados, e os artigos encontrados foram dos últimos 5 anos.
 
 \begin{table}[!htb]
 	\centering
@@ -310,7 +312,7 @@ Os seguintes critérios de inclusão foram definidos:
 	\item Sistema para elaboração de hemogramas utilizando Deep Learning;
 \end{itemize}
 
-Na tabela 4, podemos encontrar todos os 14 artigos selecionados com base nos critérios de inclusão, todos eles se enquadram em pelo menos um deles.
+Na tabela 4, é possível visualizar todos os 14 artigos selecionados com base nos critérios de inclusão, uma vez que todos eles se enquadram em pelo menos um deles.
 
 \begin{table}[!htb]
 	\centering
@@ -340,9 +342,9 @@ Todos os artigos selecionados estão relacionados à recursos para auxiliar na i
 
 \section{Análise dos trabalhos selecionados}
 
-Por fim, com os artigos selecionados e classificados, é necessário realizar a extração dos dados desses trabalhos, sendo essa a última etapa desse mapeamento sistemático da literatura. É possível perceber que os algoritmos e abordagens mais utilizados são técnicas de \emph{Deep Learning}, como, por exemplo, o uso de \emph{Convolutional Neural Network (CNN)} (A1, A2, A3, A4, A5, A6, A8, A9, A10, A11) e de \emph{Recurrent Neural Network (RNN)} (A6, A11), sendo abordagens de redes neurais para a classificação das células sanguíneas.
+Por fim, com os artigos selecionados e classificados, foi realizada a extração dos dados desses trabalhos, sendo essa a última etapa desse mapeamento sistemático da literatura. É possível perceber que os algoritmos e abordagens mais utilizados são técnicas de \emph{Deep Learning}, como, por exemplo, o uso de \emph{Convolutional Neural Network (CNN)} (A1, A2, A3, A4, A5, A6, A8, A9, A10, A11) e de \emph{Recurrent Neural Network (RNN)} (A6, A11), sendo abordagens de redes neurais para a classificação das células sanguíneas.
 
-Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais para a classificação, como, por exemplo, ocorre com o uso de \emph{Random Forest} ou \emph{Decision Trees}  (A2, A4, A7), sendo estruturas de árvores de decisão. Também se encontra estudos recorrendo a \emph{Support Vector Machine (SVM)} (A7) que utilizam vetores de suporte e por fim \emph{K-Means e K-Nearest Neighbors (KNN)} (A12), que faz a classificação considerando os vizinhos mais próximos.
+Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais para a classificação, como por exemplo, o uso de \emph{Random Forest} ou \emph{Decision Trees}  (A2, A4, A7), sendo estruturas de árvores de decisão. Também foram encontrados estudos recorrendo a \emph{Support Vector Machine (SVM)} (A7) que utilizam vetores de suporte e por fim \emph{K-Means e K-Nearest Neighbors (KNN)} (A12), que faz a classificação considerando os vizinhos mais próximos.
 
 \chapter{Procedimentos Metodológicos}
 \label{chap:metodologia}
@@ -352,25 +354,25 @@ Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais 
 % Quanto aos objetivos = Exploratória
 % Quanto aos procedimentos metodológicos = Bibliográfica
 
-O projeto iniciou com uma pesquisa exploratória da bibliografia para delimitar o escopo e compreender melhor os aspectos que estão sendo aplicados para o domínio de problema abordado por este trabalho. Essa pesquisa exploratória permitiu elaborar um mapeamento sistemático da literatura e também desenvolver uma fundamentação teórica a partir disso.
+O projeto iniciou com uma pesquisa exploratória da bibliografia para delimitar o escopo e compreender melhor os aspectos que estão sendo aplicados para o domínio de problema abordado por este trabalho. Essa pesquisa exploratória permitiu elaborar um mapeamento sistemático da literatura e também desenvolver a fundamentação teórica a partir disso.
 
-Em sequência, o que será buscado por este trabalho é a coleta dos datasets selecionados para a pesquisa, assim como realizar os devidos tratamentos e análise aprofundada desse material, de forma a preparar uma base de dados sólida e confiável para o prosseguimento dos trabalhos. Esses datasets estão disponíveis na internet de forma aberta e gratuita.
+Na sequência, deste trabalho serão coletados dos \emph{datasets} de imagens selecionados para a pesquisa. Com base em uma análise aprofundada desse material, serão realizados os devidos tratamentos, de forma a preparar uma base de dados sólida e confiável para o prosseguimento dos trabalhos. Esses \emph{datasets} estão disponíveis na internet de forma aberta e gratuita.
 
-Com o dataset devidamente ajustado, pode-se iniciar a preparação do modelo de \emph{Deep Learning}. De forma, a definir as camadas que o modelo deverá ter, com base nas imagens contidas no dataset. Com o modelo desenvolvido, iniciará a fase de treinamento e depois de teste do modelo em si, onde o dataset será divido em treino e teste, geralmente adotando uma proporção de 70\% de dados para o treino e 30\% de dados para o teste.
+Com o \emph{dataset} devidamente ajustado, será iniciada a preparação do modelo de \emph{Deep Learning}, objetivando definir as camadas que o modelo deverá ter, com base nas imagens contidas no \emph{dataset}. Com o modelo desenvolvido, será iniciada a fase de treinamento, para então realizar o teste do modelo em si. Para que isso seja possível o \emph{dataset} será divido em duas partes, umas para o treino e outra para o teste, adotando uma proporção de 70\% das imagens para o treino e 30\% para o teste.
 
-Os modelos de \emph{Deep Learning} após esse processo podem ser avaliados em relação ao seu desempenho, verificando métricas importantes do aprendizado como acurácia, revocação e precisão. Além dessa análise, se pode também preparar uma matriz de confusão para uma melhor visualização do desempenho do modelo. Dependendo do resultado recebido, o modelo poderá passar por modificações e melhorias para um resultado mais assertivo e consequentemente mais confiável.
+Os modelos de \emph{Deep Learning} após esse processo podem ser avaliados em relação ao seu desempenho, verificando métricas importantes do aprendizado como acurácia, sendo a linear ou categórica. Além dessa análise, se pode também preparar uma matriz de confusão para uma melhor visualização do desempenho do modelo. Dependendo do resultado recebido, o modelo poderá passar por modificações e melhorias para um resultado mais assertivo e consequentemente mais confiável.
 
-Por fim, ao atingir o objetivo desejado, os dados dos resultados e da performance do modelo serão registrados e descritos no trabalho de conclusão de curso final. Além disso, será feita uma comparação dessa solução com as demais encontradas por outros modelos documentados na literatura.
+Por fim, ao atingir o objetivo desejado, os dados dos resultados e da performance do modelo serão registrados e descritos no trabalho de conclusão de curso em forma de monografia. Além disso, será feita uma comparação dessa solução com as demais encontradas por outros modelos documentados na literatura.
 
 \section{Recursos}
 \label{chap:recursos}
 
-Os recursos que serão utilizados para o desenvolvimento deste projeto serão um computador próprio, todos os recursos disponibilizados pelo IFSC, como a sua biblioteca física e virtual, também serão consultados os artigos encontrados nos repositórios online disponíveis. Além disso, serão consultados datasets e conjuntos de dados disponíveis de forma online para este fim. A impressão do trabalho será terceirizada.
+Os recursos que serão utilizados para o desenvolvimento deste projeto serão um computador próprio, todos os recursos disponibilizados pelo IFSC, como a sua biblioteca física e virtual, além de consulta a artigos encontrados nos repositórios online disponíveis. Além disso, serão consultados \emph{datasets} e conjuntos de dados disponíveis na internet para este fim. A impressão do trabalho será terceirizada.
 
 \chapter{Cronograma}
 \label{chap:cronograma}
 
-A Tabela \ref{tbl:cronograma} apresenta o cronograma de atividades propostas para o desenvolvimento deste projeto de trabalho de conclusão de curso, de forma a viabilizar a produção automática de hemogramas utilizando modelos de \emph{Deep Learning}.
+A Tabela \ref{tbl:cronograma} apresenta o cronograma de atividades propostas para o desenvolvimento deste projeto de trabalho de conclusão de curso, de forma a viabilizar a produção automática de hemogramas, a partir de imagens de amostras de sangue, utilizando modelos de \emph{Deep Learning}.
 
 \begin{table}[!htb]
 	\centering
