@@ -1,13 +1,13 @@
 \chapter{Fundamentação Teórica}
 \label{chap:fund}
 
-Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}, assim como as técnicas e algoritmos aplicados para auxiliar os profissionais de laboratório a realizarem exames de sangue de uma forma automatizada e eficiente. Além disso, serão apresentados os dados coletados de uma análise de sangue que dão subsídio para a geração de hemogramas.
+Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}, assim como as técnicas e algoritmos aplicados para auxiliar os profissionais de laboratório a realizarem hemogramas de uma forma automatizada e eficiente. Além disso, serão apresentados os dados coletados de uma análise de sangue que dão subsídio para a geração de hemogramas.
 
 \section{Exames Laboratoriais de Sangue}
 \label{sec:conceito1}
 Os exames laboratoriais de sangue, principalmente se tratando de hemogramas, são um tipo de exame simples, porém de extrema importância para a saúde humana. Através desses exames pode-se descobrir diversas informações sobre o organismo da pessoa examinada, inclusive detectar doenças e problemas antecipadamente, por exemplo, para diagnosticar anemia, deficiências nutricionais, parasitas no sangue, doenças virais e autoimunes. Também é possível identificar infecções, doenças como leucemia, diagnosticar efeitos de medicamentos e também o efeito de vários tipos de estresses sobre o corpo \cite{abcOfCbc, atlasDeHematologiaEAnalise}.
 
-Um exame poderá ser solicitado por um médico, ou a partir do interesse do próprio paciente, e realizado em um laboratório de análises clínicas, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade constitui preço expressivo para aquisição e manutenção.
+Um exame pode ser solicitado por um médico, ou a partir do interesse do próprio paciente, e realizado em um laboratório de análises clínicas, que será responsável por realizar a coleta, encaminhar para a análise específica e retornar o resultado. Todo esse processo é custoso em tempo de espera e também financeiramente, pois o maquinário para esse tipo de atividade constitui preço expressivo para aquisição e manutenção.
 
 \subsection{Sangue}
 O sangue é um elemento do corpo humano, que circula em estado líquido através de todo o sistema circulatório do organismo, sendo de importância para o funcionamento correto das células através da entrada e saída de substâncias que podem modificar a sua composição \cite{manualHematologia}.
@@ -124,9 +124,9 @@ A resolução de problemas através de ferramentas da computação é bastante c
 
 É possível fazer uma analogia entre um modelo de \emph{Machine Learning} e uma criança que aprende algo novo, onde todo modelo passa por três principais etapas: o pré-processamento dos dados, a fase de treinamento, e por fim o teste. Na fase de pré-processamento, os dados são analisados e adaptados para um melhor entendimento do modelo, retirando informações inúteis, alterando o formato para um mais adequado, entre outras práticas \cite{machineLearningPython}.
 
-Logo após, o modelo de \emph{Machine Learning} deve ser treinado conforme o método desejado, antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados em cada um deles, além dos parâmetros e configurações necessárias para o treinamento. Dessa forma o modelo aprende a entender e interpretar os dados, tornando-se ser capaz de reproduzir esse mecanismo para prever o resultado de futuros dados \cite{machineLearningPython}.
+Logo após, o modelo de \emph{Machine Learning} deve ser treinado conforme o método desejado, antes de realizar a predição de qualquer valor ou resultado, onde o responsável pelo treinamento deverá fornecer um grande volume de dados, assim como os resultados esperados em cada um deles, além dos parâmetros e configurações necessárias para o treinamento. Dessa forma o modelo aprende a entender e interpretar os dados, tornando-se ser capaz de reproduzir esse método para prever o resultado de futuros dados \cite{machineLearningPython}.
 
-Por fim, após o treinamento do modelo como um todo ocorre a fase de teste. Nesta fase, o modelo será testado e avaliado com base em algumas técnicas para medir o seu desempenho, calculando métricas como a acurácia, a precisão e a revocação. A acurácia indicará uma performance geral, ou seja, quantas classes o modelo classificou corretamente. A precisão dirá, dentre as classificações que o modelo classificou como positivo, quantas estão corretas. A revocação, também citada como \emph{recall} apontará, dentre todas as classificações como positivo como valor esperado, quantas estão corretas. Além dessas métricas, também existe o F1-Score que realiza uma média harmônica entre precisão e \emph{recall} \cite{machineLearningTensorFlow}.
+Por fim, após o treinamento do modelo como um todo ocorre a fase de teste. Nesta fase, o modelo será testado e avaliado com base em algumas técnicas para medir o seu desempenho, calculando métricas como a acurácia, a precisão e a revocação. A acurácia indicará uma performance geral, ou seja, quantas classes o modelo classificou corretamente. A precisão dirá, dentre as classificações que o modelo classificou como positivo, quantas estão corretas. A revocação, também citada como \emph{recall}, apontará dentre todas as classificações que possuem positivo como valor esperado, quantas estão corretas. Além dessas métricas, também existe o F1-Score que realiza uma média harmônica entre precisão e \emph{recall} \cite{machineLearningTensorFlow}.
 
 Para uma melhor visualização, e para realizar o cálculo das métricas citadas anteriormente, se utiliza uma matriz de confusão, que descreve o número de acertos e erros relacionados com os verdadeiros ou falsos positivos e os verdadeiros ou falsos negativos observa-se na Figura \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
 
@@ -163,9 +163,9 @@ Além desses algoritmos, é importante ressaltar uma abordagem diferente da conv
 \subsubsection{Redes Neurais}
 \label{sec:redesneurais}
 
-As redes neurais buscam uma abordagem bastante parecida com o cérebro humano, pois utilizam uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} é capaz de receber \emph{inputs} (os dados de entrada) e produzir uma saída. O desempenho do uso de \emph{perceptrons} pode ser melhorado ao utilizar vários em conjunto formando uma rede, assim unindo o poder de processamento de cada um deles e chegando a um resultado mais assertivo em menor tempo. Para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network (ANN)} \cite{deepLearning, deepLearningTensorFlow}.
+As redes neurais buscam uma abordagem bastante parecida com o cérebro humano, pois utilizam uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} é capaz de receber \emph{inputs} (os dados de entrada) e produzir uma saída. O desempenho do uso de \emph{perceptrons} pode ser melhorado ao utilizar vários em conjunto formando uma rede, assim unindo o poder de processamento de cada um deles e chegando a um resultado mais assertivo em menor tempo. Para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network} (ANN) \cite{deepLearning, deepLearningTensorFlow}.
 
-A Figura \ref{fig:perceptron} apresenta toda a estrutura de um \emph{perceptron}, onde o X representa a informação repassada, o W representa os pesos de cada informação, a letra Sigma o somatório, o F a função de ativação e por fim o Y representa a saída.
+A Figura \ref{fig:perceptron} apresenta toda a estrutura de um \emph{perceptron}, onde o x representa a informação repassada, o w representa os pesos de cada informação, a letra $\Sigma$ o somatório, o f a função de ativação e por fim o y representa a saída.
 
 \begin{figure}[!htb]
 	\centering
@@ -196,7 +196,7 @@ Todo esse processo é realizado muitas vezes durante o treinamento, e só encerr
 \subsection{Deep Learning}
 Existem alguns casos que o \emph{Machine Learning} não é suficiente para o aprendizado a partir dos dados, pois o aprendizado acontece através de reconhecimento de padrões com base nos dados que não podem ser utilizados de qualquer forma, devem ser preparados e adaptados para cada modelo, ou seja, a máquina não é capaz de aprender por conta própria, pois precisa sempre de intervenção humana para o processamento dos dados. Logo, é preciso uma abordagem muito mais parecida com a forma de pensar dos seres humanos, como o \emph{Deep Learning} \cite{deepLearningPython, deepLearningTensorFlow}.
 
-O \emph{Deep Learning} busca formas de levar o conceito das redes neurais abordado na seção \ref{sec:redesneurais} ainda mais longe, utilizando \emph{Deep Neural Networks (DNNs)}. As \emph{Deep Neural Networks (DNNs)}, ou Redes Neurais Profundas, são uma arquitetura de rede neural orientada ao \emph{Deep Learning}, ou seja, são muito mais complexas em seus modelos, com um número maior de neurônios, camadas ocultas em configurações mais complexas e conexões específicas entre os neurônios \cite{deepLearningTensorFlow}.
+O \emph{Deep Learning} busca formas de aprofundar o conceito das redes neurais abordado na seção \ref{sec:redesneurais}, utilizando \emph{Deep Neural Networks (DNNs)}. As \emph{Deep Neural Networks (DNNs)}, ou Redes Neurais Profundas, são uma arquitetura de rede neural orientada ao \emph{Deep Learning}, ou seja, são muito mais complexas em seus modelos, com um número maior de neurônios, camadas ocultas em configurações mais complexas e conexões específicas entre os neurônios \cite{deepLearningTensorFlow}.
 
 Com as possibilidades que as redes neurais profundas trouxeram, surgiram algumas variantes interessantes e focadas em um nicho específico, buscando se assemelhar ainda mais a natureza humana para realizar tarefas e criar inteligência. Algumas dessas variantes se aplicam a processamento de linguagem natural, como é o caso das RNNs abordadas na seção \ref{sec:rnn}, ou também abordam o reconhecimento e interpretação de imagens como é o caso das CNNs abordadas na seção \ref{sec:cnn} e é assunto de interesse para a continuidade deste trabalho.
 
@@ -236,7 +236,7 @@ Através da documentação do Tensorflow, é possível encontrar informações p
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
 
-O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para agilizar a identificação e interpretação de análises de sangue. Este mapeamento resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para a aplicação de \emph{Deep Learning} em imagens de sangue em placas de Petri de maneira que possam ser obtidas informações para a geração automatizada de hemogramas.
+O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para agilizar a identificação e interpretação de hemogramas. Este mapeamento resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para a aplicação de \emph{Deep Learning} em imagens de sangue em placas de Petri de maneira que possam ser obtidas informações para a geração automatizada de hemogramas.
 
 \section{Mapeamento Sistemático da Literatura}
 
@@ -299,18 +299,18 @@ Os artigos coletados na pesquisa através da string de busca, passaram por crit�
 	\legend{Fonte: Elaborada pelo autor.}
 \end{table}
 
-A seleção inciou com 164 artigos no total das três bases de dados buscadas. Com a aplicação dos critérios de exclusão, observa-se um resultante de apenas 14 artigos. Isso ocorreu, pois, 100 artigos foram eliminados no critério ``O estudo não faz parte da área de pesquisa'', que significa que esses artigos tinham alguma relação, porém eram voltados a outras áreas. Outros 28 artigos foram eliminados no critério ``O estudo apresenta resultados fora da computação'', que significa serem da área de pesquisa, porém com resultados e métodos sem conexão com a computação. Foram também encontrados 6 artigos, que entraram no critério ``O estudo não é um estudo primário'', o que indica que o artigo pode ser uma revisão sistemática da literatura ou semelhante. Por fim, foram eliminados outros 16 artigos por serem duplicados.
+A seleção iniciou com 164 artigos no total das três bases de dados pesquisadas. Com a aplicação dos critérios de exclusão, observa-se um resultante de apenas 12 artigos. Isso ocorreu, pois, 101 artigos foram eliminados no critério ``O estudo não faz parte da área de pesquisa'', que significa que esses artigos tinham alguma relação, porém eram voltados a outras áreas. Outros 29 artigos foram eliminados no critério ``O estudo apresenta resultados fora da computação'', que significa serem da área de pesquisa, porém com resultados e métodos sem conexão com a computação. Foram também encontrados 6 artigos, que foram eliminados no critério ``O estudo não é um estudo primário'', o que indica que o artigo pode ser uma revisão sistemática da literatura ou semelhante. Por fim, foram eliminados outros 16 artigos por serem duplicados.
 
 \subsection{Critérios de Inclusão}
 
 Os seguintes critérios de inclusão foram definidos:
 \begin{itemize}
-	\item Nova tecnologia para análise de sangue;
+	\item Nova tecnologia para análise de hemogramas;
 	\item Processo, método ou técnica para contagem de células sanguíneas;
 	\item Sistema para elaboração de hemogramas utilizando Deep Learning;
 \end{itemize}
 
-Na Tabela 4, é possível visualizar todos os 14 artigos selecionados com base nos critérios de inclusão, uma vez que todos eles se enquadram em pelo menos um deles.
+Na Tabela 4, é possível visualizar todos os 12 artigos selecionados com base nos critérios de inclusão, uma vez que todos eles se enquadram em pelo menos um deles.
 
 \begin{table}[!htb]
 	\centering
@@ -354,9 +354,9 @@ Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais 
 
 O projeto iniciou com uma pesquisa exploratória da bibliografia para delimitar o escopo e compreender melhor os aspectos que estão sendo aplicados para o domínio de problema abordado por este trabalho. Essa pesquisa exploratória permitiu elaborar um mapeamento sistemático da literatura e também desenvolver a fundamentação teórica a partir disso.
 
-Na sequência, deste trabalho serão coletados dos \emph{datasets} de imagens selecionados para a pesquisa. Com base em uma análise aprofundada desse material, serão realizados os devidos tratamentos, de forma a preparar uma base de dados sólida e confiável para o prosseguimento dos trabalhos. Esses \emph{datasets} estão disponíveis na internet de forma aberta e gratuita.
+Na sequência deste trabalho serão coletados dos \emph{datasets} de imagens selecionados para a pesquisa. Com base em uma análise aprofundada desse material, serão realizados os devidos tratamentos, de forma a preparar uma base de dados sólida e confiável para o prosseguimento dos trabalhos. Esses \emph{datasets} estão disponíveis na internet de forma aberta e gratuita.
 
-Com o \emph{dataset} devidamente ajustado, será iniciada a preparação do modelo de \emph{Deep Learning}, objetivando definir as camadas que o modelo deverá ter, com base nas imagens contidas no \emph{dataset}. Com o modelo desenvolvido, será iniciada a fase de treinamento, para então realizar o teste do modelo em si. Para que isso seja possível o \emph{dataset} será divido em duas partes, umas para o treino e outra para o teste, adotando uma proporção de 70\% das imagens para o treino e 30\% para o teste.
+Com o \emph{dataset} devidamente ajustado, será iniciada a preparação do modelo de \emph{Deep Learning}, objetivando definir as camadas que o modelo deverá ter, com base nas imagens contidas no \emph{dataset}. Com o modelo desenvolvido, será iniciada a fase de treinamento, para então realizar o teste do modelo em si. Para que isso seja possível o \emph{dataset} será divido em duas partes, adotando uma proporção de 70\% das imagens para o treino e 30\% para o teste.
 
 Os modelos de \emph{Deep Learning} após esse processo podem ser avaliados em relação ao seu desempenho, verificando métricas importantes do aprendizado como acurácia, sendo a linear ou categórica. Além dessa análise, se pode também preparar uma matriz de confusão para uma melhor visualização do desempenho do modelo. Dependendo do resultado recebido, o modelo poderá passar por modificações e melhorias para um resultado mais assertivo e consequentemente mais confiável.
 
@@ -395,4 +395,4 @@ Defesa do TCC &  &  &  &  &  &  & & &  &  & X \\ \hline
 	\legend{Fonte: Elaborada pelo autor.}
 \end{table}
 
-As atividades propostas neste cronograma podem sofrer leves alterações no decorrer do seu desenvolvimento conforme a necessidade.
+As atividades propostas neste cronograma podem sofrer alterações no decorrer do seu desenvolvimento conforme a necessidade.
