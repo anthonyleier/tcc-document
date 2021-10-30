@@ -246,7 +246,7 @@ O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com
 
 O mapeamento sistemático da literatura foi realizado com base na busca e levantamento de artigos, utilizando uma string de busca\footnote[1]{Uma string de busca é um conjunto de palavras-chave organizadas para auxiliar na pesquisa.} nas principais bibliotecas e repositórios de artigos. Esses artigos foram analisados e selecionados conforme a sua área de pesquisa e a sua temática, para inclusão nesse estudo. Para gerenciar o mapeamento sistemático foi utilizado a ferramenta Parsifal\footnote[2]{https://parsif.al/}, a qual auxilia na definição da string de busca, e permite salvar os artigos necessários e realizar a seleção.
 
-As questões de pesquisas levantadas para isso foram, ``Como os algoritmos de \emph{Deep Learning} podem ser utilizados para a interpretação de exames?'' e ``Como realizar o tratamento de imagens para reconhecimento por modelos de \emph{Deep Learning}?''. A partir dessas questões foram extraídas palavras e termos para o direcionamento da pesquisa. É possível visualizar estas palavras com seus sinônimos na Tabela 1.
+As questões de pesquisas levantadas para isso foram, ``Como os algoritmos de \emph{Deep Learning} podem ser utilizados para a interpretação de exames?'' e ``Como realizar o tratamento de imagens para reconhecimento por modelos de \emph{Deep Learning}?''. A partir dessas questões foram extraídas palavras e termos para o direcionamento da pesquisa. É possível visualizar estas palavras com seus sinônimos na Tabela \ref{tbl:palavrasChave}.
 
 \begin{table}[!htb]
 	\centering
@@ -263,7 +263,7 @@ As questões de pesquisas levantadas para isso foram, ``Como os algoritmos de \e
 	\legend{Fonte: Elaborada pelo autor.}
 \end{table}
 
-Na Tabela 2, são listadas as bases de dados onde os artigos foram coletados, a quantidade de cada um deles e a string de busca utilizada na seleção. A mesma string de busca foi utilizada nas três bases de dados, e os artigos encontrados foram dos últimos 5 anos (2016-2021).
+Na Tabela \ref{tbl:basesDeDados}, são listadas as bases de dados onde os artigos foram coletados, a quantidade de cada um deles e a string de busca utilizada na seleção. A mesma string de busca foi utilizada nas três bases de dados, e os artigos encontrados foram dos últimos 5 anos (2016-2021).
 
 \begin{table}[!htb]
 	\centering
@@ -285,7 +285,7 @@ Na Tabela 2, são listadas as bases de dados onde os artigos foram coletados, a 
 
 \subsection{Critérios de Exclusão}
 
-Os artigos coletados na pesquisa através da string de busca, passaram por critérios de exclusão por não se adequarem a esta pesquisa, esses critérios podem ser observados na Tabela 3. 
+Os artigos coletados na pesquisa através da string de busca, passaram por critérios de exclusão por não se adequarem a esta pesquisa, esses critérios podem ser observados na Tabela \ref{tbl:exclusao}. 
 
 \begin{table}[!htb]
 	\centering
@@ -314,7 +314,7 @@ Os seguintes critérios de inclusão foram definidos:
 	\item Sistema para elaboração de hemogramas utilizando Deep Learning;
 \end{itemize}
 
-Na Tabela 4, é possível visualizar todos os 12 artigos selecionados com base nos critérios de inclusão, uma vez que todos eles se enquadram em pelo menos um deles.
+Na Tabela \ref{tbl:mapeamento}, é possível visualizar todos os 12 artigos selecionados com base nos critérios de inclusão, uma vez que todos eles se enquadram em pelo menos um deles.
 
 \begin{table}[!htb]
 	\centering
@@ -350,21 +350,102 @@ Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais 
 
 \chapter{Metodologia}
 \label{chap:metodologia}
-% Quanto à natureza = Aplicada
-% Quanto ao estilo de pesquisa = Empírica
-% Quanto aos objetivos = Exploratória
-% Quanto aos procedimentos metodológicos = Bibliográfica e Experimental
+% Dataset
+% Preparação dos dados
+% Modelagem do problema
+% Avaliação
+% Implantação (protótipo)
 
-O projeto iniciou com uma pesquisa exploratória da bibliografia para delimitar o escopo e compreender melhor os aspectos que estão sendo aplicados para o domínio de problema abordado por este trabalho. Essa pesquisa exploratória permitiu elaborar um mapeamento sistemático da literatura e também desenvolver a fundamentação teórica a partir disso.
+Para a realização deste trabalho, muitos passos foram seguidos e desenvolvidos. Desde o estudo com o \emph{dataset} escolhido, a preparação dos recursos necessários com as bibliotecas e o ambiente até o treinamento do modelo e por fim o desenvolvimento do protótipo final. Neste capítulo, todas as etapas realizadas do projeto serão descritas com detalhes para o alcançar dos resultados nos tópicos seguintes.
 
-Na sequência deste trabalho serão coletados dos \emph{datasets} de imagens selecionados para a pesquisa. Com base em uma análise aprofundada desse material, serão realizados os devidos tratamentos, de forma a preparar uma base de dados sólida e confiável para o prosseguimento dos trabalhos. Esses \emph{datasets} estão disponíveis na internet de forma aberta e gratuita.
+\section{\emph{Dataset}}
+Para a realização de trabalhos na área de inteligência artificial, a escolha do \emph{dataset} é uma tarefa de extrema importância e deve ser feita com bastante estudo, pois impacta em todo o andamento dos processos seguintes. Durante a busca pelo \emph{dataset}, alguns candidatos interessantes surgiram, mas a escolha mais assertiva foi em utilizar o BCCD Dataset. \cite{datasetBCCD}
 
-Com o \emph{dataset} devidamente ajustado, será iniciada a preparação do modelo de \emph{Deep Learning}, objetivando definir as camadas que o modelo deverá ter, com base nas imagens contidas no \emph{dataset}. Com o modelo desenvolvido, será iniciada a fase de treinamento, para então realizar o teste do modelo em si. Para que isso seja possível o \emph{dataset} será divido em duas partes, adotando uma proporção de 70\% das imagens para o treino e 30\% para o teste.
+A escolha por esse \emph{dataset} se iniciou primeiramente, pois chamou a atenção pelo maior número de trabalhos já utilizando essa fonte. Também se observou que em comparação com os outros datasets disponíveis na literatura, este é o mais completo e aprofundado nesse sentido. Outro fator decisivo, foi a sua quantidade de imagens, que além de estarem em uma quantidade bastante interessante para o uso, também apresentam uma qualidade boa para a leitura e treinamento do modelo.
 
-Os modelos de \emph{Deep Learning} após esse processo podem ser avaliados em relação ao seu desempenho, verificando métricas importantes do aprendizado como acurácia, sendo a linear ou categórica. Além dessa análise, se pode também preparar uma matriz de confusão para uma melhor visualização do desempenho do modelo. Dependendo do resultado recebido, o modelo poderá passar por modificações e melhorias para um resultado mais assertivo e consequentemente mais confiável.
+O \emph{dataset} apresenta três categorias de detecção WBC (\emph{White Blood Cell}) para as células brancas, RBC (\emph{Red Blood Cell}) para as células vermelhas e também as \emph{Platelets}, para as plaquetas. Os arquivos estão separados em diretórios diferentes, onde em uma das pastas temos todo o conjunto de imagens, e em outra pasta temos as coordenadas de cada uma das células nas imagens, em formato XML.
 
-Por fim, ao atingir o objetivo desejado, os dados dos resultados e da performance do modelo serão registrados e descritos no trabalho de conclusão de curso em forma de monografia. Além disso, será feita uma comparação dessa solução com as demais encontradas por outros modelos documentados na literatura.
+Com o \emph{dataset }em mãos, é iniciado o estudo e aprofundamento de seu conteúdo, considerando os seus recursos e também suas limitações. Inicialmente é possível perceber que uma das limitações do \emph{dataset}, é que nem todas as células nas imagens possuem coordenadas mapeadas. Grande parte apresenta o mapeamento correto, porém existem células que não apresentam nenhuma coordenada, e isso é uma falha do \emph{dataset} nesse sentido que pode afetar o treinamento do modelo.
+
+Outra limitação também observada nesse \emph{dataset}, é a falta de classificação das células brancas. O \emph{dataset} se preocupa apenas em localizar as células na imagem e categorizar em brancas, vermelhas e plaquetas. Porém, para se elaborar um hemograma completo, isso não é suficiente. Para a elaboração do hemograma, é necessário além de realizar a contagem das células brancas, também realizar a sua classificação (Neutrófilos, Basófilos, Eosinófilos, Linfócitos, Monócitos, entre outros), para através disso se ter um diagnóstico mais concreto a respeito do paciente.
+
+Com a obtenção do \emph{dataset}, se inicia a fase de adaptação do conjunto de imagens para a detecção pelo modelo. No repositório, além das imagens, alguns programas \emph{Python} também são anexados, para o tratamento dos dados. Porém, como este trabalho envolve a aplicação de um modelo computacional, o tratamento dos dados será feito conforme as necessidades do modelo. Todos os arquivos \emph{Python} serão descartados, mantendo apenas o diretório das imagens e também o diretório dos arquivos XML contendo as coordenadas das imagens.
+
+\section{Detecção de Objetos}
+Para o desenvolvimento do modelo computacional, assim como dos treinamentos e da configuração dos seus recursos, a biblioteca \emph{Tensorflow} havia sido escolhida para atender a essa demanda. O \emph{Tensorflow} possui um grande acervo de funções e utilitários dos mais diversos tipos para se trabalhar com \emph{Machine Learning} e também \emph{Deep Learning}, sendo necessário selecionar quais são os mais adequados a este trabalho. Um dos módulos mais interessantes e que se alinham com o intuito desse trabalho é o \emph{Object Detection}, ou seja, o módulo de detecção de objetos.
+
+O módulo de detecção de objetos do \emph{Tensorflow} é utilizado para encontrar em porções de imagens, elementos que foram pré-treinados para serem reconhecidos. Geralmente é utilizado para detectar pessoas e objetos do dia a dia em imagens. Também pode ser utilizado em vídeos, processando \emph{frame} a \emph{frame}, possibilitando sua aplicação em câmeras de segurança, reconhecendo em tempo real pessoas, veículos, animais e outros elementos que aparecem com bastante frequência.
+
+Este trabalho consistem em criar uma visão computacional capaz de detectar células em uma imagem, para assim realizar a contagem e posteriormente criar os elementos do hemograma. Logo, o módulo de detecção de objetos se alinha com esse conceito. Embora seja normalmente utilizado para detecção de pessoas e objetos, possui grande capacidade de personalização, o que permite um aprendizado voltado ao sangue. Ou seja, ao realizar o treinamento do modelo com base em um grande volume de imagens de sangue, é possível aprender com os dados para depois realizar as predições.
+
+Como base para a utilização dessa biblioteca, a documentação foi de extrema importância para o entendimento dos seus recursos e limitações. No módulo de detecção de objetos, a documentação foi mais escassa, porém auxiliou em muitas questões do projeto, principalmente nos códigos base. Os primeiros códigos foram desenvolvidos com base nos exemplos de teste presentes na documentação, que permitiram ter uma grande noção das configurações possíveis de serem realizadas no modelo computacional e também de como é o funcionamento geral.
+
+Para a execução dos códigos, porém, foi constatado que uma preparação do ambiente é necessária para atingir o melhor desempenho possível. Para configurar corretamente a conexão do algoritmo com a placa de vídeo (GPU), ao invés de executar no processador (CPU) como é o padrão. Como o foco é trabalhar com processamento de imagens, ainda mais com um grande volume, as GPU's possuem um desempenho muito mais eficaz, entregando resultados melhores em menor tempo.
+
+Para a preparação do ambiente, foi necessário primeiramente realizar a instalação do CUDA. O CUDA é uma plataforma da NVIDIA para realização de computação paralela, para fornecer aos desenvolvedores o melhor aproveitamento do processamento das placas de video e acelerar drasticamente os aplicativos de computação. Adicional ao CUBA, também é interessante o uso de uma biblioteca conhecida por cuDNN. O cuDNN é uma biblioteca com foco em \emph{Deep Neural Network}, ou seja, redes neurais profundas, que permite utilizar estruturas de redes neurais no trabalho com algoritmos de aprendizagem de máquina, sendo perfeitamente alinhado com o propósito desse trabalho. O uso do CUDA associado ao cuDNN, acabam por aumentar a eficiência e também a qualidade do resultado em níveis muito maiores.
+
+Com a preparação do ambiente finalizada, o algoritmo já pode ser executado sem maiores problemas. Nessa etapa alguns testes foram realizados, executando os exemplos base presentes na documentação, para ter uma ideia de como o algoritmo se comporta na máquina e quais seriam os resultados do processamento de exemplo e em quanto tempo seriam entregues. Essa etapa foi importante para o continuar dos trabalhos, por foi possível ter uma noção de tempo necessário para execução dos códigos, permitindo um planejamento muito melhor para o projeto.
+
+\section{Modelo Computacional}
+Com todos os recursos, bibliotecas e ambiente funcionando em harmonia, se iniciou o processo para inserir o \emph{dataset} aos moldes do modelo para o reconhecimento e treinamento. O conjunto de imagens estava adequadamente formatado para o uso pelo algoritmo, onde as imagens estavam em um tamanho suficientemente bom, além de possuírem todas o mesmo tamanho e a mesma escala de ampliação.
+
+Para o reconhecimento das coordenadas das imagens, primeiro, foi necessário a importação e tratamento dos arquivos XML em variáveis capazes de serem lidas pelo modelo. Contudo, apenas essa importação não foi o suficiente, visto que os dados contidos nos arquivos e os aceitados pelo modelo estavam em escalas e proporções diferentes. Ou seja, o algoritmo não estava conseguindo encontrar as células nas imagens durante a importação. Para se adequar esse processo, foi necessário criar uma função capaz de converter as coordenadas do XML em números na escala do modelo, permitindo assim, conseguir importar com sucesso no modelo, tanto as coordenadas, quanto as imagens.
+
+Dessa forma, foi possível realizar um teste primário, sem alterar as características do modelo, para um dos tipos de céulas primeiramente, que retornou resultados satisfatórios para essa condição. Porém para se obter um ganho total dos conceitos do modelo, é necessário realizar a configuração adequadas dos seguintes atributos.
+
+\begin{itemize}
+    \item \emph{Batch Size}:
+    \item \emph{Learning Rate}: Significa a taxa de aprendizado do modelo. Quanto maior, mais rápido os passos de aprendizado serão realizados. Caso seja muito grande, o modelo começa a reconhecer células onde não existem. Caso seja muito pequeno, o modelo não encontra nenhuma célula nas imagens.
+    \item Número de \emph{Batches}:
+    \item Porcentagem de Acerto: A porcentagem de acertos é o número base para ser considerado um acerto de fato, por exemplo, se o algoritmo tem mais de 50\% de certeza para uma célula, é considerado acerto.
+\end{itemize}
+
+Esses parâmetros foram configurados com base em testes realizados, onde a cada execução do código, foi verificado e ajustando conforme o necessário. Esse processo foi realizado até encontrar os valores mais adequados que retornam os melhores resultados. Os valores finais utilizados podem ser conferidos na Tabela \ref{tbl:parametros}.
+
+\begin{table}[!htb]
+\centering
+\caption{Parâmetros Definidos}
+\label{tbl:parametros}
+\begin{tabular}{|c|c|c|c|}
+\hline
+                      & WBC  & RBC  & Platelets \\ \hline
+Batch Size            & 24   & 24   & 24        \\ \hline
+Learning Rate         & 0.02 & 0.05 & 0.05      \\ \hline
+Número de Batches     & 500  & 500  & 500       \\ \hline
+Porcentagem de Acerto & 0.05 & 0.02 & 0.05      \\ \hline
+\end{tabular}
+	\vspace{6pt}
+	\legend{Fonte: Elaborada pelo autor.}
+\end{table}
+
+Além da configuração desses parâmetros, também existe outro ponto bastante importante e necessário para este trabalho, selecionar uma rede neural pré-treinada adequada para o uso. Através do uso de uma rede pré-treinada, muito tempo pode ser ganho ao ter uma boa base e não precisar treinar do zero. Além de também impactar nos resultados, pois se foi devidamente treinada com conceitos básicos, como contornos e figuras básicas, os resultados ao treinar com elementos mais complexos serão melhores.
+
+Para este trabalho, foi selecionada a ``resnet50'', embora existam muitas outas incluídas na lista da documentação aceitas pelo módulo de detecção de objetos. Essa escolha foi definida pelo tamanho da imagem utilizada e também ao realizar testes de desempenho comparando uma com as outras.
+
+Com o treinamento de um tipo de célula realizado com sucesso, é necessário expandir para treinar as demais. Primeiramente, foi testado treinando todas as células de uma só vez, porém essa abordagem estava consumindo muitos recursos da máquina e produzindo resultados muito insatisfatórios.
+
+Nesse caso, a abordagem precisou ser alterada. Ao invés de treinar todas os tipos de células juntas, foi criado um modelo único para cada uma delas, no caso um modelo para células brancas, outro para as vermelhas e um para as plaquetas. Isso permitiu que o treinamento fosse mais eficiente e com resultados mais assertivos e direcionados para cada tipo.
+
+Como são utilizados 3 modelos, ao inserir uma imagem para verificação na predição de resultados, ela terá 3 respostas diferentes, sendo uma imagem de resultado para cada tipo de célula presente. Essa abordagem também permitiu utilizar valores de parâmetros diferentes para cada tipo, o que também auxiliou na melhora dos resultados para os diferentes tipos.
+
+\section{Avaliação}
+Para a realização da avaliação, foram utilizadas algumas métricas para medir o desempenho e a qualidade dos resultados obtidos.
+As métricas foram medidas para cada um dos modelos e configurações diferentes. Até para se ter um comparativo entre uma opção e outra.
+
+As métricas utilizadas, primeiramente, foi a acurácia padrão, onde foi psosivel calcular, o numero de células obtidas em relação ao número real de células.
+
+Outra métrica utilizada, foi o MSE e o rMSE, que ambos significam
+
+Para a realização da comparação entre uma opção e outra, foi realizado
+
+\section{Protótipo}
+Após a definição da melhor instância do modelo computacional possível seguindo as métricas definidas, é necessário realizar a exportação desse modelo, para depois utiliza-lo na criação de um protótipo funcional.
+
+Para realizar a exportação do modelo, a biblioteca do Tensorflow precisou ser revista para a criação de Checkpoints. Os checkpoints são uma estrutura presente no Tensorflow que permite salvar o estado atual de um modelo treinado para ser utilizado posteriormente.
+
+Para a criação do protótipo, foi utilizada uma biblioteca extra, o Streamlit. O Streamlit é um framework voltado para o Python, com o intuito de transformar algoritmos de dados em aplicativos web de uma forma fácil e acessível para todos, sem ter a encessidade de se preocupar com o desenvolvimento de um frontend elaborado ou com a estrutura da aplicação, ele permite o foco em apenas reproduzir uma interface gráfica para um modelo computacional em poucos cliques.
+
+Ainda assim é de fácil personalização, demonstrando todos os atibutos que são necessários para o entendimento do processo e também para a interação com o usuário, alterando conforme o input de imagem recebido.
 
 \chapter{Resultados}
 \label{chap:resultados}
-
