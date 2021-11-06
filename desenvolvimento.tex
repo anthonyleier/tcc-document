@@ -1,7 +1,7 @@
 \chapter{Fundamentação Teórica}
 \label{chap:fund}
 
-Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}, assim como as técnicas e algoritmos aplicados para auxiliar os profissionais de laboratório a realizarem hemogramas de uma forma eficiente. Além disso, serão apresentados os dados coletados de uma análise de sangue que dão subsídio para a geração de hemogramas.
+Neste capítulo serão abordados os principais conceitos de \emph{Deep Learning}, assim como as técnicas e algoritmos aplicados para auxiliar os profissionais de laboratório a realizarem hemogramas de uma forma eficiente. Além disso, serão apresentados os dados coletados de uma análise de sangue que dão subsídio para a geração de elementos de hemogramas.
 
 \section{Exames Laboratoriais de Sangue}
 \label{sec:conceito1}
@@ -81,7 +81,7 @@ Um hemograma é geralmente realizado em duas principais etapas, sendo a primeira
 \subsubsection{Eritrograma}
 O objetivo do eritrograma ao realizar a análise da parte vermelha do sangue, é analisar alguns atributos-chave. Primeiramente é realizada a contagem geral dos eritrócitos adotando uma escala de milhões/mm³. A hemoglobina também é calculada e registrada em uma escala de g/dl \cite{interpretacaoHemograma, manualHematologia}.
 
-Depois dessa principal contagem são calculados alguns índices, que apresenta o primeiro deles o cálculo do volume corpuscular médio (VCM), sendo o volume médio das hemácias, calculado pelo quociente de um determinado volume de hemácias pelo número de células contidas no mesmo. Outro importante atributo é a hemoglobina corpuscular média (HCM), que semelhante ao VCM, apresenta o conteúdo médio da hemoglobina, calculado pelo quociente de conteúdo de hemoglobina em um determinado volume de hemácias pelo número de células contidas no mesmo volume \cite{interpretacaoHemograma, manualHematologia}.
+Depois dessa contagem principal são calculados alguns índices, onde o primeiro deles apresenta o cálculo do volume corpuscular médio (VCM), sendo o volume médio das hemácias, calculado pelo quociente de um determinado volume de hemácias pelo número de células contidas no mesmo. Outro importante atributo é a hemoglobina corpuscular média (HCM), que semelhante ao VCM, apresenta o conteúdo médio da hemoglobina, calculado pelo quociente de conteúdo de hemoglobina em um determinado volume de hemácias pelo número de células contidas no mesmo volume \cite{interpretacaoHemograma, manualHematologia}.
 
 Também temos outro índice que é a concentração de hemoglobina corpuscular média (CHCM), sendo a percentagem da hemoglobina em uma amostra de 100ml de hemácias. Por fim temos, a amplitude de distribuição dos glóbulos vermelhos, que em inglês significa \emph{Red Cell Distribution Width (RDW)}, que será responsável por avaliar a variação de tamanho entre as hemácias \cite{interpretacaoHemograma, manualHematologia}.
 
@@ -116,7 +116,7 @@ A abordagem de \emph{Deep Learning}, que é objeto de estudo desse trabalho é u
 
 A Inteligência Artificial é uma abordagem para a resolução de problemas de diversas naturezas de forma automatizada, ou seja, é uma maneira de se resolver problemas sem a necessidade de um humano ou usuário específico para esse trabalho. Essa área está recebendo muita atenção atualmente, buscando, cada vez mais, novas maneiras de automatizar tarefas do cotidiano. Essa abordagem está presente em diversos segmentos da indústria e atualmente também vem crescendo o uso nas residências para as mais diversas finalidades \cite{inteligenciaArtificial}.
 
-O intuito dessa área é buscar formas de ensinar máquinas e computadores a serem capazes de ter uma inteligência cada vez mais semelhante aos seres humanos. Isso ocorre geralmente através do reconhecimento de padrões através de diversas técnicas, que permitem que os computadores sejam ensinados a analisar e interpretar dados, de forma semelhante ao que acontece para o aprendizado de seres humanos. Porém, diferente de nós, as máquinas geralmente precisam de um volume massivo de dados para que sejam capazes de aprender algo básico \cite{IAAprendizadoMaquina}.
+O intuito dessa área é buscar formas de ensinar máquinas e computadores a serem capazes de ter uma inteligência cada vez mais semelhante aos seres humanos. Isso ocorre geralmente através do reconhecimento de padrões através de diversas técnicas, que permitem que os computadores sejam ensinados a analisar e interpretar dados, de forma semelhante ao que acontece no aprendizado de seres humanos. Porém, diferente de nós, as máquinas geralmente precisam de um volume massivo de dados para que sejam capazes de aprender algo básico \cite{IAAprendizadoMaquina}.
 
 \subsection{Machine Learning}
 
@@ -128,7 +128,7 @@ Logo após, o modelo de \emph{Machine Learning} deve ser treinado conforme o mé
 
 Por fim, após o treinamento do modelo como um todo ocorre a fase de teste. Nesta fase, o modelo será testado e avaliado com base em algumas técnicas para medir o seu desempenho, calculando métricas como a acurácia, a precisão e a revocação. A acurácia indicará uma performance geral, ou seja, quantas classes o modelo classificou corretamente. A precisão dirá, dentre as classificações que o modelo classificou como positivo, quantas estão corretas. A revocação, também citada como \emph{recall}, apontará dentre todas as classificações que possuem positivo como valor esperado, quantas estão corretas. Além dessas métricas, também existe o F1-Score que realiza uma média harmônica entre precisão e \emph{recall} \cite{machineLearningTensorFlow}.
 
-Para uma melhor visualização, e para realizar o cálculo das métricas citadas anteriormente, se utiliza uma matriz de confusão, que descreve o número de acertos e erros relacionados com os verdadeiros ou falsos positivos e os verdadeiros ou falsos negativos observa-se na Figura \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
+Para uma melhor visualização, e para realizar o cálculo das métricas citadas anteriormente, é comum a utilização de uma matriz de confusão, que descreve o número de acertos e erros relacionados com os verdadeiros ou falsos positivos e os verdadeiros ou falsos negativos, conforme observa-se na Figura \ref{fig:confusionMatrix} \cite{machineLearningTensorFlow}.
 
 \begin{figure}[!htb]
 	\centering
@@ -165,7 +165,7 @@ Além desses algoritmos, é importante ressaltar uma abordagem diferente da conv
 
 As redes neurais buscam uma abordagem bastante parecida com o cérebro humano, pois utilizam uma estrutura composta de \emph{perceptrons}, que são uma versão computadorizada de algo parecido com um neurônio humano. O \emph{perceptron} é capaz de receber \emph{inputs} (os dados de entrada) e produzir uma saída. O desempenho do uso de \emph{perceptrons} pode ser melhorado ao utilizar vários em conjunto formando uma rede, assim unindo o poder de processamento de cada um deles e chegando a um resultado mais assertivo em menor tempo. Para essa estrutura se dá o nome de rede neural artificial ou como é conhecida, \emph{Artificial Neural Network} (ANN) \cite{deepLearning, deepLearningTensorFlow}.
 
-A Figura \ref{fig:perceptron} apresenta toda a estrutura de um \emph{perceptron}, onde o x representa a informação repassada, o w representa os pesos de cada informação, a letra $\Sigma$ o somatório, o f a função de ativação e por fim o y representa a saída.
+A Figura \ref{fig:perceptron} apresenta toda a estrutura de um \emph{perceptron}, onde o $x$ representa a informação repassada, o $w$ representa os pesos de cada informação, a letra $\Sigma$ o somatório, o $f$ a função de ativação e por fim o $y$ representa a saída.
 
 \begin{figure}[!htb]
 	\centering
@@ -185,7 +185,7 @@ Uma \emph{Artificial Neural Network} é uma estrutura formada por diversos neur�
 	\label{fig:neuralNetwork}
 \end{figure}
 
-É importante ressaltar que além das informações repassadas de um \emph{perceptron} para o outro, existe outro fator importantíssimo para o seu funcionamento, sendo os pesos adotados. Os pesos são valores definidos para cada informação recebida pelo \emph{perceptron} e pode-se pensar no seu uso como um critério de prioridade entre uma informação e outra, que serão ajustados para alcançar o resultado desejado \cite{deepLearningTensorFlow}.
+É importante ressaltar que além das informações repassadas de um \emph{perceptron} para o outro, existe outro fator importante para o seu funcionamento, sendo os pesos adotados. Os pesos são valores definidos para cada informação recebida pelo \emph{perceptron} e pode-se pensar no seu uso como um critério de prioridade entre uma informação e outra, que serão ajustados para alcançar o resultado desejado \cite{deepLearningTensorFlow}.
 
 Dessa forma, uma ANN poderá aprender a realizar diversos tipos de tarefas, como classificação, por exemplo, através do uso de um algoritmo de \emph{backpropagation} que significa propagação regressiva, responsável por gerir a taxa de aprendizado do modelo, seguindo alguns passos \cite{deepLearningTensorFlow}.
 
@@ -210,7 +210,7 @@ As \emph{Convolutional Neural Networks}, ou Redes Neurais Convolucionais, são u
 
 As DNNs tradicionais funcionam bem para imagens pequenas, porém com um grande volume de dados, que nesse caso será cada pixel da imagem, o modelo teria muita dificuldade para aprender, logo nasceu a necessidade das CNNs. Para resolver esse problema, as CNNs foram desenvolvidas para usar camadas parcialmente conectadas e com grande reutilização dos pesos, dessa forma tem muito menos parâmetros à interpretar e passar adiante e consequentemente são mais rápidas para treinar, tendo menor risco de sobre-ajuste e necessitando de um volume menor de dados de treinamento \cite{deepLearningTensorFlow}.
 
-Essa eficiência se deve também ao fato de que uma CNN, quando aprender a interpretar algum recurso ou elemento específico na imagem, se torna capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprendem a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
+Essa eficiência se deve também ao fato de que uma CNN, quando aprende a interpretar algum recurso ou elemento específico na imagem, torna-se capaz de identificar aquele elemento em qualquer lugar da imagem, diferentemente das DNNs que só aprendem a reconhecer um recurso em um local fixo. Isso mostra a capacidade das CNNs de serem mais generalistas em comparação com as DNNs \cite{deepLearningTensorFlow}.
 
 Esse recurso pode ser encontrado dentro da camada convolucional, que está presente no início do processo e pode ser observada na Figura \ref{fig:cnn}. 
 
@@ -233,14 +233,14 @@ O conjunto dessas duas bibliotecas para o trabalho com \emph{Machine Learning} e
 
 Através da documentação do Tensorflow, é possível encontrar informações para desenvolver uma rede neural convolucional, por exemplo, onde existe toda a parte teórica e também a demonstração de um exemplo prático voltado a esse fim. Também é possível através dessa biblioteca e da sua documentação estar realizando a classificação de imagens com base em um \emph{dataset} de imagens \cite{websiteTensorFlow}.
 
-Dentro do Tensorflow, também é possível estar trabalhando com diferentes módulos da biblioteca, nesse trabalho foi escolhido para uso o \emph{Object Detection}. Esse módulo é utilizado dentro dessa área para um objetivo bastante específico, que é a detecção de objetos contidos em uma imagem. Pode ser configurado para diversos usos, incluindo no caso desse trabalho, para ao invés de detectar objetos físicos do dia a dia, é treinado para o reconhecimento de células em uma imagem e também para diferenciar uma célula das outras.
+Dentro do Tensorflow, também é possível estar trabalhando com diferentes módulos da biblioteca, nesse trabalho foi escolhido para uso o \emph{Object Detection}. Esse módulo é utilizado dentro dessa área para um objetivo bastante específico, que é a detecção de objetos contidos em uma imagem. Pode ser configurado para diversos usos, incluindo o caso desse trabalho, onde ao invés de detectar objetos físicos do dia a dia, o modelo é treinado para o reconhecimento de células em uma imagem e também para diferenciar uma célula das outras.
 
-Com o \emph{Object Detection}, o tratamento das imagens e todo o processamento do modelo computacional se tornam tarefas mais fáceis de se trabalhar e também conta com outros vários recursos interessantes e úteis na hora do treinamento. Todo o algoritmo codificado para a realização do treinamento do modelo, contou com o apoio e funções do módulo do Tensorflow, \emph{Object Detection}.
+Com o \emph{Object Detection}, o tratamento das imagens e todo o processamento do modelo computacional se tornam tarefas mais fáceis de se trabalhar e também conta com outros vários recursos interessantes e úteis na hora do treinamento. Todo o algoritmo codificado para a realização do treinamento do modelo, contou com o apoio de funções do módulo do Tensorflow, \emph{Object Detection}.
 
 \chapter{Estado da Arte da Área Pesquisada}
 \label{chap:mapeamento}
 
-O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para agilizar a identificação e interpretação de hemogramas. Este mapeamento resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para a aplicação de \emph{Deep Learning} em imagens de sangue em placas de Petri de maneira que possam ser obtidas informações para a geração automatizada de hemogramas.
+O processo de pesquisa e seleção dos trabalhos relacionados, foi realizado com base em um mapeamento sistemático sobre as pesquisas com propostas para agilizar a identificação e interpretação de hemogramas. Este mapeamento resultou na identificação e seleção dos principais trabalhos de pesquisa no tema deste Projeto de Trabalho de Conclusão de Curso. Outro objetivo deste mapeamento sistemático foi verificar os métodos utilizados para a aplicação de \emph{Deep Learning} em imagens de amostras de sangue de maneira que possam ser obtidas informações para a geração automatizada de elementos de hemogramas.
 
 \section{Mapeamento Sistemático da Literatura}
 
@@ -346,7 +346,7 @@ Todos os artigos selecionados estão relacionados à recursos para auxiliar na i
 
 Por fim, com os artigos selecionados e classificados, foi realizada a extração dos dados desses trabalhos, sendo essa a última etapa desse mapeamento sistemático da literatura. É possível perceber que os algoritmos e abordagens mais utilizados são técnicas de \emph{Deep Learning}, como, por exemplo, o uso de \emph{Convolutional Neural Network (CNN)} (A1, A2, A3, A4, A5, A6, A8, A9, A10, A11) e de \emph{Recurrent Neural Network (RNN)} (A6, A11), sendo abordagens de redes neurais para a classificação das células sanguíneas.
 
-Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais para a classificação, como por exemplo, o uso de \emph{Random Forest} ou \emph{Decision Trees}  (A2, A4, A7), sendo estruturas de árvores de decisão. Também foram encontrados estudos recorrendo a \emph{Support Vector Machine (SVM)} (A7) que utilizam vetores de suporte e por fim \emph{K-Means e K-Nearest Neighbors (KNN)} (A12), que faz a classificação considerando os vizinhos mais próximos.
+Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais para a classificação, como por exemplo, o uso de \emph{Random Forest} ou \emph{Decision Trees}  (A2, A4, A7), sendo estruturas de árvores de decisão. Também foram encontrados estudos recorrendo a \emph{Support Vector Machine (SVM)} (A7) que utilizam vetores de suporte e por fim \emph{K-Means e K-Nearest Neighbors (KNN)} (A12), que fazem a classificação considerando os vizinhos mais próximos.
 
 \chapter{Metodologia}
 \label{chap:metodologia}
@@ -356,50 +356,50 @@ Outros trabalhos utilizam de algoritmos de \emph{Machine Learning} tradicionais 
 % Avaliação
 % Implantação (protótipo)
 
-Para a realização deste trabalho, muitos passos foram seguidos e desenvolvidos. Desde o estudo com o \emph{dataset} escolhido, a preparação dos recursos necessários com as bibliotecas e o ambiente até o treinamento do modelo e por fim o desenvolvimento do protótipo final. Neste capítulo, todas as etapas realizadas do projeto serão descritas com detalhes para o alcançar dos resultados nos tópicos seguintes.
+Para a realização deste trabalho, muitos passos foram seguidos e desenvolvidos. Desde o estudo com o \emph{dataset} escolhido, a preparação dos recursos necessários como as bibliotecas e o ambiente, até o treinamento do modelo e por fim o desenvolvimento do protótipo final. Neste capítulo, todas as etapas realizadas no projeto serão descritas em detalhes, para facilitar a compreensão dos passos executados para alcançar objetivos propostos.
 
 \section{\emph{Dataset}}
-Para a realização de trabalhos na área de inteligência artificial, a escolha do \emph{dataset} é uma tarefa de extrema importância e deve ser feita com bastante estudo, pois impacta em todo o andamento dos processos seguintes. Durante a busca pelo \emph{dataset}, alguns candidatos interessantes surgiram, mas a escolha mais assertiva foi em utilizar o BCCD Dataset. \cite{datasetBCCD}
+Para a realização de trabalhos na área de inteligência artificial, a escolha do \emph{dataset} é uma tarefa de extrema importância e deve ser feita com bastante estudo, pois impacta em todo o andamento dos processos seguintes. Durante a busca pelo \emph{dataset}, alguns candidatos surgiram, mas a escolha que se mostrou mais adequada foi de utilizar o BCCD Dataset. \cite{datasetBCCD}
 
-A escolha por esse \emph{dataset} se iniciou primeiramente, pois chamou a atenção pelo maior número de trabalhos já utilizando essa fonte. Também se observou que em comparação com os outros datasets disponíveis na literatura, este é o mais completo e aprofundado nesse sentido. Outro fator decisivo, foi a sua quantidade de imagens, que além de estarem em uma quantidade bastante interessante para o uso, também apresentam uma qualidade boa para a leitura e treinamento do modelo.
+A escolha por esse \emph{dataset} se deu, primeiramente, pelo maior número de trabalhos referenciando esta fonte. Também observou-se que em comparação com os outros \emph{datasets} disponíveis na literatura, esse é o mais completo e aprofundado para esta área de pesquisa. Outro fator decisivo, foi a sua quantidade de imagens, que além de estarem em uma quantidade considerável para o uso, também apresentam boa qualidade para a interpretação visual e para o treinamento de modelos de \emph{Deep Learning}.
 
 O \emph{dataset} apresenta três categorias de detecção WBC (\emph{White Blood Cell}) para as células brancas, RBC (\emph{Red Blood Cell}) para as células vermelhas e também as \emph{Platelets}, para as plaquetas. Os arquivos estão separados em diretórios diferentes, onde em uma das pastas temos todo o conjunto de imagens, e em outra pasta temos as coordenadas de cada uma das células nas imagens, em formato XML.
 
-Com o \emph{dataset} em mãos, é iniciado o estudo e aprofundamento de seu conteúdo, considerando os seus recursos e também suas limitações. Inicialmente é possível perceber que uma das limitações do \emph{dataset}, é que nem todas as células nas imagens possuem coordenadas mapeadas. Grande parte apresenta o mapeamento correto, porém existem células que não apresentam nenhuma coordenada, e isso é uma falha do \emph{dataset} nesse sentido que pode afetar o treinamento do modelo.
+Com o \emph{dataset} em mãos, foi iniciado o estudo e aprofundamento de seu conteúdo, considerando os seus recursos e também suas limitações. Inicialmente foi possível perceber que uma das limitações do \emph{dataset} é que nem todas as células nas imagens possuem coordenadas mapeadas. Grande parte apresenta o mapeamento correto, porém existem células que não apresentam nenhuma coordenada, e isso é uma falha do \emph{dataset} que pode afetar o treinamento do modelo.
 
-Outra limitação também observada nesse \emph{dataset}, é a falta de classificação das células brancas. O \emph{dataset} se preocupa apenas em localizar as células na imagem e categorizar em brancas, vermelhas e plaquetas. Porém, para se elaborar um hemograma completo, isso não é suficiente. Para a elaboração do hemograma, é necessário além de realizar a contagem das células brancas, também realizar a sua classificação (Neutrófilos, Basófilos, Eosinófilos, Linfócitos, Monócitos, entre outros), para através disso se ter um diagnóstico mais concreto a respeito do paciente.
+Outra limitação também observada nesse \emph{dataset}, é a falta de classificação das células brancas. O \emph{dataset} se preocupa apenas em localizar as células na imagem e categorizar em brancas, vermelhas e plaquetas. Porém, para se elaborar um hemograma completo, isso não é suficiente. Para a elaboração do hemograma, é necessário além de realizar a contagem das células brancas, também realizar a sua classificação (Neutrófilos, Basófilos, Eosinófilos, Linfócitos, Monócitos, entre outros), para através disso se ter um diagnóstico mais concreto a respeito do paciente. A introdução da detecção das classes para as células brancas ficará listada como possível trabalho futuro.
 
-Com a obtenção do \emph{dataset}, se inicia a fase de adaptação do conjunto de imagens para a detecção pelo modelo. No repositório, além das imagens, alguns programas \emph{Python} também são anexados, para o tratamento dos dados. Porém, como este trabalho envolve a aplicação de um modelo computacional, o tratamento dos dados será feito conforme as necessidades do modelo. Todos os arquivos \emph{Python} serão descartados, mantendo apenas o diretório das imagens e também o diretório dos arquivos XML contendo as coordenadas das imagens.
+Com a obtenção do \emph{dataset}, iniciou-se a fase de adaptação do conjunto de imagens para a detecção pelo modelo. No repositório, além das imagens, também estão contigos alguns programas \emph{Python}, que servem para o tratamento dos dados \textcolor{red}{Tem como comentar mais sobre isso??}. Porém, como este trabalho envolve a aplicação de um modelo computacional de \emph{Deep Learning}, o tratamento dos dados será feito respeitando as necessidades desta técnica. Sendo assim, todos os arquivos \emph{Python} contidos no \emph{dataset} foram descartados para este trabalho, mantendo apenas o diretório das imagens e o diretório dos arquivos XML que contém as coordenadas das imagens.
 
 \section{Detecção de Objetos}
-Para o desenvolvimento do modelo computacional, assim como dos treinamentos e da configuração dos seus recursos, a biblioteca Tensorflow havia sido escolhida para atender a essa demanda. O Tensorflow possui um grande acervo de funções e utilitários dos mais diversos tipos para se trabalhar com \emph{Machine Learning} e também \emph{Deep Learning}, sendo necessário selecionar quais são os mais adequados a este trabalho. Um dos módulos mais interessantes e que se alinham com o intuito desse trabalho é o \emph{Object Detection}, ou seja, o módulo de detecção de objetos. \cite{websiteObjectDetection}
+Para o desenvolvimento do modelo computacional, assim como do treinamento e da configuração dos seus recursos, a biblioteca Tensorflow foi sido escolhida para atender a essa demanda. O Tensorflow possui um grande acervo de funções e utilitários dos mais diversos tipos para se trabalhar com \emph{Machine Learning} e também \emph{Deep Learning}, sendo necessário selecionar quais são os mais adequados a este trabalho. Um dos módulos mais interessantes e que se alinham com o intuito desse trabalho é o \emph{Object Detection}, ou seja, o módulo de detecção de objetos \cite{websiteObjectDetection}. \textcolor{red}{Está certa essa referência?}
 
-O módulo de detecção de objetos do Tensorflow é utilizado para encontrar em porções de imagens, elementos que foram pré-treinados para serem reconhecidos. Geralmente é utilizado para detectar pessoas e objetos do dia a dia em imagens. Também pode ser utilizado em vídeos, processando \emph{frame} a \emph{frame}, possibilitando sua aplicação em câmeras de segurança, reconhecendo em tempo real pessoas, veículos, animais e outros elementos que aparecem com bastante frequência. Como é possível observar na imagem \ref{fig:objectdetection}.
+O módulo de detecção de objetos do Tensorflow é utilizado para encontrar elementos em porções de imagens, os quais foram previamente treinados para serem reconhecidos. Geralmente é utilizado para detectar pessoas e objetos do dia a dia em imagens. Também pode ser utilizado em vídeos, processando \emph{frame} a \emph{frame}, o que possibilita sua aplicação em câmeras de segurança, reconhecendo em tempo real pessoas, veículos, animais e outros elementos que aparecem com bastante frequência. Um exemplo de detecção de objetos através do TensorFlow é apresentado na Figura \ref{fig:objectdetection}.
 
 \begin{figure}[!htb]
 	\centering
-	\caption{Usos do \emph{Object Detection}}
+	\caption{Exemplo de aplicação de \emph{Object Detection} no TensorFlow.}
 	\includegraphics[width=0.60\textwidth]{img/objectdetection.jpg}
-	\legend{Fonte: \citeonline{websiteObjectDetection}}
+	\legend{Fonte: \citeonline{websiteObjectDetection} \textcolor{red}{Conferir referência.}}
 	\label{fig:objectdetection}
 \end{figure}
 
-Este trabalho consistem em criar uma visão computacional capaz de detectar células em uma imagem, para assim realizar a contagem e posteriormente criar os elementos do hemograma. Logo, o módulo de detecção de objetos se alinha com esse conceito. Embora seja normalmente utilizado para detecção de pessoas e objetos, possui grande capacidade de personalização, o que permite um aprendizado voltado ao sangue. Ou seja, ao realizar o treinamento do modelo com base em um grande volume de imagens de sangue, é possível aprender com os dados para depois realizar as predições.
+Este trabalho consiste em criar um sistema de visão computacional capaz de detectar células em uma imagem, para assim realizar a contagem e posteriormente criar os elementos de um hemograma. Logo, o módulo de detecção de objetos se alinha com esse conceito. Embora seja normalmente utilizado para detecção de pessoas e objetos, este módulo possui grande capacidade de personalização, o que permite aprendizado voltado aos elementos que compõem o sangue. Ou seja, ao realizar o treinamento do modelo com base em um grande volume de imagens de sangue, é possível aprender com os dados para depois realizar as predições.
 
 Como base para a utilização dessa biblioteca, a documentação foi de extrema importância para o entendimento dos seus recursos e limitações. No módulo de detecção de objetos, a documentação foi mais escassa, porém auxiliou em muitas questões do projeto, principalmente nos códigos base. Os primeiros códigos foram desenvolvidos com base nos exemplos de teste presentes na documentação, que permitiram ter uma grande noção das configurações possíveis de serem realizadas no modelo computacional e também de como é o funcionamento geral.
 
-Para a execução dos códigos, porém, foi constatado que uma preparação do ambiente é necessária para atingir o melhor desempenho possível. Para configurar corretamente a conexão do algoritmo com a placa de vídeo (GPU), ao invés de executar no processador (CPU) como é o padrão. Como o foco é trabalhar com processamento de imagens, ainda mais com um grande volume, as GPU's possuem um desempenho muito mais eficaz, entregando resultados melhores em menor tempo.
+Para a execução dos códigos, porém, foi constatado que uma preparação do ambiente é necessária para atingir o melhor desempenho possível. Se fez necessário configurar corretamente a conexão do algoritmo para execução na placa de vídeo (GPU), ao invés de executar no processador (CPU) como é o padrão. Como o foco é trabalhar com processamento de imagens, ainda mais com um grande volume, as GPU's possuem um desempenho muito mais eficaz, entregando resultados melhores em menor tempo.
 
-Para a preparação do ambiente, foi necessário primeiramente realizar a instalação do CUDA. O CUDA é uma plataforma da NVIDIA para realização de computação paralela, para fornecer aos desenvolvedores o melhor aproveitamento do processamento das placas de video e acelerar drasticamente os aplicativos de computação. Adicional ao CUBA, também é interessante o uso de uma biblioteca conhecida por cuDNN. O cuDNN é uma biblioteca com foco em \emph{Deep Neural Network}, ou seja, redes neurais profundas, que permite utilizar estruturas de redes neurais no trabalho com algoritmos de aprendizagem de máquina, sendo perfeitamente alinhado com o propósito desse trabalho. O uso do CUDA associado ao cuDNN, acabam por aumentar a eficiência e também a qualidade do resultado em níveis muito maiores. \cite{websiteCUDA, websiteCUDNN}
+Para a preparação do ambiente, foi necessário primeiramente realizar a instalação do CUDA. O CUDA é uma plataforma da NVIDIA para realização de computação paralela, para fornecer aos desenvolvedores o melhor aproveitamento do processamento das placas de video e acelerar drasticamente os aplicativos de computação. Adicional ao CUDA, também é interessante o uso de uma biblioteca conhecida por cuDNN. O cuDNN é uma biblioteca com foco em \emph{Deep Neural Network}, ou seja, redes neurais profundas, que permite utilizar estruturas de redes neurais no trabalho com algoritmos de aprendizagem de máquina, sendo perfeitamente alinhado com o propósito desse trabalho. O uso do CUDA associado ao cuDNN, aumenta a eficiência e também a qualidade do resultado. \cite{websiteCUDA, websiteCUDNN}
 
-Com a preparação do ambiente finalizada, o algoritmo já pode ser executado sem maiores problemas. Nessa etapa alguns testes foram realizados, executando os exemplos base presentes na documentação, para ter uma ideia de como o algoritmo se comporta na máquina e quais seriam os resultados do processamento de exemplo e em quanto tempo seriam entregues. Essa etapa foi importante para o continuar dos trabalhos, por foi possível ter uma noção de tempo necessário para execução dos códigos, permitindo um planejamento muito melhor para o projeto.
+Com a preparação do ambiente finalizada, o algoritmo já pode ser executado sem maiores problemas. Nessa etapa alguns testes foram realizados, executando os exemplos base presentes na documentação, para ter uma ideia de como o algoritmo se comporta na máquina e quais seriam os resultados do processamento de exemplo e em quanto tempo seriam entregues. Essa etapa foi importante para a continuidade dos trabalhos, pois foi possível ter uma noção de tempo necessário para execução dos códigos, permitindo aprimorar o planejamento das próximas etapas do projeto.
 
 \section{Modelo Computacional}
-Com todos os recursos, bibliotecas e ambiente funcionando em harmonia, se iniciou o processo para inserir o \emph{dataset} aos moldes do modelo para o reconhecimento e treinamento. O conjunto de imagens estava adequadamente formatado para o uso pelo algoritmo, onde as imagens estavam em um tamanho suficientemente bom, além de possuírem todas o mesmo tamanho e a mesma escala de ampliação.
+Com todos os recursos, bibliotecas e ambiente funcionando em harmonia, iniciou-se o processo para inserir o \emph{dataset} nos moldes do modelo para o treinamento e reconhecimento das imagens. O conjunto de imagens estava adequadamente formatado para o uso pelo algoritmo, estando em um tamanho suficientemente bom, além de possuírem todas o mesmo tamanho e a mesma escala de ampliação.
 
-Para o reconhecimento das coordenadas das imagens, primeiro, foi necessário a importação e tratamento dos arquivos XML em variáveis capazes de serem lidas pelo modelo. Contudo, apenas essa importação não foi o suficiente, visto que os dados contidos nos arquivos e os aceitados pelo modelo estavam em escalas e proporções diferentes. Ou seja, o algoritmo não estava conseguindo encontrar as células nas imagens durante a importação. Para se adequar esse processo, foi necessário criar uma função capaz de converter as coordenadas do XML em números na escala do modelo, permitindo assim, conseguir importar com sucesso no modelo, tanto as coordenadas, quanto as imagens.
+Para o reconhecimento das coordenadas das imagens, primeiro, foi necessário a importação e tratamento dos arquivos XML em variáveis capazes de serem lidas pelo modelo. Contudo, apenas essa importação não foi o suficiente, visto que os dados contidos nos arquivos e os aceitos pelo modelo estavam em escalas e proporções diferentes. Ou seja, o algoritmo não estava conseguindo encontrar as células nas imagens durante a importação. Para adequar esse processo, foi necessário criar uma função capaz de converter as coordenadas do XML em números na escala do modelo, permitindo assim, importar tanto as coordenadas, quanto as imagens com sucesso.
 
-Dessa forma, foi possível realizar um teste primário, sem alterar as características do modelo, para um dos tipos de céulas primeiramente, que retornou resultados satisfatórios para essa condição. Porém para se obter um ganho total dos conceitos do modelo, é necessário realizar a configuração adequadas dos seguintes atributos.
+Dessa forma, foi possível realizar um teste primário, sem alterar as características do modelo, para um dos tipos de células primeiramente, o que retornou resultados satisfatórios para essa condição. Porém para se obter um ganho total dos conceitos do modelo, foi necessário a realização de ajustes nas configurações dos seguintes atributos:
 
 \begin{itemize}
     \item \emph{Batch Size}: Significa o tamanho do lote utilizado no treinamento. Geralmente quanto maior o lote, melhor o aprendizado, porém também é necessário mais processamento da máquina.
@@ -408,7 +408,70 @@ Dessa forma, foi possível realizar um teste primário, sem alterar as caracter�
     \item Porcentagem de Acerto: Significa o número base para ser considerado um acerto de fato, por exemplo, se o algoritmo tem mais de 50\% de certeza para uma célula, é considerado acerto.
 \end{itemize}
 
-Esses parâmetros foram configurados com base em testes realizados, onde a cada execução do código, foi verificado e ajustando conforme o necessário. Esse processo foi realizado até encontrar os valores mais adequados que retornam os melhores resultados. Os valores finais utilizados podem ser conferidos na Tabela \ref{tbl:parametros}.
+Esses parâmetros foram configurados com base em testes realizados, onde a cada execução do código, foi verificado e ajustado conforme o necessário. Esse processo foi realizado até encontrar os valores mais adequados que retornam os melhores resultados. Os valores finais utilizados podem ser conferidos no capítulo \ref{chap:resultados}.
+
+Além da configuração desses parâmetros, também existe outro ponto bastante importante e necessário para este trabalho, o qual consiste em selecionar uma rede neural pré-treinada adequada para o uso. Através de uma rede pré-treinada, muitos parâmetros comuns podem ser aproveitados, agilizando o processo de treinamento de novos modelos. Além disso, também é capaz de impactar nos resultados, pois se foi devidamente treinada com informações básicas, como contornos e elementos comuns, os resultados ao treinar com elementos mais complexos serão melhores.
+
+Para este trabalho, foi selecionada a rede ``resnet50'', embora existam muitas outras incluídas na lista da documentação aceitas pelo módulo de detecção de objetos. Essa escolha foi definida pelo tamanho da imagem utilizada e também ao realizar testes de desempenho em comparação com as outras redes \cite{websiteObjectDetection}. \textcolor{red}{Verificar referências}
+
+Com o treinamento de um tipo de célula realizado com sucesso, foi necessário expandir para treinar as demais. Primeiramente, foi testado treinando todas as células de uma só vez, porém essa abordagem estava consumindo muitos recursos da máquina e produzindo resultados insatisfatórios.
+
+Nesse caso, a abordagem precisou ser alterada. Ao invés de treinar todos os tipos de células de uma só vez, foi criado um modelo único para cada uma delas, no caso um modelo para células brancas, outro para as vermelhas e um para as plaquetas. Isso permitiu que o treinamento fosse mais eficiente e com resultados mais assertivos e direcionados para cada tipo.
+
+Como são utilizados 3 modelos, ao inserir uma imagem para verificação na predição de resultados, ela terá 3 respostas diferentes, sendo uma imagem de resultado para cada tipo de célula presente. Essa abordagem também permitiu utilizar valores de parâmetros diferentes para cada tipo, o que também auxiliou na melhora dos resultados para os diferentes tipos. Como o objetivo proposto neste trabalho é a contagem das células individuais, esta separação dos modelos para cada célula não tem influência negativa no resultado final.
+
+\section{Avaliação}
+Para a realização da avaliação, foram utilizadas métricas para medir o desempenho do modelo computacional e também para avaliar a qualidade dos resultados obtidos com cada um dos modelos treinados. As métricas foram utilizadas em cada uma das opções de modelos, utilizando configurações diferentes, para ter um comparativo entre uma opção e outra.
+
+Dessa forma, foi possível avaliar e escolher com propriedade, qual algoritmo era o mais adequado para o uso no protótipo, assim como as melhores configurações possíveis para extrair o máximo desempenho da alternativa escolhida.
+
+As métricas utilizadas para a avaliação, foram inicialmente a acurácia padrão para os primeiros testes. Posteriormente também foram medidas, utilizando o MSE (\emph{Mean Squared Error}), que significa erro quadrático médio e também foi estendido para o rMSE. o rMSE (\emph{Root Mean Squared Error}), sendo uma variação do MSE, onde é aplicada a raiz quadrada ao resultado.
+
+A acurácia padrão foi a primeira métrica utilizada, sendo calculada considerando o número de células reais para serem encontradas pelo modelo e o número de células que o modelo realmente conseguiu encontrar. Com base na relação desses números também foi calculada a porcentagem geral de acurácia final.
+
+O MSE, foi calculado com base na fórmula apresentada a seguir. Primeiramente, foi calculada a diferença entre o valor encontrado pelo modelo e o valor real de cada uma das imagens, para então calcular o quadrado do resultado obtido. Por fim, é realizada a média desses valores para todas as imagens, gerando erro quadrático médio.
+
+\[ MSE = \frac{1}{n}\sum_{i=1}^{n} (\skew{4.5}\hat{y}_\iota - y_\iota)^{2} \]
+
+O valor ideal desse número é perto de 0, pois quanto maior o número, maior o erro do modelo. Como o resultado é sempre elevado ao quadrado, predições distantes do real são facilmente perceptíveis, o que torna essa métrica interessante para problemas onde grandes erros não são tolerados.
+
+O rMSE, foi calculado com base na fórmula apresentada abaixo. Como já foi calculado o MSE, foi possível calcular a raiz quadrada resultante para encontrar o rMSE final.
+
+\[ rMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (\skew{4.5}\hat{y}_\iota - y_\iota)^{2}} \]
+
+Essa métrica é um complemento do MSE normal, pois através dessa métrica, é possível mensurar de uma forma melhor a resultante final. Pois, enquanto o MSE está elevado o quadrado, o rMSE não tem esse problema, pois é extraída a raiz quadrada no processo final.
+
+\section{Protótipo}
+Após a definição da melhor instância do modelo computacional possível, seguindo as métricas definidas, foi realizada a exportação desse modelo, para então utilizá-lo na criação de um protótipo funcional.
+
+Para realizar a exportação do modelo, a documentação da biblioteca do Tensorflow precisou ser analisada novamente, estudando de forma mais aprofundada o funcionamento dos \emph{checkpoints}. Os \emph{checkpoints} são uma estrutura presente no Tensorflow que permitem salvar o estado atual de um modelo treinado para ser utilizado posteriormente. Dessa forma, é possível utilizar um modelo pronto, sem precisar passar pelo processamento do treinamento novamente e sim, somente utilizá-lo para predições, com base em uma imagem de entrada. Sendo assim, o modelo pode ser usado em vários locais diferentes, apenas importando um arquivo \cite{websiteTensorFlow}.
+
+Para a criação do protótipo, foi utilizada uma biblioteca com foco em prototipação de algoritmos de inteligência artificial, o Streamlit. O Streamlit é um framework para o uso em Python, que permite criar protótipos de uma forma fácil e rápida. É possível ter uma aplicação web com poucos comandos, permitindo focar no mais importante que é o código. Logo, não é necessário se preocupar com a parte da interface gráfica \cite{websiteStreamlit}.
+
+Ainda assim é de fácil personalização, mostrando na tela todos os recursos do algoritmo, permitindo ao usuário enviar os dados de entrada (\emph{input}) e também conseguir visualizar o resultado recebido do algoritmo (\emph{output}). Dessa forma, é possível ter uma interação com o usuário em tempo real.
+
+A Figura \ref{fig:prototipo} apresenta a interface do protótipo desenvolvido.
+
+\begin{figure}[!htb]
+	\centering
+	\caption{Interface do protótipo desenvolvido.}
+	\includegraphics[width=1.0\textwidth]{img/prototipo.png}
+	\legend{Fonte: Elaborado pelo autor.}
+	\label{fig:prototipo}
+\end{figure}
+
+Como pode ser notado, o protótipo apresenta ao usuário um campo de entrada, onde é possível informar um \emph{link} de uma imagem da Internet, sendo recomendado o uso de imagens no formato do \emph{dataset} onde o modelo foi treinado. Na mesma Figura, também é possível visualizar um resultado do processamento de uma amostra de sangue, onde, nas imagens apresentadas, estão contidos o reconhecimento das células brancas, vermelhas e plaquetas, respectivamente, através no modelo treinado previamente.
+
+\chapter{Resultados}
+\label{chap:resultados}
+Neste capítulo serão abordados todos os resultados do projeto desenvolvido. Todas as resultantes serão avaliadas em métricas e conceitos definidos anteriormente. Dessa forma, serão detalhados quais foram os retornos do trabalho, medidos nas métricas e também em resultantes de imagens produzidas pelo modelo treinado e também através do protótipo desenvolvido.
+
+\section{Estatísticas}
+O \emph{dataset} utilizado como base para a realização deste trabalho, possui 364 imagens na sua amostra de sangue. Cada uma das imagens pode conter até 30 células de classes diferentes, localizadas em diferentes porções da imagem. As classes utilizadas nessa pesquisa são células vermelhas (RBC), células brancas (WBC) e também plaquetas (\emph{Platelets}). Além das imagens, foram utilizados arquivos XML para a localização de cada umas das células nas imagens.
+
+Este dataset foi separado em dois principais grupos. O primeiro grupo se refere ao conjunto de imagens voltados apenas para o treino, com 80\% das imagens totais, esse grupo conteve 291 imagens selecionadas aleatoriamente. Enquanto o segundo grupo, voltado apenas para o teste, com 20\% das imagens totais, resultou em 73 imagens separadas para este fim. Como o grupo de treino precisa ser maior para se ter um bom treinamento do modelo e por fim realizar o teste nas imagens restantes, a seleção de 80/20 da separação dos arquivos foi adotada.
+
+Como observado no capítulo \ref{chap:metodologia}, o modelo foi configurado seguindo alguns princípios e configurações principais. Primeiramente foi selecionada a rede neural pré-treinada com o melhor resultado e performance para este grupo de imagem, sendo essa a ``resnet50'', reconhecida na base de código por ``ssd\_resnet50\_v1\_fpn\_640x640\_coco17\_tpu-8''. Além dessa escolha, quatro parâmtros fundamentais foram cuidadosamente selecionados, buscando o melhor desempenho em menor tempo. A definição dos parâmetros de \emph{Batch Size}, \emph{Learning Rate}, Número de \emph{Batches} e também a porcentagem de acerto base podem ser visualizados na tabela \ref{tbl:parametros}.
 
 \begin{table}[!htb]
 \centering
@@ -426,55 +489,117 @@ Porcentagem de Acerto & 0.5 & 0.1 & 0.5      \\ \hline
 	\legend{Fonte: Elaborada pelo autor.}
 \end{table}
 
-Além da configuração desses parâmetros, também existe outro ponto bastante importante e necessário para este trabalho, selecionar uma rede neural pré-treinada adequada para o uso. Através do uso de uma rede pré-treinada, muito tempo pode ser ganho ao ter uma boa base e não precisar treinar do zero. Além de também impactar nos resultados, pois se foi devidamente treinada com conceitos básicos, como contornos e figuras básicas, os resultados ao treinar com elementos mais complexos serão melhores.
+Após o treinamento do modelo, as predições foram medidas utilizando 3 métricas diferentes. A primeira foi a acurácia padrão, que permite ter uma visão geral do andamento do processo. Realizando a medição da acurácia padrão, considerando o número de células reais e o número de células que deveriam ser encontradas pelo modelo, se chegou na seguinte relação, utilizando o melhor resultado possível como parâmetro:
 
-Para este trabalho, foi selecionada a ``resnet50'', embora existam muitas outas incluídas na lista da documentação aceitas pelo módulo de detecção de objetos. Essa escolha foi definida pelo tamanho da imagem utilizada e também ao realizar testes de desempenho comparando uma com as outras. \cite{websiteObjectDetection}
+\begin{itemize}
+    \item WBC: 74 células encontradas de 74 células reais (100\% de Acerto e 0\% de Falha)
+    \item RBC: 1007 células encontradas de 908 células reais (110.9\% de Acerto e 10.9\% de Falha)
+    \item Platelets: 57 células encontradas de 59 células reais (96.61\% de Acerto e 3.39\% de Falha)
+\end{itemize}
 
-Com o treinamento de um tipo de célula realizado com sucesso, é necessário expandir para treinar as demais. Primeiramente, foi testado treinando todas as células de uma só vez, porém essa abordagem estava consumindo muitos recursos da máquina e produzindo resultados muito insatisfatórios.
+Conforme constatado no capítulo \ref{chap:metodologia}, o MSE e o rMSE, são métricas complementares, de fácil utilização e dizem muito a respeito do desempenho de um modelo computacional. Enquanto o MSE trabalha realizando o cálculo do erro quadrático médio, o rMSE é a raiz desse valor encontrado. Tais métricas são interessantes de se utilizar, pois, permitem visualizar de forma considerável, até mesmo pequenos erros. Essa escala não apresenta um número máximo ou ideal, mas o resultado deve se aproximar de zero, quanto mais próximo, melhor. Dessa forma, utilizando as fórmulas do capítulo anterior, foi possível chegar na relação da tabela \ref{tbl:mse}.
 
-Nesse caso, a abordagem precisou ser alterada. Ao invés de treinar todas os tipos de células juntas, foi criado um modelo único para cada uma delas, no caso um modelo para células brancas, outro para as vermelhas e um para as plaquetas. Isso permitiu que o treinamento fosse mais eficiente e com resultados mais assertivos e direcionados para cada tipo.
+\begin{table}[!htb]
+	\centering
+	\caption{MSE e rMSE}
+	\label{tbl:mse}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		          & MSE                & rMSE               \\ \hline
+		WBC       & 0.3835616438356164 & 0.6193235372853323 \\ \hline
+		RBC       & 14.342465753424657 & 3.787144802278447  \\ \hline
+		Platelets & 0.9041095890410958 & 0.9508467747440151 \\ \hline
+	\end{tabular}
+	\vspace{6pt}
+	\legend{Fonte: Elaborada pelo autor.}
+\end{table}
 
-Como são utilizados 3 modelos, ao inserir uma imagem para verificação na predição de resultados, ela terá 3 respostas diferentes, sendo uma imagem de resultado para cada tipo de célula presente. Essa abordagem também permitiu utilizar valores de parâmetros diferentes para cada tipo, o que também auxiliou na melhora dos resultados para os diferentes tipos.
+Através da relação da tabela \ref{tbl:mse}, foi possível perceber que o melhor desempenho está na detecção de células brancas, o que se alinha com as definições encontradas pela acurácia vista anteriormente. Isso pode ter acontecido, pois, no \emph{dataset}, em grande parte das imagens existe pelo menos uma célula branca que é facilmente detectada em relação às demais. Seguinte a isso, as plaquetas também apresentam bons resultados, parecido com a relação da acurácia do modelo. Por fim, as células vermelhas apresentam resultados inferiores em relação às demais. Isso pode ter acontecido, devido ao fato da sua abundância em todas as imagens, enquanto as outras classes apresentam uma ou duas células por imagem, as células vermelhas podem aparecer em um número maior que 20, isso dificulta o aprendizado do modelo e também atrapalha na predição nesse caso.
 
-\section{Avaliação}
-Para a realização da avaliação, foram utilizadas métricas para medir o desempenho do modelo computacional e também para avaliar a qualidade dos resultados obtidos com cada um dos modelos treinados. As métricas foram utilizadas em cada uma das opções de modelos, utilizando configurações diferentes, para ter um comparativo entre uma opção e outra.
+\section{Células Brancas (WBC)}
+A primeira classe de células trabalhadas, desde o primeiro teste utilizando o \emph{dataset} foram as células brancas. Isso ocorreu pela sua fácil identificação em relação as demais, sendo um ótimo candidato para se iniciar os testes e posteriormente as primeiras versões do protótipo.
 
-Dessa forma, foi possível avaliar e escolher com propriedade, qual algoritmo era o mais adequado para o uso no protótipo, assim como as melhores configurações possíveis para extrair o máximo desempenho da alternativa escolhida.
-
-As métricas utilizadas para a avaliação, foram inicialmente a acurácia padrão para os primeiros testes. Posteriormente também foram medidas, utilizando o MSE (\emph{Mean Squared Error}), que significa erro quadrático médio e também foi estendido para o rMSE. o rMSE (\emph{Root Mean Squared Error}), sendo uma variação do MSE, onde é retirada a raiz.
-
-A acurácia padrão foi a primeira métrica utilizada, foi calculada considerando o número de células reais para serem encontradas pelo modelo e o número de células que o modelo realmente conseguiu encontrar. Com base na relação desses números também foi calculado uma porcentagem geral de acurácia final.
-
-O MSE, foi calculado com base na fórmula, conforme abaixo. Primeiramente, foi calculado a diferença entre o valor encontrado pelo modelo e o valor real de cada uma das imagens e eleva-se ao quadrado. Por fim, faz-se a média desses valores de cada uma das imagens, gerando o valor final.
-
-\[ MSE = \frac{1}{n}\sum_{i=1}^{n} (\skew{4.5}\hat{y}_\iota - y_\iota)^{2} \]
-
-O valor ideal desse número é perto de 0, pois quanto maior o número, maior o erro do modelo. Como o resultado é sempre elevado ao quadrado, predições distantes do real são facilmente perceptíveis, o que torna essa métrica interessante para problemas onde grandes erros não são tolerados.
-
-O rMSE, foi calculado com base na fórmula, conforme abaixo. Como já foi calculado o MSE, foi possível retirar a raiz dessa resultante para encontrar o rMSE final.
-
-\[ rMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (\skew{4.5}\hat{y}_\iota - y_\iota)^{2}} \]
-
-Essa métrica é um complemento do MSE normal, pois através dessa métrica, é possível mensurar de uma forma melhor a resultante final. Pois, enquanto o MSE está elevado o quadrado, o rMSE não tem esse problema, pois é retirado a raiz no processo final.
-
-\section{Protótipo}
-Após a definição da melhor instância do modelo computacional possível, seguindo as métricas definidas, é necessário realizar a exportação desse modelo, para depois utilizá-lo na criação de um protótipo funcional.
-
-Para realizar a exportação do modelo, a biblioteca do Tensorflow precisou ser revista novamente para a criação de \emph{checkpoints}. Os \emph{checkpoints} são uma estrutura presente no Tensorflow que permite salvar o estado atual de um modelo treinado para ser utilizado posteriormente. Dessa forma, é possível utilizar um modelo pronto, sem precisar passar pelo processamento do treinamento novamente e sim, somente utilizá-lo para predições, com base em uma imagem de entrada. Sendo assim, o modelo pode ser usado em vários locais diferentes, apenas importando um arquivo. \cite{websiteTensorFlow}
-
-Para a criação do protótipo, foi utilizada uma biblioteca com foco em prototipação de algoritmos de inteligência artificial, o Streamlit. O Streamlit é um framework para o uso em Python, que permite criar protótipos de uma forma fácil e rápida. É possível ter uma aplicação web com poucos comandos, permitindo focar no mais importante que é o código. Logo, não é necessário se preocupar com a parte da interface gráfica. \cite{websiteStreamlit}
-
-Ainda assim é de fácil personalização, mostrando na tela todos os recursos do algoritmo, permitindo ao usuário enviar os dados de entrada (\emph{input}) e também conseguir visualizar o resultado recebido do algoritmo (\emph{output}). Dessa forma, é possível ter uma interação com o usuário em tempo real.
-
-Para o desenvolvimento do protótipo para esse trabalho, foi criado um campo de entrada, onde é possível digitar um \emph{link} de uma imagem da internet, no caso é recomendado utilizar imagens do \emph{dataset} onde o modelo foi treinado. E logo em seguida é possível visualizar em tempo de execução, as imagens de respostas repassadas pelo algoritmo, como é possível visualizar na imagem \ref{fig:prototipo}.
+Essas células estão presentes nas imagens em baixa quantidade, pois o dataset buscou focalizar uma célula branca em cada imagem. Embora em alguns casos é possível encontrar até duas ou três. Além da quantidade, podem ser diferenciadas das outras através da sua coloração.
 
 \begin{figure}[!htb]
 	\centering
-	\caption{Protótipo Desenvolvido}
-	\includegraphics[width=0.60\textwidth]{img/prototipo.png}
+	\caption{Detecção de Célula - WBC}
+	\includegraphics[width=0.60\textwidth]{img/predict_wbc.jpeg}
 	\legend{Fonte: Elaborado pelo autor.}
-	\label{fig:prototipo}
+	\label{fig:predict_wbc}
 \end{figure}
 
-\chapter{Resultados}
-\label{chap:resultados}
+Na imagem \ref{fig:predict_wbc} pode ser observado a detecção da célula branca pelo modelo. Onde foi possível diferenciar e delimitar a célula de forma bastante satisfatória. Na imagem \ref{fig:predict_wbc_2} também pode ser observado o mesmo processo, mas em outra situação.
+
+\begin{figure}[!htb]
+	\centering
+	\caption{Detecção de Célula - WBC}
+	\includegraphics[width=0.60\textwidth]{img/predict_wbc_2.jpeg}
+	\legend{Fonte: Elaborado pelo autor.}
+	\label{fig:predict_wbc_2}
+\end{figure}
+
+Podemos perceber que o modelo teve uma boa taxa de acerto, levando em consideração as métricas e agora vendo o resultado na prática através das imagens. Dessa forma, é possível realizar as contagens com um bom índice de assertividade.
+
+\section{Células Vermelhas (RBC)}
+Após a detecção das células brancas, o próximo passo buscado foi a interpretação das células vermelhas. Estas se diferenciam na sua detecção em relação às outras devido a sua quantidade. As células vermelhas aparecem em uma proporção muito maior, constando até mesmo mais de 20 células por imagem.
+
+A grande quantidade desse tipo de células é um desafio para o modelo, principalmente pela delimitação de suas áreas. Por não terem forma definida e muitas vezes se sobrepondo uma sobre as outras, isso atrapalha a sua identificação.
+
+\begin{figure}[!htb]
+	\centering
+	\caption{Detecção de Células - RBC}
+	\includegraphics[width=0.60\textwidth]{img/predict_rbc.jpeg}
+	\legend{Fonte: Elaborado pelo autor.}
+	\label{fig:predict_rbc}
+\end{figure}
+
+Na imagem \ref{fig:predict_rbc} podemos visualizar o processo de detecção das células vermelhas. Sendo possível realizar a contagem das células conforme o necessário, com uma pequena margem de erro. Na imagem \ref{fig:predict_rbc_2} também é possível visualizar a identificação pelo modelo, porém em uma densidade muito maior, mesmo com a sobreposição de células, ainda assim o modelo conseguiu realizar a identificação correta.
+
+\begin{figure}[!htb]
+	\centering
+	\caption{Detecção de Células - RBC}
+	\includegraphics[width=0.60\textwidth]{img/predict_rbc_2.jpeg}
+	\legend{Fonte: Elaborado pelo autor.}
+	\label{fig:predict_rbc_2}
+\end{figure}
+
+É possível concluir que embora não tenha um desempenho tão positivo quanto as demais classes, os resultados também são bons pois permitem uma contagem das células vermelhas com uma pequena margem de erro.
+
+\section{Plaquetas (\emph{Platelets})}
+Por fim, a detecção das plaquetas foram realizadas de forma parecida com as células brancas. Embora estejam mais presentes no \emph{dataset} do que as células brancas, também não estão em um número tão superior quanto as células vermelhas, apresentando pequenos conjuntos por imagens. Outro fator característico em relação as demais é o seu tamanho, que é muito menor e de fácil identificação a olho nu.
+
+Embora sejam identificadas de forma mais tranquila, a sobreposição de células também pode acontecer nesse caso, atrapalhando o desempenho da identificação pelo modelo. Porém isso acontece em um número significantemente menor em relação às células vermelhas.
+
+\begin{figure}[!htb]
+	\centering
+	\caption{Detecção de Células - Platelets}
+	\includegraphics[width=0.60\textwidth]{img/predict_platelets.jpeg}
+	\legend{Fonte: Elaborado pelo autor.}
+	\label{fig:predict_platelets}
+\end{figure}
+
+É possível visualizar na imagem \ref{fig:predict_platelets} o processo de identificação dessas células, que apresenta um desempenho consideravelmente bom. Na imagem \ref{fig:predict_platelets_2} com outra situação, também foi possível detectar até 4 plaquetas com boa assertividade.
+
+\begin{figure}[!htb]
+	\centering
+	\caption{Detecção de Células - Platelets}
+	\includegraphics[width=0.60\textwidth]{img/predict_platelets_2.jpeg}
+	\legend{Fonte: Elaborado pelo autor.}
+	\label{fig:predict_platelets_2}
+\end{figure}
+
+Com isso, podemos concluir que as plaquetas possuem um desempenho adequado na sua identificação permitindo uma contagem satisfatória. Embora não seja tão positivo quando na detecção das células brancas, ainda supera as células vermelhas em relação ao desempenho e critérios de assertividade.
+
+\section{Hemograma}
+Com base na identificação e na contagem das células como visto anteriormente é possível realizar a produção de um hemograma. Um hemograma é basicamente uma contagem das células e comparação desses resultados com índices pré-calculados de valores ideais para cada tipo de paciente.
+
+Os valores iniciais do hemograma podem ser calculados realizando após a identificação das células, a contagem de cada tipo. As unidades de medida são importantes nesse processo, pois são diferentes para cada tipo de célula. A unidade base para o cálculo é o milímetro cúbico (mm³), ou seja, uma unidade de volume. Para o cálculo dos leucócitos, que são as células brancas, e também das plaquetas é realizada a contagem em proporção a um milímetro cúbico. Porém, no caso dos eritrócitos, que são as células vermelhas, elas estão em uma quantidade muito maior em relação às outras células, portanto é realizado o cálculo de milhões de células em um milímetro cúbico.
+
+O eritrograma pode ser elaborado, considerando o número de eritrócitos em uma relação de milhões/mm³. O leucograma pode ser elaborado, utilizando o número de leucócitos encontrados em unidade/mm³. E por fim o plaquetograma pode ser elaborado, com base no número de plaquetas identificadas em unidades/mm³.
+
+Dessa forma, com esse hemograma parcial várias doenças e desequilíbrios do organismo do paciente podem ser identificados. Como por exemplo, o leucograma sendo o principal exame para avaliar a imunidade de uma pessoa, através da quantidade de leucócitos presentes no organismo. O número das plaquetas também muito diz sobre o organismo, avaliando a coagulação sangúinea do indivíduo e pré-disposições à hemorragias. Assim como, o número de hemácias baixo, poderia indicar uma anemia ou doença associada, entre muitos outros casos.
+
+Podemos concluir que através desses dados, é possível elaborar um hemograma parcial bastante útil e interessante para o uso. Caso os valores de um exame como este estejam alterados e fora do padrão considerado aceito mundialmente. Nesse caso seria necessário realizar uma investigação mais aprofundada com exames mais específicos a cada situação.
+
+As limitações da elaboração de um hemograma total estão relacionadas com as limitações do \emph{dataset}. Primeiramente, para a realização de um hemograma completo, seria necessário ter além da contagem, também se ter a classificação das células brancas. Sua classificação em Monócitos, Leucócitos, Neutrófilos, Eosinófilos, Basófilos, Linfócitos, entre outros é necessária para a completude do exame. Porém, essas classificações não são apresentadas pelo \emph{dataset}, que procura focar apenas nas diferenciações entre os três principais tipos. Outros valores relacionados à cálculos de volume também não são possíveis de serem calculados.

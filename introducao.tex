@@ -1,8 +1,8 @@
 \chapter{Introdução}
 \label{chap:introducao}
-A saúde humana sempre foi uma área pilar de toda a sociedade e vem se tornando ainda mais vital para sustentar as demais. Considerando os problemas e situações advindos da pandemia de COVID-19, é necessário pensar em formas de automatizar para auxiliar os profissionais de saúde em suas tarefas, de forma à focar em problemas mais graves e urgentes. Também, com o avanço da tecnologia e dos meios de comunicação, a automação vem se fazendo presente na vida de todos, tornando-se indispensável nas mais diversas áreas. Para a área da saúde isso não difere, sendo preciso pensar em formas de, através da automatização, facilitar processos cotidianos para assim garantir um foco maior nos problemas mais críticos.
+A saúde humana sempre foi uma área pilar de toda a sociedade e vem se tornando ainda mais vital para sustentar as demais. Considerando os problemas e situações advindos da pandemia de COVID-19, é necessário pensar em formas de automatizar tarefas para agilizar o trabalho dos profissionais de saúde, permitindo que os mesmos tenham foco em problemas que demandam atenção urgente. Também, com o avanço da tecnologia e dos meios de comunicação, a automação vem se fazendo presente na vida de todos, tornando-se indispensável nas mais diversas áreas. Para a área da saúde isso não é diferente, sendo preciso pensar em formas de automatizar processos cotidianos para assim garantir  maior atenção nos problemas mais críticos.
 
-Também como efeito da pandemia, a demanda por exames laboratoriais vem crescendo, e conforme isso acontece, um maior número de profissionais da saúde são necessários para atender, analisar e produzir laudos desses exames. Porém, nem todo local possui uma equipe adequada para lidar com isso, e então acontece sobrecarga de funções para dar conta dessa demanda.
+Também como efeito da pandemia, a demanda por exames laboratoriais vêm crescendo, e conforme isso acontece, um maior número de profissionais da saúde são necessários para atender, analisar e produzir laudos desses exames. Porém, nem todo local possui uma equipe adequada para lidar com isso, e então acontece sobrecarga de funções para dar conta dessa demanda.
 
 Este trabalho tem como principal objetivo buscar maneiras de automatizar a produção de hemogramas. Através de detecções automáticas, é possível criar uma ferramenta para auxiliar os profissionais da saúde nessa tarefa. Atualmente, os hemogramas são realizados por máquinas especializadas, portanto, demandam um alto custo financeiro e de manutenção para isso. Esse processo pode ser facilitado com o uso de algoritmos de \emph{Deep Learning} para a automatização, como forma alternativa ao maquinário especializado.
 
@@ -10,38 +10,39 @@ Os algoritmos de \emph{Deep Learning} (DL) vêm sendo utilizados nas mais divers
 
 As técnicas de \emph{Deep Learning} buscam atingir resultados a partir de um grande conjunto de dados. Esses dados devem ser devidamente coletados e adaptados, ou seja, pré-processados adequadamente para que o processo de aprendizagem do \emph{Deep Learning} possa ser desempenhado da melhor forma possível. O modelo de \emph{Deep Learning} passa pela fase de treinamento e posteriormente por uma fase de realização de testes com outros dados para obtenção de resultados, que serão pós-processados para uma melhor visualização e apresentados ao profissional da saúde.
 
-Nesse trabalho, busca-se analisar imagens de exames de sangue, para uma detecção e contagem automatizada das células da amostra. Essa amostra é armazenada e registrada em placas de Petri, que são recipientes cilíndricos utilizados pelos profissionais para cultura de microrganismos e análise de materiais \cite{petri}, de forma a elaborar hemogramas a partir dessas informações. Para isso será utilizado um \emph{dataset} desse tipo de imagem, que são grandes conjuntos de dados, a fim de detectar e contar os diferentes tipos de células do sangue, de forma a auxiliar os profissionais a elaborarem hemogramas.
+Nesse trabalho, busca-se analisar imagens de exames de sangue, para uma detecção e contagem automatizada das células da amostra. Normalmente, considerando o processo manual, essas amostras são verificadas e analisadas com o uso de lâminas de vidro e microscópio, onde são realizadas as devidas contagens de células, de forma a elaborar hemogramas a partir dessas informações. Outra abordagem utilizada em laboratórios de maior escala é a utilização de máquinas especializadas para esta contagem, que como já mencionado, envolvem custo financeiro elevado. Neste sentido, este projeto consiste na utilização de um \emph{dataset}, grande conjunto de imagens de amostras de sangue, a fim de detectar e contar os diferentes tipos de células existentes na amostra, de forma a auxiliar os profissionais a elaborarem hemogramas.
 
 \section{Problema de Pesquisa}
 \label{sec:problema}
-Considerando as diferentes formas e aplicações dos algoritmos de \emph{Deep Learning}, presentes nas mais diversas áreas, como se pode utilizar um modelo computacional, para a detecção de celulas do sangue em imagens de placas de Petri, a fim de gerar informações úteis na elaboração de elementos do hemograma e auxiliar os profissionais de laboratório e da saúde?
+
+Considerando as diferentes formas e aplicações dos algoritmos de \emph{Deep Learning} presentes nas mais diversas áreas, é possível utilizar um modelo computacional, para a detecção e contagem de células em imagens de amostras de sangue, a fim de gerar informações úteis na elaboração de elementos do hemograma e auxiliar os profissionais de laboratório e da saúde?
 
 \section{Hipótese de Pesquisa}
 \label{sec:hipotese}
-A hipótese para o problema apresentado, é que modelos computacionais podem ser treinados para a detecção de céluas em imagens de placas de Petri, com grande eficiência em prover informações úteis na elaboração de elementos do hemograma, para auxiliar os profissionais de laboratório e da saúde.
+A hipótese para o problema apresentado, é que modelos computacionais podem ser treinados para a detecção e contagem de células em imagens de amostras de sangue, com grande eficiência em prover informações úteis na elaboração de elementos do hemograma, para auxiliar os profissionais de laboratório e da saúde.
 
 \section{Objetivos}
 \label{sec:objetivos}
 
 \subsection{Objetivo Geral}
-Como objetivo geral deste trabalho, deve-se buscar formas de treinamento de uma modelo computacional para detecção de células em imagens, voltado a prover informações úteis para elaborar elementos do hemograma e assim auxiliar os profissionais da área em suas tarefas.
+Como objetivo geral deste trabalho, deve-se buscar formas de treinamento de um modelo computacional para detecção de células em imagens de amostras de sangue, voltado a prover informações úteis para elaborar elementos do hemograma e assim auxiliar os profissionais da área em suas tarefas.
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
     \item Realizar um mapeamento sistemático sobre o tema, a fim de reconhecer os melhores trabalhos na literatura sobre as técnicas de Deep Learning utilizadas na área da saúde.
     \item Buscar imagens de amostras de sangue em bases de dados disponíveis e voltadas para esta finalidade.
     \item Realizar o pré-processamento dos dados coletados a fim de preparar o conjunto para o treinamento do modelo computacional.
-    \item Desenvolver e treinar modelos computacionais de \emph{Deep Learning} a fim de encontrar informações na análise de amostras de sangue em placas de Petri;
-    \item Desenvolver um protótipo funcional através do modelo computacional, para o uso pelos profissionais.
+    \item Desenvolver e treinar modelos computacionais de \emph{Deep Learning} a fim de encontrar informações na análise de amostras de sangue;
+    \item Desenvolver um protótipo funcional através do modelo computacional, para ser usado por profissionais da área.
 \end{itemize}
 
 \section{Justificativa}
 \label{sec:justificativa}
-Este estudo busca demonstrar uma forma alternativa de análise das amostras de sangue para elaboração de elementos do hemograma, portanto seu principal foco é auxiliar os profissionais da saúde. A contribuição desse estudo poderá ajudar os profissionais a serem mais rápidos em suas decisões sem perder a assertividade, de forma a aumentar a eficiência da análise de exames laboratoriais. Principalmente em momentos de crise, onde a área da saúde é bastante afetada, é necessário ter formas alternativas e associativas em tarefas cotidianas e de extrema importância para a continuidade dos trabalhos. Com esse trabalho, estudiosos da área da computação e também da saúde, poderão ter uma noção desse contexto e de suas possibilidades, cultivando novas iniciativas de trabalho, de forma a auxiliar em novas pesquisas e aplicações.
+Este estudo busca demonstrar uma forma alternativa de análise das amostras de sangue para elaboração de elementos do hemograma, portanto seu principal foco é auxiliar os profissionais da saúde. A contribuição desse estudo poderá ajudar os profissionais a serem mais rápidos em suas decisões sem perder a assertividade, de forma a aumentar a eficiência da análise de exames laboratoriais. Principalmente em momentos de crise, onde a área da saúde é bastante afetada, é necessário ter formas alternativas e associativas em tarefas cotidianas e de extrema importância para a continuidade dos trabalhos. Através dos resultados desse projeto, pesquisadores da área da computação e também da saúde, poderão ter uma noção desse contexto e de suas possibilidades, cultivando novas iniciativas de trabalho, de forma a auxiliar em novas pesquisas e aplicações.
 
-Outra questão bastante relevante, é em relação aos custos associados, devido ao fato de que o maquinário utilizado hoje para a análise desses exames demanda um alto custo para a sua compra e manutenção. Esse trabalho também possibilitará a realização da análise laboratorial reduzindo a necessidade de compra dessas máquinas, e consequentemente diminuindo também custos nesse aspecto.
+Outra questão bastante relevante, é em relação aos custos associados, devido ao fato de que o maquinário utilizado hoje para a análise desses exames demanda um alto custo para a sua compra e manutenção. Esse trabalho também possibilitará a realização da análise laboratorial reduzindo a necessidade de compra desses equipamentos, e consequentemente diminuindo também os custos envolvidos nesse processo.
 
-Embora já existam estudos utilizando \emph{Deep Learning} e também estudos utilizando esses conceitos na área da saúde, esse trabalho tem a ideia de associar a análise dos modelos de \emph{Deep Learning} com a elaboração de elementos do hemogramas de uma forma automatizada. Logo, se faz necessária a investigação dos conceitos desse trabalho para essa e futuras pesquisas.
+Embora já existam estudos utilizando \emph{Deep Learning} e também estudos utilizando esses conceitos na área da saúde, esse trabalho tem a ideia de associar a análise dos modelos de \emph{Deep Learning} com a elaboração de elementos do hemograma de uma forma automatizada. Logo, se faz necessária a investigação dos conceitos desse trabalho para essa e futuras pesquisas.
 
 \section{Organização do texto}
 \label{sec:organizacao}
