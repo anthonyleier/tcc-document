@@ -464,14 +464,15 @@ Como pode ser notado, o protótipo apresenta ao usuário um campo de entrada, on
 
 \chapter{Resultados}
 \label{chap:resultados}
-Neste capítulo serão abordados todos os resultados do projeto desenvolvido. Todas as resultantes serão avaliadas em métricas e conceitos definidos anteriormente. Dessa forma, serão detalhados quais foram os retornos do trabalho, medidos nas métricas e também em resultantes de imagens produzidas pelo modelo treinado e também através do protótipo desenvolvido.
+Neste capítulo serão abordados todos os resultados do projeto desenvolvido, os quais foram todos avaliados através das métricas e conceitos apresentados no Capítulo anterior. Dessa forma, será apresentado em detalhes como os resultados foram obtidos, medidos e avaliados a partir das métricas, e também apresentadas imagens produzidas pelo modelo treinado. 
 
-\section{Estatísticas}
-O \emph{dataset} utilizado como base para a realização deste trabalho, possui 364 imagens na sua amostra de sangue. Cada uma das imagens pode conter até 30 células de classes diferentes, localizadas em diferentes porções da imagem. As classes utilizadas nessa pesquisa são células vermelhas (RBC), células brancas (WBC) e também plaquetas (\emph{Platelets}). Além das imagens, foram utilizados arquivos XML para a localização de cada umas das células nas imagens.
+\section{Análise de Desempenho do Modelo}
 
-Este dataset foi separado em dois principais grupos. O primeiro grupo se refere ao conjunto de imagens voltados apenas para o treino, com 80\% das imagens totais, esse grupo conteve 291 imagens selecionadas aleatoriamente. Enquanto o segundo grupo, voltado apenas para o teste, com 20\% das imagens totais, resultou em 73 imagens separadas para este fim. Como o grupo de treino precisa ser maior para se ter um bom treinamento do modelo e por fim realizar o teste nas imagens restantes, a seleção de 80/20 da separação dos arquivos foi adotada.
+O \emph{dataset} utilizado como base para a realização deste trabalho, possui 364 imagens diferentes de amostras de sangue. Cada imagem pode conter até 30 células de classes diferentes, localizadas em diferentes porções da imagem. As classes utilizadas nessa pesquisa são células vermelhas (RBC), células brancas (WBC) e também plaquetas (\emph{Platelets}), as quais são identificadas através de coordenadas que indicam a localização de cada célula na imagem, e ficam armazenadas em arquivos XML que acompanham o \emph{dataset} em questão.
 
-Como observado no capítulo \ref{chap:metodologia}, o modelo foi configurado seguindo alguns princípios e configurações principais. Primeiramente foi selecionada a rede neural pré-treinada com o melhor resultado e performance para este grupo de imagem, sendo essa a ``resnet50'', reconhecida na base de código por ``ssd\_resnet50\_v1\_fpn\_640x640\_coco17\_tpu-8''. Além dessa escolha, quatro parâmtros fundamentais foram cuidadosamente selecionados, buscando o melhor desempenho em menor tempo. A definição dos parâmetros de \emph{Batch Size}, \emph{Learning Rate}, Número de \emph{Batches} e também a porcentagem de acerto base podem ser visualizados na tabela \ref{tbl:parametros}.
+Este \emph{dataset} foi separado em dois principais grupos. O primeiro grupo se refere ao conjunto de imagens voltados apenas para o treino, com 80\% das imagens totais, esse grupo contém 291 imagens selecionadas aleatoriamente. Enquanto o segundo grupo, voltado apenas para o teste, com 20\% das imagens totais, contém 73 imagens separadas para este fim. Como o grupo de treino precisa ser maior para se ter um bom treinamento do modelo e por fim realizar o teste nas imagens restantes, a seleção de 80/20 da separação dos arquivos foi adotada.
+
+Como observado no Capítulo \ref{chap:metodologia}, o modelo foi configurado seguindo alguns princípios e configurações principais. Primeiramente foi selecionada a rede neural pré-treinada com o melhor resultado e performance para este grupo de imagem, sendo essa a ``resnet50'', reconhecida na base de código por ``ssd\_resnet50\_v1\_fpn\_640x640\_coco17\_tpu-8''. Além dessa escolha, quatro parâmtros fundamentais foram cuidadosamente selecionados, buscando o melhor desempenho em menor tempo. A definição dos parâmetros de \emph{Batch Size}, \emph{Learning Rate}, Número de \emph{Batches} e também a porcentagem de acerto base podem ser visualizados na Tabela \ref{tbl:parametros}.
 
 \begin{table}[!htb]
 \centering
@@ -493,11 +494,11 @@ Após o treinamento do modelo, as predições foram medidas utilizando 3 métric
 
 \begin{itemize}
     \item WBC: 74 células encontradas de 74 células reais (100\% de Acerto e 0\% de Falha)
-    \item RBC: 1007 células encontradas de 908 células reais (110.9\% de Acerto e 10.9\% de Falha)
+    \item RBC: 1007 células encontradas de 908 células reais (\textcolor{red}{110.9\% de Acerto} e 10.9\% de Falha)
     \item Platelets: 57 células encontradas de 59 células reais (96.61\% de Acerto e 3.39\% de Falha)
 \end{itemize}
 
-Conforme constatado no capítulo \ref{chap:metodologia}, o MSE e o rMSE, são métricas complementares, de fácil utilização e dizem muito a respeito do desempenho de um modelo computacional. Enquanto o MSE trabalha realizando o cálculo do erro quadrático médio, o rMSE é a raiz desse valor encontrado. Tais métricas são interessantes de se utilizar, pois, permitem visualizar de forma considerável, até mesmo pequenos erros. Essa escala não apresenta um número máximo ou ideal, mas o resultado deve se aproximar de zero, quanto mais próximo, melhor. Dessa forma, utilizando as fórmulas do capítulo anterior, foi possível chegar na relação da tabela \ref{tbl:mse}.
+Conforme constatado no Capítulo \ref{chap:metodologia}, o MSE e o rMSE, são métricas complementares, de fácil utilização e dizem muito a respeito do desempenho de um modelo computacional. Enquanto o MSE trabalha realizando o cálculo do erro quadrático médio, o rMSE é a raiz desse valor encontrado. Tais métricas são interessantes de se utilizar, pois, permitem visualizar de forma considerável, até mesmo pequenos erros. Essa escala não apresenta um número máximo ou ideal, mas o resultado deve se aproximar de zero, quanto mais próximo, melhor. Dessa forma, utilizando as fórmulas do capítulo anterior, foi possível chegar na relação da tabela \ref{tbl:mse}.
 
 \begin{table}[!htb]
 	\centering
@@ -514,12 +515,12 @@ Conforme constatado no capítulo \ref{chap:metodologia}, o MSE e o rMSE, são m�
 	\legend{Fonte: Elaborada pelo autor.}
 \end{table}
 
-Através da relação da tabela \ref{tbl:mse}, foi possível perceber que o melhor desempenho está na detecção de células brancas, o que se alinha com as definições encontradas pela acurácia vista anteriormente. Isso pode ter acontecido, pois, no \emph{dataset}, em grande parte das imagens existe pelo menos uma célula branca que é facilmente detectada em relação às demais. Seguinte a isso, as plaquetas também apresentam bons resultados, parecido com a relação da acurácia do modelo. Por fim, as células vermelhas apresentam resultados inferiores em relação às demais. Isso pode ter acontecido, devido ao fato da sua abundância em todas as imagens, enquanto as outras classes apresentam uma ou duas células por imagem, as células vermelhas podem aparecer em um número maior que 20, isso dificulta o aprendizado do modelo e também atrapalha na predição nesse caso.
+Através da relação da Tabela \ref{tbl:mse}, foi possível perceber que o melhor desempenho está na detecção de células brancas, o que se alinha com as definições encontradas pela acurácia vista anteriormente. Isso pode ter acontecido, pois, no \emph{dataset}, em grande parte das imagens existe pelo menos uma célula branca que é facilmente detectada em relação às demais. Seguinte a isso, as plaquetas também apresentam bons resultados, parecido com a relação da acurácia do modelo. Por fim, as células vermelhas apresentam resultados inferiores em relação às demais. Isso pode ter acontecido, devido ao fato da sua abundância em todas as imagens, enquanto as outras classes apresentam uma ou duas células por imagem, as células vermelhas podem aparecer em um número maior que 20, isso dificulta o aprendizado do modelo e também atrapalha na predição nesse caso.
 
-\section{Células Brancas (WBC)}
+\section{Identificação de Células Brancas (WBC)}
 A primeira classe de células trabalhadas, desde o primeiro teste utilizando o \emph{dataset} foram as células brancas. Isso ocorreu pela sua fácil identificação em relação as demais, sendo um ótimo candidato para se iniciar os testes e posteriormente as primeiras versões do protótipo.
 
-Essas células estão presentes nas imagens em baixa quantidade, pois o dataset buscou focalizar uma célula branca em cada imagem. Embora em alguns casos é possível encontrar até duas ou três. Além da quantidade, podem ser diferenciadas das outras através da sua coloração.
+Essas células estão presentes nas imagens em baixa quantidade, pois o \emph{dataset} buscou focalizar uma célula branca em cada imagem. Embora em alguns casos seja possível encontrar até duas ou três. Além da quantidade, podem ser diferenciadas das outras através da sua coloração.
 
 \begin{figure}[!htb]
 	\centering
@@ -529,7 +530,7 @@ Essas células estão presentes nas imagens em baixa quantidade, pois o dataset 
 	\label{fig:predict_wbc}
 \end{figure}
 
-Na imagem \ref{fig:predict_wbc} pode ser observado a detecção da célula branca pelo modelo. Onde foi possível diferenciar e delimitar a célula de forma bastante satisfatória. Na imagem \ref{fig:predict_wbc_2} também pode ser observado o mesmo processo, mas em outra situação.
+Na Figura \ref{fig:predict_wbc} pode ser observado a detecção da célula branca pelo modelo. Onde foi possível diferenciar e delimitar a célula de forma bastante satisfatória. Na Figura \ref{fig:predict_wbc_2} também pode ser observado o mesmo processo, mas em outra situação.
 
 \begin{figure}[!htb]
 	\centering
@@ -539,12 +540,14 @@ Na imagem \ref{fig:predict_wbc} pode ser observado a detecção da célula branc
 	\label{fig:predict_wbc_2}
 \end{figure}
 
-Podemos perceber que o modelo teve uma boa taxa de acerto, levando em consideração as métricas e agora vendo o resultado na prática através das imagens. Dessa forma, é possível realizar as contagens com um bom índice de assertividade.
+Pôde-se perceber que o modelo obteve boa taxa de acerto, levando em consideração tanto as métricas de desempenho, quanto através da análise visual das imagens. Deste modo, é possível realizar as contagens das células com bom índice de assertividade.
 
-\section{Células Vermelhas (RBC)}
-Após a detecção das células brancas, o próximo passo buscado foi a interpretação das células vermelhas. Estas se diferenciam na sua detecção em relação às outras devido a sua quantidade. As células vermelhas aparecem em uma proporção muito maior, constando até mesmo mais de 20 células por imagem.
+\section{Identificação de Células Vermelhas (RBC)}
+Após a detecção das células brancas, o próximo passo buscado foi a interpretação das células vermelhas. Essas se diferenciam na sua detecção em relação às outras devido a sua quantidade. As células vermelhas aparecem em uma proporção muito maior, constando até mesmo mais de 20 células por imagem.
 
 A grande quantidade desse tipo de células é um desafio para o modelo, principalmente pela delimitação de suas áreas. Por não terem forma definida e muitas vezes se sobrepondo uma sobre as outras, isso atrapalha a sua identificação.
+
+Na Figura \ref{fig:predict_rbc} podemos visualizar o processo de detecção das células vermelhas. Sendo possível realizar a contagem das células conforme o necessário, com uma pequena margem de erro. 
 
 \begin{figure}[!htb]
 	\centering
@@ -554,7 +557,7 @@ A grande quantidade desse tipo de células é um desafio para o modelo, principa
 	\label{fig:predict_rbc}
 \end{figure}
 
-Na imagem \ref{fig:predict_rbc} podemos visualizar o processo de detecção das células vermelhas. Sendo possível realizar a contagem das células conforme o necessário, com uma pequena margem de erro. Na imagem \ref{fig:predict_rbc_2} também é possível visualizar a identificação pelo modelo, porém em uma densidade muito maior, mesmo com a sobreposição de células, ainda assim o modelo conseguiu realizar a identificação correta.
+Entretanto, na Figura \ref{fig:predict_rbc_2} também é possível visualizar a identificação pelo modelo, porém em uma densidade muito maior, mesmo com a sobreposição de células, ainda assim o modelo conseguiu identificar a maior parte das células de forma correta.
 
 \begin{figure}[!htb]
 	\centering
@@ -566,10 +569,13 @@ Na imagem \ref{fig:predict_rbc} podemos visualizar o processo de detecção das 
 
 É possível concluir que embora não tenha um desempenho tão positivo quanto as demais classes, os resultados também são bons pois permitem uma contagem das células vermelhas com uma pequena margem de erro.
 
-\section{Plaquetas (\emph{Platelets})}
-Por fim, a detecção das plaquetas foram realizadas de forma parecida com as células brancas. Embora estejam mais presentes no \emph{dataset} do que as células brancas, também não estão em um número tão superior quanto as células vermelhas, apresentando pequenos conjuntos por imagens. Outro fator característico em relação as demais é o seu tamanho, que é muito menor e de fácil identificação a olho nu.
+\section{Identificação de Plaquetas (\emph{Platelets})}
 
-Embora sejam identificadas de forma mais tranquila, a sobreposição de células também pode acontecer nesse caso, atrapalhando o desempenho da identificação pelo modelo. Porém isso acontece em um número significantemente menor em relação às células vermelhas.
+Por fim, a detecção das plaquetas foram realizadas de forma similar as células brancas. Apesar de estarem mais presentes no \emph{dataset} do que as células brancas, elas não estão em um número tão elevado quanto as células vermelhas, apresentando pequenos conjuntos por imagens. Outro fator característico em relação as demais é o seu tamanho, que é muito menor e de fácil identificação a olho nu.
+
+Embora sejam identificadas de forma mais tranquila, a sobreposição de células também pode acontecer nesse caso, atrapalhando o desempenho da identificação pelo modelo. Porém isso acontece em um número significantemente menor em comparação com as células vermelhas.
+
+É possível visualizar na Figura \ref{fig:predict_platelets} o processo de identificação de células brancas, onde o modelo apresenta um desempenho considerado ótimo.
 
 \begin{figure}[!htb]
 	\centering
@@ -579,7 +585,7 @@ Embora sejam identificadas de forma mais tranquila, a sobreposição de células
 	\label{fig:predict_platelets}
 \end{figure}
 
-É possível visualizar na imagem \ref{fig:predict_platelets} o processo de identificação dessas células, que apresenta um desempenho consideravelmente bom. Na imagem \ref{fig:predict_platelets_2} com outra situação, também foi possível detectar até 4 plaquetas com boa assertividade.
+Já na Figura \ref{fig:predict_platelets_2} é possível notar uma situação um pouco diferente. Nessa análise o modelo foi capaz de identificar corretamente as 4 plaquetas que aparecem na imagem, porém com margem de confiança do algoritmo levemente reduzida. 
 
 \begin{figure}[!htb]
 	\centering
@@ -591,15 +597,18 @@ Embora sejam identificadas de forma mais tranquila, a sobreposição de células
 
 Com isso, podemos concluir que as plaquetas possuem um desempenho adequado na sua identificação permitindo uma contagem satisfatória. Embora não seja tão positivo quando na detecção das células brancas, ainda supera as células vermelhas em relação ao desempenho e critérios de assertividade.
 
-\section{Hemograma}
-Com base na identificação e na contagem das células como visto anteriormente é possível realizar a produção de um hemograma. Um hemograma é basicamente uma contagem das células e comparação desses resultados com índices pré-calculados de valores ideais para cada tipo de paciente.
+\section{Elaboração de Elementos do Hemograma}
 
-Os valores iniciais do hemograma podem ser calculados realizando após a identificação das células, a contagem de cada tipo. As unidades de medida são importantes nesse processo, pois são diferentes para cada tipo de célula. A unidade base para o cálculo é o milímetro cúbico (mm³), ou seja, uma unidade de volume. Para o cálculo dos leucócitos, que são as células brancas, e também das plaquetas é realizada a contagem em proporção a um milímetro cúbico. Porém, no caso dos eritrócitos, que são as células vermelhas, elas estão em uma quantidade muito maior em relação às outras células, portanto é realizado o cálculo de milhões de células em um milímetro cúbico.
+Com base na identificação e na contagem das células, como visto anteriormente, é possível realizar a produção de um hemograma. Um hemograma é basicamente uma contagem das células e comparação desses resultados com índices pré-calculados de valores ideais para cada tipo de paciente.
+
+Os valores iniciais do hemograma podem ser calculados realizando, após a identificação das células, a contagem de cada tipo. As unidades de medida são importantes nesse processo, pois são diferentes para cada tipo de célula. A unidade base para o cálculo é o milímetro cúbico (mm³), ou seja, uma unidade de volume. Para o cálculo dos leucócitos, que são as células brancas, e também das plaquetas é realizada a contagem em proporção a um milímetro cúbico. Porém, no caso dos eritrócitos, que são as células vermelhas, elas estão em uma quantidade muito maior em relação às outras células, portanto é realizado o cálculo de milhões de células em um milímetro cúbico.
 
 O eritrograma pode ser elaborado, considerando o número de eritrócitos em uma relação de milhões/mm³. O leucograma pode ser elaborado, utilizando o número de leucócitos encontrados em unidade/mm³. E por fim o plaquetograma pode ser elaborado, com base no número de plaquetas identificadas em unidades/mm³.
 
-Dessa forma, com esse hemograma parcial várias doenças e desequilíbrios do organismo do paciente podem ser identificados. Como por exemplo, o leucograma sendo o principal exame para avaliar a imunidade de uma pessoa, através da quantidade de leucócitos presentes no organismo. O número das plaquetas também muito diz sobre o organismo, avaliando a coagulação sangúinea do indivíduo e pré-disposições à hemorragias. Assim como, o número de hemácias baixo, poderia indicar uma anemia ou doença associada, entre muitos outros casos.
+Desta forma, com esse hemograma parcial várias doenças e desequilíbrios do organismo do paciente podem ser identificados. Como por exemplo, o leucograma sendo o principal exame para avaliar a imunidade de uma pessoa, através da quantidade de leucócitos presentes no organismo. O número das plaquetas também muito diz sobre o organismo, avaliando a coagulação sangúinea do indivíduo e pré-disposições à hemorragias. Assim como, o número de hemácias baixo, poderia indicar uma anemia ou doença associada, entre muitos outros casos.
 
 Podemos concluir que através desses dados, é possível elaborar um hemograma parcial bastante útil e interessante para o uso. Caso os valores de um exame como este estejam alterados e fora do padrão considerado aceito mundialmente. Nesse caso seria necessário realizar uma investigação mais aprofundada com exames mais específicos a cada situação.
 
-As limitações da elaboração de um hemograma total estão relacionadas com as limitações do \emph{dataset}. Primeiramente, para a realização de um hemograma completo, seria necessário ter além da contagem, também se ter a classificação das células brancas. Sua classificação em Monócitos, Leucócitos, Neutrófilos, Eosinófilos, Basófilos, Linfócitos, entre outros é necessária para a completude do exame. Porém, essas classificações não são apresentadas pelo \emph{dataset}, que procura focar apenas nas diferenciações entre os três principais tipos. Outros valores relacionados à cálculos de volume também não são possíveis de serem calculados.
+As limitações para a elaboração de um hemograma total estão relacionadas com as limitações do \emph{dataset}. Primeiramente, para a realização de um hemograma completo, seria necessário ter além da contagem, também a classificação das células brancas. Sua classificação em Monócitos, Leucócitos, Neutrófilos, Eosinófilos, Basófilos, Linfócitos, entre outros é necessária para a completude do exame. Porém, essas classificações não são apresentadas pelo \emph{dataset}, que procura focar apenas nas diferenciações entre os três principais tipos. \textcolor{red}{Outros valores relacionados à cálculos de volume também não são possíveis de serem calculados.}\textcolor{blue}{O que quer dizer com isso?} \textcolor{red}{Falar que alguns desses aspectos serão mencionados como trabalhos futuros no capítulo seguinte.}
+
+\textcolor{blue}{Qual é a proporção da amostra de sangue apresentada neste dataset em relação a mm³? Seria importante mencionar essa informação no texto.}
