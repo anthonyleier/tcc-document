@@ -369,10 +369,10 @@ Com o \emph{dataset} em mãos, foi iniciado o estudo e aprofundamento de seu con
 
 Outra limitação também observada nesse \emph{dataset}, é a falta de classificação das células brancas. O \emph{dataset} se preocupa apenas em localizar as células na imagem e categorizar em brancas, vermelhas e plaquetas. Porém, para se elaborar um hemograma completo, isso não é suficiente. Para a elaboração do hemograma, é necessário além de realizar a contagem das células brancas, também realizar a sua classificação (Neutrófilos, Basófilos, Eosinófilos, Linfócitos, Monócitos, entre outros), para através disso se ter um diagnóstico mais concreto a respeito do paciente. A introdução da detecção das classes para as células brancas ficará listada como possível trabalho futuro.
 
-Com a obtenção do \emph{dataset}, iniciou-se a fase de adaptação do conjunto de imagens para a detecção pelo modelo. No repositório, além das imagens, também estão contigos alguns programas \emph{Python}, que servem para o tratamento dos dados \textcolor{red}{Tem como comentar mais sobre isso??}. Porém, como este trabalho envolve a aplicação de um modelo computacional de \emph{Deep Learning}, o tratamento dos dados será feito respeitando as necessidades desta técnica. Sendo assim, todos os arquivos \emph{Python} contidos no \emph{dataset} foram descartados para este trabalho, mantendo apenas o diretório das imagens e o diretório dos arquivos XML que contém as coordenadas das imagens.
+Com a obtenção do \emph{dataset}, iniciou-se a fase de adaptação do conjunto de imagens para a detecção pelo modelo. No repositório, além das imagens, também estão contidos alguns programas \emph{Python}, que servem para o tratamento dos dados como uma forma de demonstrar possíveis usos para o \emph{dataset}. Como por exemplo, um programa capaz de fazer o contorno das células para uma pré-visualização dos dados. Porém, como este trabalho envolve a aplicação de um modelo computacional de \emph{Deep Learning}, o tratamento dos dados será feito respeitando as necessidades desta técnica. Sendo assim, todos os arquivos \emph{Python} contidos no \emph{dataset} foram descartados para este trabalho, mantendo apenas o diretório das imagens e o diretório dos arquivos XML que contém as coordenadas das imagens.
 
 \section{Detecção de Objetos}
-Para o desenvolvimento do modelo computacional, assim como do treinamento e da configuração dos seus recursos, a biblioteca Tensorflow foi sido escolhida para atender a essa demanda. O Tensorflow possui um grande acervo de funções e utilitários dos mais diversos tipos para se trabalhar com \emph{Machine Learning} e também \emph{Deep Learning}, sendo necessário selecionar quais são os mais adequados a este trabalho. Um dos módulos mais interessantes e que se alinham com o intuito desse trabalho é o \emph{Object Detection}, ou seja, o módulo de detecção de objetos \cite{websiteObjectDetection}. \textcolor{red}{Está certa essa referência?}
+Para o desenvolvimento do modelo computacional, assim como do treinamento e da configuração dos seus recursos, a biblioteca Tensorflow foi sido escolhida para atender a essa demanda. O Tensorflow possui um grande acervo de funções e utilitários dos mais diversos tipos para se trabalhar com \emph{Machine Learning} e também \emph{Deep Learning}, sendo necessário selecionar quais são os mais adequados a este trabalho. Um dos módulos mais interessantes e que se alinham com o intuito desse trabalho é o \emph{Object Detection}, ou seja, o módulo de detecção de objetos \cite{websiteObjectDetection}.
 
 O módulo de detecção de objetos do Tensorflow é utilizado para encontrar elementos em porções de imagens, os quais foram previamente treinados para serem reconhecidos. Geralmente é utilizado para detectar pessoas e objetos do dia a dia em imagens. Também pode ser utilizado em vídeos, processando \emph{frame} a \emph{frame}, o que possibilita sua aplicação em câmeras de segurança, reconhecendo em tempo real pessoas, veículos, animais e outros elementos que aparecem com bastante frequência. Um exemplo de detecção de objetos através do TensorFlow é apresentado na Figura \ref{fig:objectdetection}.
 
@@ -380,7 +380,7 @@ O módulo de detecção de objetos do Tensorflow é utilizado para encontrar ele
 	\centering
 	\caption{Exemplo de aplicação de \emph{Object Detection} no TensorFlow.}
 	\includegraphics[width=0.60\textwidth]{img/objectdetection.jpg}
-	\legend{Fonte: \citeonline{websiteObjectDetection} \textcolor{red}{Conferir referência.}}
+	\legend{Fonte: \citeonline{websiteObjectDetection}}
 	\label{fig:objectdetection}
 \end{figure}
 
@@ -412,7 +412,7 @@ Esses parâmetros foram configurados com base em testes realizados, onde a cada 
 
 Além da configuração desses parâmetros, também existe outro ponto bastante importante e necessário para este trabalho, o qual consiste em selecionar uma rede neural pré-treinada adequada para o uso. Através de uma rede pré-treinada, muitos parâmetros comuns podem ser aproveitados, agilizando o processo de treinamento de novos modelos. Além disso, também é capaz de impactar nos resultados, pois se foi devidamente treinada com informações básicas, como contornos e elementos comuns, os resultados ao treinar com elementos mais complexos serão melhores.
 
-Para este trabalho, foi selecionada a rede ``resnet50'', embora existam muitas outras incluídas na lista da documentação aceitas pelo módulo de detecção de objetos. Essa escolha foi definida pelo tamanho da imagem utilizada e também ao realizar testes de desempenho em comparação com as outras redes \cite{websiteObjectDetection}. \textcolor{red}{Verificar referências}
+Para este trabalho, foi selecionada a rede ``resnet50'', embora existam muitas outras incluídas na lista da documentação aceitas pelo módulo de detecção de objetos. Essa escolha foi definida pelo tamanho da imagem utilizada e também ao realizar testes de desempenho em comparação com as outras redes \cite{websiteObjectDetection}.
 
 Com o treinamento de um tipo de célula realizado com sucesso, foi necessário expandir para treinar as demais. Primeiramente, foi testado treinando todas as células de uma só vez, porém essa abordagem estava consumindo muitos recursos da máquina e produzindo resultados insatisfatórios.
 
@@ -493,9 +493,9 @@ Porcentagem de Acerto & 0.5 & 0.1 & 0.5      \\ \hline
 Após o treinamento do modelo, as predições foram medidas utilizando 3 métricas diferentes. A primeira foi a acurácia padrão, que permite ter uma visão geral do andamento do processo. Realizando a medição da acurácia padrão, considerando o número de células reais e o número de células que deveriam ser encontradas pelo modelo, se chegou na seguinte relação, utilizando o melhor resultado possível como parâmetro:
 
 \begin{itemize}
-    \item WBC: 74 células encontradas de 74 células reais (100\% de Acerto e 0\% de Falha)
-    \item RBC: 1007 células encontradas de 908 células reais (\textcolor{red}{110.9\% de Acerto} e 10.9\% de Falha)
-    \item Platelets: 57 células encontradas de 59 células reais (96.61\% de Acerto e 3.39\% de Falha)
+    \item WBC: 74 células encontradas de 74 células reais (100,00\% de Acerto e 0,00\% de Falha)
+    \item RBC: 1007 células encontradas de 908 células reais (89,10\% de Acerto e 10,90\% de Falha)
+    \item Platelets: 57 células encontradas de 59 células reais (96,61\% de Acerto e 3,39\% de Falha)
 \end{itemize}
 
 Conforme constatado no Capítulo \ref{chap:metodologia}, o MSE e o rMSE, são métricas complementares, de fácil utilização e dizem muito a respeito do desempenho de um modelo computacional. Enquanto o MSE trabalha realizando o cálculo do erro quadrático médio, o rMSE é a raiz desse valor encontrado. Tais métricas são interessantes de se utilizar, pois, permitem visualizar de forma considerável, até mesmo pequenos erros. Essa escala não apresenta um número máximo ou ideal, mas o resultado deve se aproximar de zero, quanto mais próximo, melhor. Dessa forma, utilizando as fórmulas do capítulo anterior, foi possível chegar na relação da tabela \ref{tbl:mse}.
@@ -609,6 +609,6 @@ Desta forma, com esse hemograma parcial várias doenças e desequilíbrios do or
 
 Podemos concluir que através desses dados, é possível elaborar um hemograma parcial bastante útil e interessante para o uso. Caso os valores de um exame como este estejam alterados e fora do padrão considerado aceito mundialmente. Nesse caso seria necessário realizar uma investigação mais aprofundada com exames mais específicos a cada situação.
 
-As limitações para a elaboração de um hemograma total estão relacionadas com as limitações do \emph{dataset}. Primeiramente, para a realização de um hemograma completo, seria necessário ter além da contagem, também a classificação das células brancas. Sua classificação em Monócitos, Leucócitos, Neutrófilos, Eosinófilos, Basófilos, Linfócitos, entre outros é necessária para a completude do exame. Porém, essas classificações não são apresentadas pelo \emph{dataset}, que procura focar apenas nas diferenciações entre os três principais tipos. \textcolor{red}{Outros valores relacionados à cálculos de volume também não são possíveis de serem calculados.}\textcolor{blue}{O que quer dizer com isso?} \textcolor{red}{Falar que alguns desses aspectos serão mencionados como trabalhos futuros no capítulo seguinte.}
+As limitações para a elaboração de um hemograma total estão relacionadas com as limitações do \emph{dataset}. Primeiramente, para a realização de um hemograma completo, seria necessário ter além da contagem, também a classificação das células brancas. Sua classificação em Monócitos, Leucócitos, Neutrófilos, Eosinófilos, Basófilos, Linfócitos, entre outros é necessária para a completude do exame. Porém, essas classificações não são apresentadas pelo \emph{dataset}, que procura focar apenas nas diferenciações entre os três principais tipos.
 
-\textcolor{blue}{Qual é a proporção da amostra de sangue apresentada neste dataset em relação a mm³? Seria importante mencionar essa informação no texto.}
+Outros valores relacionados à cálculos com volume, como o VCM (Volume Corpuscular Médio) e também o HCM (Hemoglobina Corpuscular Média), entre os outros citados no Capítulo \ref{chap:fund} não são possíveis de serem calculados por falta de informação. Na utilização de outro \emph{dataset} em trabalhos futuros, essas informações podem ser calculadas tranquilamente a partir da coleta de dados, como será abordado no próximo capítulo. 
