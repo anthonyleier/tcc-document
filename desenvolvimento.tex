@@ -412,9 +412,9 @@ Esses parâmetros foram configurados com base em testes realizados, onde a cada 
 
 Além da configuração desses parâmetros, também existe outro ponto bastante importante e necessário para este trabalho, o qual consiste em selecionar uma rede neural pré-treinada adequada para o uso. Através de uma rede pré-treinada, muitos parâmetros comuns podem ser aproveitados, agilizando o processo de treinamento de novos modelos. Além disso, também é capaz de impactar nos resultados, pois se foi devidamente treinada com informações básicas, como contornos e elementos comuns, os resultados ao treinar com elementos mais complexos serão melhores.
 
-Para este trabalho, foi selecionada a rede ``resnet50'', embora existam muitas outras incluídas na lista da documentação aceitas pelo módulo de detecção de objetos. Essa escolha foi definida pelo tamanho da imagem utilizada e também ao realizar testes de desempenho em comparação com as outras redes \cite{websiteObjectDetection}.
+Para este trabalho, foi selecionada a rede ``resnet50'', embora existam muitas outras incluídas na lista da documentação aceitas pelo módulo de detecção de objetos. Essa escolha foi definida pelo tamanho da imagem utilizada e também ao realizar testes de desempenho em comparação com as outras redes \cite{resnet}.
 
-% Falar aqui sobre a resnet e rede pré-treinada
+O uso da ``resnet50'' auxilia muito na fase de treino do modelo, pois não é necessário realizar o treinamento de toda a estrutura do zero e sim treinar apenas as últimas camadas. Como as camadas mais iniciais do modelo já foram treinadas com generalidades, toda a carga de trabalho está em treinar apenas as últimas camadas da rede com informações específicas. Nesse caso direcionar o aprendizado para imagens de amostras de sangue.
 
 Com o treinamento de um tipo de célula realizado com sucesso, foi necessário expandir para treinar as demais. Primeiramente, foi testado treinando todas as células de uma só vez, porém essa abordagem estava consumindo muitos recursos da máquina e produzindo resultados insatisfatórios.
 
