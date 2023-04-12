@@ -1,0 +1,3 @@
+# tcc-document
+
+Escrita do meu Trabalho de Conclusão de Curso (TCC) com base na identificação, classificação e contagem das células do sangue presentes em imagens de amostras (microscópicas), com a utilização de Deep Learning (Inteligência Artificial) através do TensorFlow (Python). O trabalho garantiu meu diploma de bacharelado, com uma nota final máxima. O código utilizado pode ser encontrado no [reposiório](https://github.com/anthonyleier/blood-detection) do projeto, e a versão final do trabalho pode ser lida no [repositório](https://repositorio.ifsc.edu.br/handle/123456789/2501) de artigos da instituição.
